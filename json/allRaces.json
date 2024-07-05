@@ -1,0 +1,112 @@
+{
+    "Player's Handbook / Basic Rules": [
+        "Dwarf",
+        "Elf",
+        "Drow",
+        "Halfling",
+        "Human",
+        "Dragonborn",
+        "Gnome",
+        "Half-Elf",
+        "Half-Orc",
+        "Tiefling"
+    ],
+    "Volo's Guide to Monsters": [
+        "Aasimar",
+        "Firbolg",
+        "Goliath",
+        "Kenku",
+        "Lizardfolk",
+        "Tabaxi",
+        "Triton",
+        "Bugbear",
+        "Goblin",
+        "Hobgoblin",
+        "Kobold",
+        "Orc",
+        "Yuan-ti Pureblood"
+    ],
+    "Monsters of the Multiverse": [
+        "Aarackocra",
+        "Aasimar",
+        "Bugbear",
+        "Centaur",
+        "Changeling",
+        "Deep Gnome",
+        "Duergar",
+        "Eladrin",
+        "Fairy",
+        "Firbolg",
+        "Air Genasi",
+        "Earth Genasi",
+        "Fire Genasi",
+        "Water Genasi",
+        "Githyanki",
+        "Githzerai",
+        "Goblin",
+        "Goliath",
+        "Harengon",
+        "Hobgoblin",
+        "Kenku",
+        "Kobold",
+        "Lizardfolk",
+        "Minotaur",
+        "Orc",
+        "Satyr",
+        "Sea Elf",
+        "Shadar-Kai",
+        "Shifter",
+        "Tabaxi",
+        "Tortle",
+        "Triton",
+        "Yuan-ti"
+    ],
+    "Guildmaster's Guide to Ravnica": [
+        "Centaur",
+        "Loxodon",
+        "Minotaur",
+        "Simic Hybrid",
+        "Vedalken"
+    ],
+    "Eberron: Rising from the Last War": [
+        "Changeling",
+        "Kalashtar",
+        "Shifter",
+        "Warforged"
+    ],
+    "Mythic Odysseys of Theros": [
+        "Leonin",
+        "Satyr"
+    ],
+    "Spelljammer": [
+        "Astral Elf",
+        "Autognome",
+        "Giff",
+        "Hadozee",
+        "Plasmoid",
+        "Thri-Kreen"
+    ],
+    "Grim Hollow":[
+        "The Disembodied",
+        "Wechselkind"
+    ],
+    "Other":[
+        "Kender",
+        "Owlin",
+        "Verdan",
+        "Grung",
+        "Locathah"
+    ],
+    "Humblewood": [
+        "Cervan",
+        "Corvum",
+        "Gallus",
+        "Hedge",
+        "Jerbeen",
+        "Luma",
+        "Mapach",
+        "Raptor",
+        "Strig",
+        "Vulpin"
+    ]
+}

@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav {
+    background: #0082e6;
+    width: 400px;
+    line-height: 40px;
+    padding: 8px 25px; /* Corrected padding syntax */
+    position: relative;
+    border-radius: 5px;
+    
+}
+
+nav label {
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+    /* display: block; */
+    cursor: pointer;
+}
+
+.button span {
+    float: right;
+    line-height: 35px;
+    padding-right: 10px;
+}
+
+nav ul {
+    position: absolute;
+    background: #94a2ac;
+    list-style: none;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    border-radius: 5px;
+    display: none;
+}
+[id^=btn]:checked +ul{ /*allows for drop down to open and close*/
+    display: block;
+    height: 300px; /* Set a fixed height */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+nav .menu:before{
+    position: absolute;
+    content:'' ;
+    height:20px;
+    width:20px;
+    background:#0082e6;
+    right:30px;
+    top:-10px;
+    transform:rotate(45deg);
+    
+
+}
+
+nav ul li {
+    line-height: 40px;
+    padding: 8px 20px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+nav ul li label {
+    font-size: 18px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+}
+
+nav ul li a:hover,
+nav ul li label:hover { /* Corrected selector */
+    color: cyan;
+}
+
+nav ul ul {
+    position: static; /* You might want to review this positioning */
+}
+
+nav ul ul li {
+    line-height: 30px;
+    padding-left: 30px;
+    border-bottom: none;
+}
+
+nav ul ul li a {
+    color: #e6e6e6;
+    font-size: 17px;
+}
+
+nav ul li span {
+    font-size: 20px;
+    float: right;
+    margin-top: 10px;
+    padding: 0 10px; /* Corrected padding syntax */
+}
+
+#btn-1,#btn-2,#btn-3{
+    display: none;
+}

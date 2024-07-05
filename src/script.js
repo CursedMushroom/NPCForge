@@ -36,3 +36,39 @@ function generateCharacter() {
 function getRandomElement(arr) {
     return arr[Math.floor(Math.random() * arr.length)];
 }
+
+//const url = 'json/allRaces.json';
+
+async function fetchJSON(url) {
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error('Network response was not ok ' + response.statusText);
+        }
+        const data = await response.json();
+        console.log(data);
+    } catch (error) {
+        console.error('There has been a problem with your fetch operation:', error);
+    }
+}
+fetchJSON('json/allRaces.json');
+
+
+// script.js
+var tree = document.querySelectorAll('ul.tree a:not(:last-child)');
+for(var i = 0; i < tree.length; i++){
+    tree[i].addEventListener('click', function(e) {
+        var parent = e.target.parentElement;
+        var classList = parent.classList;
+        if(classList.contains("open")) {
+            classList.remove('open');
+            var opensubs = parent.querySelectorAll(':scope .open');
+            for(var i = 0; i < opensubs.length; i++){
+                opensubs[i].classList.remove('open');
+            }
+        } else {
+            classList.add('open');
+        }
+        e.preventDefault();
+    });
+}
