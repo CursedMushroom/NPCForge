@@ -1,3 +1,18 @@
+:root {
+    --temp1: #f5f5f5;
+    --temp2: #f0f0f0;
+    --temp3: #e6e6e6;
+    --temp4: #d9d9d9;
+    --temp5: #cccccc;
+    --temp6: #b3b3b3;
+    --temp7: #999999;
+    --temp8: #666666;
+    --temp9: #4d4d4d;
+    --temp10: #333333;
+    --temp11: #1a1a1a;
+    --temp12: #000000;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,14 +20,136 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+body {
+    background: var(--temp5);
+    background-image: url('images/background-overlay.png');
+}
+
+.searchDiv {
+    background-color: var(--temp2);
+}
+
+
+
+
+/* Top Navbar */
+.navbar {
+    background: #1b1b1b;
+}
+
+.navbar:after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+.logo {
+    float: left;
+    color: white;
+    font-size: 27px;
+    font-weight: 600px;
+    line-height: 70px;
+    padding-left: 60px;
+    /* display: none; */
+
+}
+
+.navbar ul {
+    float: right;
+    list-style: none;
+    margin-right: 40px;
+    position: relative;
+}
+
+.navbar ul li {
+    float: left;
+    display: inline-block;
+    background: #1b1b1b;
+    margin: 0 5px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    line-height: 70px;
+    font-size: 18px;
+    padding: 8px 15px;
+}
+
+#navbarIcon {
+    margin-left: 15px;
+    font-size: 15px;
+}
+
+.navbar ul li a:hover {
+    color: cyan;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #33ffff,
+        0 0 10px #66ffff;
+}
+
+.navbar ul ul li a:hover {
+    color: cyan;
+    border-radius: 5px;
+    box-shadow: none;
+
+}
+
+.navbar ul ul {
+    position: absolute;
+    top: 90px;
+    border-top: 3px solid cyan;
+    opacity: 0;
+    visibility: hidden;
+    transition: top .3s;
+
+}
+
+.navbar ul ul ul {
+    border-top: none;
+}
+
+.navbar ul li:hover>ul {
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.navbar ul ul li {
+    position: relative;
+    margin: 0px;
+    width: 150px;
+    float: none;
+    display: list-item;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.navbar ul ul li a {
+    line-height: 50px;
+
+}
+
+.navbar ul ul ul li {
+    position: relative;
+    top: -70px;
+    left: 150px;
+}
+.nav-show,.icon,input{
+    display: none;
+}
+
+/* -------------------------------------------------------------------------- */
+
+
+/* Race Dropdown Menu */
 nav {
     background: #0082e6;
     width: 400px;
     line-height: 40px;
-    padding: 8px 25px; /* Corrected padding syntax */
+    padding: 8px 25px;
     position: relative;
     border-radius: 5px;
-    
+
 }
 
 nav label {
@@ -39,22 +176,23 @@ nav ul {
     border-radius: 5px;
     display: none;
 }
-[id^=btn]:checked +ul{ /*allows for drop down to open and close*/
+
+[id^=btn]:checked+ul { /*allows for drop down to open and close*/
     display: block;
-    height: 300px; /* Set a fixed height */
-    overflow-y: auto; /* Enable vertical scrolling */
+    height: 300px;
+    overflow-y: auto;
 }
 
-nav .menu:before{
+nav .menu:before {
     position: absolute;
-    content:'' ;
-    height:20px;
-    width:20px;
-    background:#0082e6;
-    right:30px;
-    top:-10px;
-    transform:rotate(45deg);
-    
+    content: '';
+    height: 20px;
+    width: 20px;
+    background: #0082e6;
+    right: 30px;
+    top: -10px;
+    transform: rotate(45deg);
+
 
 }
 
@@ -77,12 +215,12 @@ nav ul li a {
 }
 
 nav ul li a:hover,
-nav ul li label:hover { /* Corrected selector */
+nav ul li label:hover {
     color: cyan;
 }
 
 nav ul ul {
-    position: static; /* You might want to review this positioning */
+    position: static;
 }
 
 nav ul ul li {
@@ -100,9 +238,126 @@ nav ul li span {
     font-size: 20px;
     float: right;
     margin-top: 10px;
-    padding: 0 10px; /* Corrected padding syntax */
+    padding: 0 10px;
+    /* Corrected padding syntax */
 }
 
-#btn-1,#btn-2,#btn-3{
+#btn-1,
+#btn-2,
+#btn-3 {
     display: none;
+}
+/* ---------------------------------------------------------------------------------------------------------------------------- */
+
+/* Custom Dropdown Selector */
+.custom-select {
+    width: 350px;
+    position: relative;
+}
+
+select {
+    appearance: none;
+    /* safari */
+    -webkit-appearance: none;
+    /* other styles for aesthetics */
+    width: 100%;
+    font-size: 1.15rem;
+    padding: 0.675em 6em 0.675em 1em;
+    background-color: #fff;
+    border: 1px solid #caced1;
+    border-radius: 0.25rem;
+    color: #000;
+    cursor: pointer;
+}
+
+.custom-select::before,
+.custom-select::after {
+    --size: 0.3rem;
+    position: absolute;
+    content: "";
+    right: 1rem;
+    pointer-events: none;
+}
+
+.custom-select::before {
+    border-left: var(--size) solid transparent;
+    border-right: var(--size) solid transparent;
+    border-bottom: var(--size) solid black;
+    top: 40%;
+}
+
+.custom-select::after {
+    border-left: var(--size) solid transparent;
+    border-right: var(--size) solid transparent;
+    border-top: var(--size) solid black;
+    top: 55%;
+}
+/* ---------------------------------------------------------------------------------------------------------------------------- */
+
+.gen-btn, input{
+    display: none;
+}
+
+/* MEDIA QUERY */
+@media all and (max-width: 968px) {
+    .navbar ul {
+        margin-right: 0px;
+        float: left;
+    }
+    .logo {
+        padding-left: 30px;
+        width: 100%;
+    }
+    .navbar ul li, .navbar ul ul li {
+        display: block;
+        width: 100%;
+    }
+    .navbar ul ul {
+        top: 70px;
+        position: static;
+        border-top: none;
+        float: none;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+    }
+    .navbar ul ul ul li {
+        position: static;
+    }
+    .navbar ul ul li {
+        border-bottom: none;
+    }
+    .navbar ul ul a {
+        padding-left: 80px;
+    }
+    .nav-show {
+        display: block;
+        color: white;
+        font-size: 18px;
+        padding: 0 20px;
+        line-height: 70px;
+        cursor: pointer;
+    }
+    .nav-show:hover {
+        color: cyan;
+    }
+    .icon {
+        display: block;
+        color: white;
+        position: absolute;
+        right: 40px;
+        line-height: 70px;
+        font-size: 25px;
+        cursor: pointer;
+    }
+    .navbar ul li a:hover {
+        box-shadow: none;
+    }
+    .nav-show + a, ul {
+        display: none;
+    }
+    [id^=nav-btn]:checked + ul,
+    [id^=gen-btn]:checked + ul {
+        display: block;
+    }
 }
