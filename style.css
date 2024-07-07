@@ -27,6 +27,7 @@ body {
 
 .searchDiv {
     background-color: var(--temp2);
+    padding: 10px;
 }
 
 
@@ -134,7 +135,7 @@ body {
     top: -70px;
     left: 150px;
 }
-.nav-show,.icon,input{
+.nav-show,.icon{
     display: none;
 }
 
@@ -294,10 +295,12 @@ select {
 }
 /* ---------------------------------------------------------------------------------------------------------------------------- */
 
-.gen-btn, input{
+.gen-btn{/* removed input */
     display: none;
 }
-
+.hide-input{
+    display: none;
+}
 /* MEDIA QUERY */
 @media all and (max-width: 968px) {
     .navbar ul {
