@@ -31,11 +31,42 @@ body {
 }
 
 
+.searchInputs {
+    padding: 10px;
+    width: 100%;
+    background-color: var(--temp7);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+    align-items: center;
+    position: relative;
+    /* Add this */
+    z-index: 1;
+    /* Add this */
+}
+
+.searchInputs>* {
+    flex: 1 1 auto;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+
+#tool-tip {
+    transform: translate(10%, -55%);
+    font-size: 1.2em;
+}
 
 
 /* Top Navbar */
 .navbar {
     background: #1b1b1b;
+
 }
 
 .navbar:after {
@@ -103,6 +134,8 @@ body {
     opacity: 0;
     visibility: hidden;
     transition: top .3s;
+    z-index: 2;
+    /* Add this */
 
 }
 
@@ -135,7 +168,9 @@ body {
     top: -70px;
     left: 150px;
 }
-.nav-show,.icon{
+
+.nav-show,
+.icon {
     display: none;
 }
 
@@ -145,11 +180,13 @@ body {
 /* Race Dropdown Menu */
 nav {
     background: #0082e6;
-    width: 400px;
+    width: 200px;
     line-height: 40px;
     padding: 8px 25px;
     position: relative;
     border-radius: 5px;
+    z-index: 3;
+    /* Add this */
 
 }
 
@@ -178,7 +215,8 @@ nav ul {
     display: none;
 }
 
-[id^=btn]:checked+ul { /*allows for drop down to open and close*/
+[id^=btn]:checked+ul {
+    /*allows for drop down to open and close*/
     display: block;
     height: 300px;
     overflow-y: auto;
@@ -248,6 +286,7 @@ nav ul li span {
 #btn-3 {
     display: none;
 }
+
 /* ---------------------------------------------------------------------------------------------------------------------------- */
 
 /* Custom Dropdown Selector */
@@ -293,28 +332,36 @@ select {
     border-top: var(--size) solid black;
     top: 55%;
 }
+
 /* ---------------------------------------------------------------------------------------------------------------------------- */
 
-.gen-btn{/* removed input */
+.gen-btn {
+    /* removed input */
     display: none;
 }
-.hide-input{
+
+.hide-input {
     display: none;
 }
+
 /* MEDIA QUERY */
 @media all and (max-width: 968px) {
     .navbar ul {
         margin-right: 0px;
         float: left;
     }
+
     .logo {
         padding-left: 30px;
         width: 100%;
     }
-    .navbar ul li, .navbar ul ul li {
+
+    .navbar ul li,
+    .navbar ul ul li {
         display: block;
         width: 100%;
     }
+
     .navbar ul ul {
         top: 70px;
         position: static;
@@ -324,15 +371,19 @@ select {
         opacity: 1;
         visibility: visible;
     }
+
     .navbar ul ul ul li {
         position: static;
     }
+
     .navbar ul ul li {
         border-bottom: none;
     }
+
     .navbar ul ul a {
         padding-left: 80px;
     }
+
     .nav-show {
         display: block;
         color: white;
@@ -341,9 +392,11 @@ select {
         line-height: 70px;
         cursor: pointer;
     }
+
     .nav-show:hover {
         color: cyan;
     }
+
     .icon {
         display: block;
         color: white;
@@ -353,14 +406,22 @@ select {
         font-size: 25px;
         cursor: pointer;
     }
+
     .navbar ul li a:hover {
         box-shadow: none;
     }
-    .nav-show + a, ul {
+
+    .nav-show+a,
+    ul {
         display: none;
     }
-    [id^=nav-btn]:checked + ul,
-    [id^=gen-btn]:checked + ul {
+
+    [id^=nav-btn]:checked+ul,
+    [id^=gen-btn]:checked+ul {
         display: block;
+    }
+
+    .searchInputs {
+        flex-direction: column;
     }
 }

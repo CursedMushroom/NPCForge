@@ -1,0 +1,26 @@
+[
+    {
+        "gender": "Male",
+        "pronounSubject": "he",
+        "pronounObject": "him",
+        "pronounPossessive": "his",
+        "collectiveNoun": "is",
+        "possessiveNoun": "has"
+    },
+    {
+        "gender": "Female",
+        "pronounSubject": "she",
+        "pronounObject": "her",
+        "pronounPossessive": "her",
+        "collectiveNoun": "is",
+        "possessiveNoun": "has"
+    },
+    {
+        "gender": "Non-Binary",
+        "pronounSubject": "they",
+        "pronounObject": "them",
+        "pronounPossessive": "their",
+        "collectiveNoun": "are",
+        "possessiveNoun": "have"
+    }
+]

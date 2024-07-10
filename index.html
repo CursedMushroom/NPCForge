@@ -43,10 +43,16 @@
             sequi. Voluptate saepe quis numquam, vitae delectus reprehenderit?</p>
 
         <div class="searchInputs">
-            <button id="generateBtn">Generate Character</button>
+            <div>
+                <label for="quantity">Amount to Generate (between 1 and 5):</label>
+                <input type="number" id="quantity" name="quantity" min="1" max="5">
+                <i class="fa-solid fa-circle-question" id="tool-tip"></i>
+                <!-- <span class="tooltiptext">Tooltip text</span> -->
+            </div>
+
             <div class="custom-select">
                 <select>
-                    <option value="">Open this select menu </option>
+                    <option value="">Wealth Dist </option>
                     <option value="">GitHub</option>
                     <option value="">Instagram</option>
                     <option value="">Facebook</option>
@@ -56,10 +62,8 @@
                 </select>
             </div>
 
-            <label for="quantity">Quantity (between 1 and 5):</label>
-            <input type="number" id="quantity" name="quantity" min="1" max="5">
             <nav>
-                <label for="btn-1" class="button"> Dropdown
+                <label for="btn-1" class="button"> Races
                     <span class="fas fa-caret-down"></span>
                 </label>
                 <input type="checkbox" id="btn-1">
@@ -87,12 +91,25 @@
                             <li><a href="#">Sub Item 2</a></li>
                             <li><a href="#">Sub Item 3</a></li>
                             <li><a href="#">Sub Item 1</a></li>
-
                         </ul>
                     </li>
                 </ul>
             </nav>
-
+            <div class="custom-select">
+                <select>
+                    <option value="">Preset </option>
+                    <option value="">GitHub</option>
+                    <option value="">Instagram</option>
+                    <option value="">Facebook</option>
+                    <option value="">LinkedIn</option>
+                    <option value="">Twitter</option>
+                    <option value="">Reddit</option>
+                </select>
+            </div>
+            <div class="button-group">
+                <button>reset all</button>
+                <button id="generateBtn">Generate Character</button>
+            </div>
         </div>
 
 
