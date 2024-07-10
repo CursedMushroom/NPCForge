@@ -1,0 +1,95 @@
+{
+    "fem-names": [
+    ],
+    "masc-names": [
+    ],
+    "androgynous-names": [
+    ],
+    "surnames": [
+    ],
+    "ratio": {
+        "feminine": 0,
+        "masculine": 0,
+        "androgynous": 0
+    },
+    "ageMin": 0,
+    "ageMax": 0,
+    "appearance": {
+        "hair": {
+            "type": [
+            ],
+            "style": [
+            ],
+            "color": [
+            ]
+        },
+        "eyes": [
+        ],
+        "height": [
+            "Very Short",
+            "Short",
+            "Below Average Height",
+            "Average Height",
+            "Above Average Height",
+            "Tall",
+            "Very Tall"
+        ],
+        "build": [
+            "Slender",
+            "Athletic",
+            "Muscular",
+            "Sturdy",
+            "Stocky",
+            "Lanky",
+            "Lean",
+            "Bulky"
+        ],
+        "skin": {
+            "color": [
+            ],
+            "details": [
+                "Freckles",
+                "Moles",
+                "Age spots",
+                "Wrinkles",
+                "Dimples",
+                "Smooth",
+                "Rough",
+                "Oily",
+                "Dry",
+                "Scarred",
+                "Sunburned",
+                "Tanned",
+                "Birthmarks"
+            ],
+            "scar": [
+                "Clean cut",
+                "Jagged",
+                "Burn scar",
+                "Battle scar",
+                "Whip marks",
+                "Claw marks",
+                "Pockmarks",
+                "Surgical scar"
+            ],
+            "birthmark": [
+            ],
+            "tattoos": [
+            ],
+            "bodyPart": [
+                "Face",
+                "Neck",
+                "Shoulder",
+                "Back",
+                "Chest",
+                "Arm",
+                "Forearm",
+                "Hand",
+                "Leg",
+                "Thigh",
+                "Calf",
+                "Foot"
+            ]
+        }
+    }
+}

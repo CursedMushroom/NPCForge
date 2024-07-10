@@ -448,13 +448,13 @@
                 "Curly",
                 "Coily",
                 "Kinky",
-                "Braided"
+                "Braided",
+                "Bald"
             ],
             "style": [
                 "Short",
                 "Medium",
                 "Long",
-                "Bald",
                 "Mohawk",
                 "Ponytail",
                 "Bun",
@@ -567,8 +567,7 @@
                 "Dry",
                 "Scarred",
                 "Sunburned",
-                "Tanned",
-                "Birthmarks"
+                "Tanned"
             ],
             "scar": [
                 "Clean cut",
@@ -612,7 +611,7 @@
                 "Sword and shield",
                 "Guild emblem"
             ],
-            "body-part": [
+            "bodyPart": [
                 "Face",
                 "Neck",
                 "Shoulder",
