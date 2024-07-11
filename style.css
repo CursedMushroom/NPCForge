@@ -135,7 +135,6 @@ body {
     visibility: hidden;
     transition: top .3s;
     z-index: 2;
-    /* Add this */
 
 }
 
@@ -180,7 +179,7 @@ body {
 /* Race Dropdown Menu */
 nav {
     background: #0082e6;
-    width: 200px;
+    width: 250px;
     line-height: 40px;
     padding: 8px 25px;
     position: relative;
@@ -198,10 +197,15 @@ nav label {
     cursor: pointer;
 }
 
+.button{
+    width:100%;
+}
+
 .button span {
     float: right;
     line-height: 35px;
     padding-right: 10px;
+    font-size: 40px;
 }
 
 nav ul {
@@ -237,13 +241,14 @@ nav .menu:before {
 
 nav ul li {
     line-height: 40px;
-    padding: 8px 20px;
+    padding-left: 20px;
+    padding-right: 20px;
     cursor: pointer;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 nav ul li label {
-    font-size: 18px;
+    font-size: 14px;
 }
 
 nav ul li a {
@@ -264,7 +269,7 @@ nav ul ul {
 
 nav ul ul li {
     line-height: 30px;
-    padding-left: 30px;
+    /* padding-left: 30px; */
     border-bottom: none;
 }
 
