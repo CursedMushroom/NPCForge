@@ -441,6 +441,17 @@
     "ageMin": 18,
     "ageMax": 100,
     "appearance": {
+        "facialHair": [
+            "Clean-shaven",
+            "Stubble",
+            "Goatee",
+            "Moustache",
+            "Beard",
+            "Sideburns",
+            "Soul patch",
+            "Chinstrap",
+            "Neckbeard",
+            "Mutton chops"],
         "hair": {
             "type": [
                 "Straight",

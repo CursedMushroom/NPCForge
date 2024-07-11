@@ -15,6 +15,7 @@
     "ageMin": 0,
     "ageMax": 0,
     "appearance": {
+        "facialHair": [],
         "hair": {
             "type": [
             ],
