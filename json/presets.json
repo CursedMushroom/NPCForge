@@ -1,0 +1,236 @@
+{
+    "Waterdeep": {
+        "races": [
+            "Human",
+            "Dwarf",
+            "Elf",
+            "Halfling",
+            "Gnome"
+        ],
+        "wealth_dis": "Wealthy"
+    },
+    "Baldur's Gate": {
+        "races": [
+            "Human",
+            "Half-Elf",
+            "Tiefling",
+            "Dwarf"
+        ],
+        "wealth_dis": "Wealthy"
+    },
+    "Neverwinter": {
+        "races": [
+            "Human",
+            "Half-Elf",
+            "Dwarf",
+            "Tiefling"
+        ],
+        "wealth_dis": "Prosperous"
+    },
+    "Silverymoon": {
+        "races": [
+            "Elf",
+            "Human",
+            "Half-Elf",
+            "Dwarf",
+            "Gnome"
+        ],
+        "wealth_dis": "Wealthy"
+    },
+    "Icewind Dale": {
+        "races": [
+            "Human",
+            "Dwarf",
+            "Gnome",
+            "Half-Orc"
+        ],
+        "wealth_dis": "Modest"
+    },
+    "Cormyr": {
+        "races": [
+            "Human",
+            "Elf",
+            "Half-Elf",
+            "Halfling"
+        ],
+        "wealth_dis": "Prosperous"
+    },
+    "Sigil (City of Doors)": {
+        "races": [
+            "Human",
+            "Tiefling",
+            "Githzerai",
+            "Githyanki"
+        ],
+        "wealth_dis": "Varied"
+    },
+    "Sharn": {
+        "races": [
+            "Human",
+            "Warforged",
+            "Halfling",
+            "Elf",
+            "Gnome"
+        ],
+        "wealth_dis": "Wealthy"
+    },
+    "Stormreach": {
+        "races": [
+            "Human",
+            "Elf",
+            "Warforged",
+            "Half-Orc",
+            "Shifter"
+        ],
+        "wealth_dis": "Prosperous"
+    },
+    "Barovia": {
+        "races": [
+            "Human",
+            "Elf",
+            "Drow"
+        ],
+        "wealth_dis": "Impoverished"
+    },
+    "Tyr": {
+        "races": [
+            "Human",
+            "Dwarf",
+            "Thri-kreen"
+        ],
+        "wealth_dis": "Varied"
+    },
+    "Greyhawk City": {
+        "races": [
+            "Human",
+            "Elf",
+            "Half-Elf",
+            "Dwarf",
+            "Halfling"
+        ],
+        "wealth_dis": "Wealthy"
+    },
+    "Solace": {
+        "races": [
+            "Human",
+            "Elf",
+            "Dwarf",
+            "Kender"
+        ],
+        "wealth_dis": "Modest"
+    },
+    "Phandalin": {
+        "races": [
+            "Human",
+            "Dwarf",
+            "Elf",
+            "Halfling",
+            "Gnome"
+        ],
+        "wealth_dis": "Modest"
+    },
+    "Saltmarsh": {
+        "races": [
+            "Human",
+            "Half-Elf",
+            "Halfling",
+            "Triton",
+            "Sea Elf"
+        ],
+        "wealth_dis": "Varied"
+    },
+    "Chult": {
+        "races": [
+            "Human",
+            "Tabaxi",
+            "Tortle",
+            "Yuan-ti",
+            "Aarakocra"
+        ],
+        "wealth_dis": "Varied"
+    },
+    "Ravnica": {
+        "races": [
+            "Human",
+            "Elf",
+            "Goblin",
+            "Centaur",
+            "Vedalken"
+        ],
+        "wealth_dis": "Varied"
+    },
+    "Theros": {
+        "races": [
+            "Human",
+            "Leonin",
+            "Satyr",
+            "Triton",
+            "Centaur"
+        ],
+        "wealth_dis": "Varied"
+    },
+    "Wildemount": {
+        "races": [
+            "Human",
+            "Elf",
+            "Dwarf",
+            "Halfling",
+            "Dragonborn"
+        ],
+        "wealth_dis": "Varied"
+    },
+    "Mount Celestia": {
+        "races": [
+            "Astral Elf",
+            "Aasimar"
+        ],
+        "wealth_dis": "Opulent"
+    },
+    "The Abyss": {
+        "races": [
+            "Tiefling"
+        ],
+        "wealth_dis": "Varied"
+    },
+    "Limbo": {
+        "races": [
+            "Githzerai"
+        ],
+        "wealth_dis": "Chaotic"
+    },
+    "Mechanus": {
+        "races": [
+            "Modron",
+            "Construct",
+            "Gnome"
+        ],
+        "wealth_dis": "Wealthy"
+    },
+    "Elemental Plane of Air": {
+        "races": [
+            "Air Genasi",
+            "Aarakocra"
+        ],
+        "wealth_dis": "Varied"
+    },
+    "Elemental Plane of Earth": {
+        "races": [
+            "Earth Genasi",
+            "Gnome"
+        ],
+        "wealth_dis": "Varied"
+    },
+    "Elemental Plane of Fire": {
+        "races": [
+            "Fire Genasi"
+        ],
+        "wealth_dis": "Varied"
+    },
+    "Elemental Plane of Water": {
+        "races": [
+            "Water Genasi",
+            "Triton"
+        ],
+        "wealth_dis": "Varied"
+    }
+}

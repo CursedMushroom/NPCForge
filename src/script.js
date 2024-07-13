@@ -1,3 +1,5 @@
+let racePool = [];
+
 function generateCharacter(data, pronouns) {
     let name, age, pronounSubject, pronounObject, pronounPossessive, collectiveNoun, possessiveNoun;
     let appearanceType, appearanceStyle, appearanceColor, eyes, height, build, skinColor, skinDetail, skinScar, skinBirthmark, skinTattoo, facialHair;
@@ -105,7 +107,7 @@ async function fetchJSON(url) {
     try {
         const response = await fetch(url);
         if (!response.ok) {
-            throw new Error('Network response was not ok ' + response.statusText);
+            throw new Error('Network response for provided url was not ok ' + response.statusText);
         }
         const data = await response.json();
 
@@ -125,10 +127,23 @@ async function fetchJSON(url) {
 // Call fetchJSON 
 fetchJSON('json/human.json');
 
+
+
+function getCheckedValues() {
+    const checkboxes = document.querySelectorAll('input[name="race"]:checked');
+    const values = [];
+    checkboxes.forEach((checkbox) => {
+        values.push(checkbox.value);
+    });
+    racePool=values;
+    console.log("Checked values: " + racePool.join(', '));
+   
+}
+
 // Add event listener to the button after the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('elfBtn').addEventListener('click', function () {
-        fetchJSON('json/elf.json');
+        getCheckedValues();
     });
     document.getElementById('generateBtn').addEventListener('click', function () {
         fetchJSON('json/human.json');

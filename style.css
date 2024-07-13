@@ -180,12 +180,11 @@ body {
 nav {
     background: #0082e6;
     width: 250px;
-    line-height: 40px;
+    /* line-height: 40px; */
     padding: 8px 25px;
     position: relative;
     border-radius: 5px;
     z-index: 3;
-    /* Add this */
 
 }
 
@@ -242,13 +241,13 @@ nav .menu:before {
 nav ul li {
     line-height: 40px;
     padding-left: 20px;
-    padding-right: 20px;
+    /* padding-right: 10px; */
     cursor: pointer;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 nav ul li label {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 nav ul li a {
@@ -288,7 +287,8 @@ nav ul li span {
 
 #btn-1,
 #btn-2,
-#btn-3 {
+#btn-3,
+#btn-4 {
     display: none;
 }
 
@@ -296,7 +296,7 @@ nav ul li span {
 
 /* Custom Dropdown Selector */
 .custom-select {
-    width: 350px;
+    width: 250px;
     position: relative;
 }
 
@@ -307,7 +307,7 @@ select {
     /* other styles for aesthetics */
     width: 100%;
     font-size: 1.15rem;
-    padding: 0.675em 6em 0.675em 1em;
+    padding: 0.675em 1em 0.675em 1em;
     background-color: #fff;
     border: 1px solid #caced1;
     border-radius: 0.25rem;
