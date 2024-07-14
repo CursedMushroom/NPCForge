@@ -36,7 +36,7 @@ body {
     width: 100%;
     background-color: var(--temp7);
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     gap: 10px 20px;
     align-items: center;
     position: relative;
@@ -55,7 +55,17 @@ body {
     gap: 10px;
 }
 
+.amount{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    /* background-color: var(--temp2); */
+}
+#amount-text {
 
+    width:60%;
+}
 
 #tool-tip {
     transform: translate(10%, -55%);
@@ -173,31 +183,30 @@ body {
     display: none;
 }
 
+
+
 /* -------------------------------------------------------------------------- */
 
 
 /* Race Dropdown Menu */
 nav {
-    background: #0082e6;
+    background: #ffffff;
     width: 250px;
-    /* line-height: 40px; */
     padding: 8px 25px;
     position: relative;
     border-radius: 5px;
     z-index: 3;
-
 }
 
 nav label {
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 22px;
     font-weight: 500;
-    /* display: block; */
     cursor: pointer;
 }
 
-.button{
-    width:100%;
+.button {
+    width: 100%;
 }
 
 .button span {
@@ -205,7 +214,9 @@ nav label {
     line-height: 35px;
     padding-right: 10px;
     font-size: 40px;
+    transition: transform 200ms linear;
 }
+
 
 nav ul {
     position: absolute;
@@ -218,8 +229,7 @@ nav ul {
     display: none;
 }
 
-[id^=btn]:checked+ul {
-    /*allows for drop down to open and close*/
+[id^=btn]:checked + ul {
     display: block;
     height: 300px;
     overflow-y: auto;
@@ -230,24 +240,22 @@ nav .menu:before {
     content: '';
     height: 20px;
     width: 20px;
-    background: #0082e6;
+    background: #ffffff;
     right: 30px;
     top: -10px;
     transform: rotate(45deg);
-
-
 }
 
 nav ul li {
     line-height: 40px;
     padding-left: 20px;
-    /* padding-right: 10px; */
     cursor: pointer;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 nav ul li label {
     font-size: 16px;
+    color: rgb(255, 255, 255);
 }
 
 nav ul li a {
@@ -268,7 +276,6 @@ nav ul ul {
 
 nav ul ul li {
     line-height: 30px;
-    /* padding-left: 30px; */
     border-bottom: none;
 }
 
@@ -282,7 +289,6 @@ nav ul li span {
     float: right;
     margin-top: 10px;
     padding: 0 10px;
-    /* Corrected padding syntax */
 }
 
 #btn-1,
@@ -291,6 +297,8 @@ nav ul li span {
 #btn-4 {
     display: none;
 }
+
+
 
 /* ---------------------------------------------------------------------------------------------------------------------------- */
 
@@ -339,14 +347,112 @@ select {
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------- */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #caced1; /* Underline */
+}
 
+.right-label {
+    display: flex;
+    align-items: center;
+}
+
+.right-label input {
+    margin-left: 5px;
+}
+.drop-select {
+    width: 250px;
+    position: relative;
+}
+
+.select-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.675em 1em 0.675em 1em;
+    background-color: #fff;
+    border: 1px solid #caced1;
+    border-radius: 0.25rem;
+    cursor: pointer;
+
+    appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    font-size: 1.15rem;
+    
+  
+    
+    color: #000;
+    cursor: pointer;
+}
+
+.dropdown-icon::before,
+.dropdown-icon::after {
+    --size: 0.3rem;
+    content: "";
+    display: block;
+    border-left: var(--size) solid transparent;
+    border-right: var(--size) solid transparent;
+    margin-bottom: 0.1rem;
+}
+
+.dropdown-icon::before {
+    border-bottom: var(--size) solid black;
+}
+
+.dropdown-icon::after {
+    border-top: var(--size) solid black;
+}
+
+.checkboxes {
+    display: none;
+    height:400px;
+    overflow-y: auto;
+    border: 1px solid #caced1;
+    border-radius: 0.25rem;
+    padding: 0.5em;
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.checkboxes label {
+    display: block;
+    padding: 0.2em 0;
+}
+
+.checkboxes input {
+    margin-right: 0.5em;
+}
+
+.show {
+    display: block;
+}
+
+.amountSelect{
+    width:100px;
+}
 .gen-btn {
-    /* removed input */
     display: none;
 }
 
 .hide-input {
     display: none;
+}
+
+#race-section{
+    padding-left: 10px;
+}
+
+.results{
+    padding:10px;
 }
 
 /* MEDIA QUERY */

@@ -149,3 +149,4 @@ document.addEventListener('DOMContentLoaded', function () {
         fetchJSON('json/human.json');
     });
 });
+

@@ -37,22 +37,31 @@
 
     <div class="searchDiv">
         <h1>Random Character Description Generator</h1>
-        <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi, veritatis, mollitia hic laudantium ea
-            explicabo aliquid deserunt et modi reiciendis ipsum itaque incidunt repellat sapiente est impedit voluptatum
-            delectus rem placeat, suscipit tenetur numquam? Perspiciatis labore fugit deleniti ipsum porro omnis aperiam
-            sequi. Voluptate saepe quis numquam, vitae delectus reprehenderit?</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit...</p>
 
         <div class="searchInputs">
-            <div>
-                <label for="quantity">Amount to Generate (between 1 and 5):</label>
-                <input type="number" id="quantity" name="quantity" min="1" max="5">
-                <!-- <i class="fa-solid fa-circle-question" id="tool-tip"></i> -->
-                <!-- <span class="tooltiptext">Tooltip text</span> -->
+            <div class="amount">
+                <label for="amount" id="amount-text">Amount of NPCS to Generate:</label>
+                <div class="custom-select amountSelect">
+                    <select>
+                        <option value="1">1</option>
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                        <option value="20">20</option>
+                        <option value="25">25</option>
+                        <option value="30">30</option>
+                        <option value="35">35</option>
+                        <option value="40">40</option>
+                        <option value="45">45</option>
+                        <option value="50">50</option>
+                    </select>
+                </div>
             </div>
 
             <div class="custom-select">
                 <select>
-                    <option value="">--- Wealth Distribution --- </option>
+                    <option value="" disabled selected hidden>--- Wealth Distribution ---</option>
                     <option value="opulent">Opulent</option>
                     <option value="wealthy">Wealthy</option>
                     <option value="prosperous">Prosperous</option>
@@ -61,161 +70,136 @@
                     <option value="impoverished">Impoverished</option>
                     <option value="destitute">Destitute</option>
                 </select>
+
             </div>
 
-            <nav>
-                <label for="btn-1" class="button"> Races
-                    <span class="fas fa-caret-down"></span>
-                </label>
-                <input type="checkbox" id="btn-1">
-                <ul class="menu">
-                    <li>
-                        <input type="checkbox" id="allRaces" name="all-races" value="allRaces">
-                        <label for="allRaces"> All Races </label>
-                    </li>
-                    <li>
-                        <label for="btn-2" class="first">Player's Handbook<span
-                                class="fas fa-caret-down"></span></label>
-                        <input type="checkbox" id="btn-2">
-                        <ul>
-                            <li>
-                                <input type="checkbox" id="dwarf" name="race" value="dwarf">
-                                <label for="dwarf"> Dwarf </label>
-                            </li>
+            <div class="drop-select">
+                <div class="select-box" onclick="toggleDropdown(event)">
+                    <span id="selected-value">--- Races ---</span>
+                    <div class="dropdown-icon"></div>
+                </div>
 
-                            <li>
-                                <input type="checkbox" id="elf" name="race" value="elf">
-                                <label for="elf"> Elf </label>
-                            </li>
+                <div id="checkboxes" class="checkboxes">
+                    <div class="container">
+                        <label id="book-title"><strong>Player's Handbook</strong></label>
+                        <label for="PHBAll" class="right-label">
+                            All <input type="checkbox" id="PHBAll" name="race" value="PHBAll" />
+                        </label>
+                    </div>
+                    <div id="race-section">
+                        <label for="dwarf">
+                            <input type="checkbox" id="dwarf" name="race" value="dwarf"
+                                onclick="updateSelectedValue(event)" /> Dwarf
+                        </label>
+                        <label for="elf">
+                            <input type="checkbox" id="elf" name="race" value="elf"
+                                onclick="updateSelectedValue(event)" /> Elf
+                        </label>
+                        <label for="drow">
+                            <input type="checkbox" id="drow" name="race" value="drow"
+                                onclick="updateSelectedValue(event)" /> Drow
+                        </label>
+                        <label for="halfling">
+                            <input type="checkbox" id="halfling" name="race" value="halfling"
+                                onclick="updateSelectedValue(event)" /> Halfling
+                        </label>
+                        <label for="human">
+                            <input type="checkbox" id="human" name="race" value="human"
+                                onclick="updateSelectedValue(event)" /> Human
+                        </label>
+                        <label for="dragonborn">
+                            <input type="checkbox" id="dragonborn" name="race" value="dragonborn"
+                                onclick="updateSelectedValue(event)" /> Dragonborn
+                        </label>
+                        <label for="gnome">
+                            <input type="checkbox" id="gnome" name="race" value="gnome"
+                                onclick="updateSelectedValue(event)" /> Gnome
+                        </label>
+                        <label for="half-elf">
+                            <input type="checkbox" id="half-elf" name="race" value="half-elf"
+                                onclick="updateSelectedValue(event)" /> Half-Elf
+                        </label>
+                        <label for="half-orc">
+                            <input type="checkbox" id="half-orc" name="race" value="half-orc"
+                                onclick="updateSelectedValue(event)" /> Half-Orc
+                        </label>
+                        <label for="tiefling">
+                            <input type="checkbox" id="tiefling" name="race" value="tiefling"
+                                onclick="updateSelectedValue(event)" /> Tiefling
+                        </label>
 
-                            <li>
-                                <input type="checkbox" id="drow" name="race" value="drow">
-                                <label for="drow"> Drow</label>
-                            </li>
 
-                            <li>
-                                <input type="checkbox" id="halfling" name="race" value="halfling">
-                                <label for="halfling"> Halfling</label>
-                            </li>
+                    </div>
+                    <div class="container">
+                        <label id="book-title"><strong>Volo's Guide to Monsters</strong></label>
+                        <label for="voloAll" class="right-label">
+                            All <input type="checkbox" id="voloAll" name="race" value="voloAll" />
+                        </label>
+                    </div>
+                    <div id="race-section">
+                        <label for="aasimar">
+                            <input type="checkbox" id="aasimar" name="race" value="aasimar"
+                                onclick="updateSelectedValue(event)" /> Aasimar
+                        </label>
+                        <label for="firbolg">
+                            <input type="checkbox" id="firbolg" name="race" value="firbolg"
+                                onclick="updateSelectedValue(event)" /> Firbolg
+                        </label>
+                        <label for="goliath">
+                            <input type="checkbox" id="goliath" name="race" value="goliath"
+                                onclick="updateSelectedValue(event)" /> Goliath
+                        </label>
+                        <label for="kenku">
+                            <input type="checkbox" id="kenku" name="race" value="kenku"
+                                onclick="updateSelectedValue(event)" /> Kenku
+                        </label>
+                        <label for="lizardfolk">
+                            <input type="checkbox" id="lizardfolk" name="race" value="lizardfolk"
+                                onclick="updateSelectedValue(event)" /> Lizardfolk
+                        </label>
+                        <label for="tabaxi">
+                            <input type="checkbox" id="tabaxi" name="race" value="tabaxi"
+                                onclick="updateSelectedValue(event)" /> Tabaxi
+                        </label>
+                        <label for="triton">
+                            <input type="checkbox" id="triton" name="race" value="triton"
+                                onclick="updateSelectedValue(event)" /> Triton
+                        </label>
+                        <label for="bugbear">
+                            <input type="checkbox" id="bugbear" name="race" value="bugbear"
+                                onclick="updateSelectedValue(event)" /> Bugbear
+                        </label>
+                        <label for="goblin">
+                            <input type="checkbox" id="goblin" name="race" value="goblin"
+                                onclick="updateSelectedValue(event)" /> Goblin
+                        </label>
+                        <label for="hobgoblin">
+                            <input type="checkbox" id="hobgoblin" name="race" value="hobgoblin"
+                                onclick="updateSelectedValue(event)" /> Hobgoblin
+                        </label>
+                        <label for="kobold">
+                            <input type="checkbox" id="kobold" name="race" value="kobold"
+                                onclick="updateSelectedValue(event)" /> Kobold
+                        </label>
+                        <label for="orc">
+                            <input type="checkbox" id="orc" name="race" value="orc"
+                                onclick="updateSelectedValue(event)" /> Orc
+                        </label>
+                        <label for="yuanTiPure">
+                            <input type="checkbox" id="yuanTiPure" name="race" value="yuanTiPure"
+                                onclick="updateSelectedValue(event)" /> Yuan-ti Pureblood
+                        </label>
 
-                            <li>
-                                <input type="checkbox" id="human" name="race" value="human">
-                                <label for="human"> Human</label>
-                            </li>
+                    </div>
 
-                            <li>
-                                <input type="checkbox" id="dragonborn" name="race" value="dragonborn">
-                                <label for="dragonborn"> Dragonborn</label>
-                            </li>
 
-                            <li>
-                                <input type="checkbox" id="gnome" name="race" value="gnome">
-                                <label for="gnome"> Gnome</label>
-                            </li>
 
-                            <li>
-                                <input type="checkbox" id="halfElf" name="race" value="halfElf">
-                                <label for="halfElf"> Half-Elf</label>
-                            </li>
+                </div>
+            </div>
 
-                            <li>
-                                <input type="checkbox" id="halfOrc" name="race" value="halfOrc">
-                                <label for="halfOrc"> Half-Orc </label>
-                            </li>
-
-                            <li>
-                                <input type="checkbox" id="tiefling" name="race" value="tiefling">
-                                <label for="tiefling"> Tiefling</label>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <label for="btn-3" class="second">Volo's Guide to Monsters <span
-                                class="fas fa-caret-down"></span></label>
-                        <input type="checkbox" id="btn-3">
-                        <ul>
-                            <li>
-                                <input type="checkbox" id="aasimar" name="race" value="aasimar">
-                                <label for="aasimar"> Aasimar</label>
-                            </li>
-
-                            <li>
-                                <input type="checkbox" id="firbolg" name="race" value="firbolg">
-                                <label for="firbolg"> Firbolg</label>
-                            </li>
-
-                            <li>
-                                <input type="checkbox" id="goliath" name="race" value="goliath">
-                                <label for="goliath"> Goliath</label>
-                            </li>
-
-                            <li>
-                                <input type="checkbox" id="kenku" name="race" value="kenku">
-                                <label for="kenku"> Kenku</label>
-                            </li>
-
-                            <li>
-                                <input type="checkbox" id="lizardfolk" name="race" value="lizardfolk">
-                                <label for="lizardfolk"> Lizardfolk</label>
-                            </li>
-
-                            <li>
-                                <input type="checkbox" id="tabaxi" name="race" value="tabaxi">
-                                <label for="tabaxi"> Tabaxi</label>
-                            </li>
-
-                            <li>
-                                <input type="checkbox" id="triton" name="race" value="triton">
-                                <label for="triton"> Triton</label>
-                            </li>
-
-                            <li>
-                                <input type="checkbox" id="bugbear" name="race" value="bugbear">
-                                <label for="bugbear"> Bugbear</label>
-                            </li>
-
-                            <li>
-                                <input type="checkbox" id="goblin" name="race" value="goblin">
-                                <label for="goblin"> Goblin</label>
-                            </li>
-
-                            <li>
-                                <input type="checkbox" id="hobgoblin" name="race" value="hobgoblin">
-                                <label for="hobgoblin"> Hobgoblin</label>
-                            </li>
-
-                            <li>
-                                <input type="checkbox" id="kobold" name="race" value="kobold">
-                                <label for="kobold"> Kobold</label>
-                            </li>
-
-                            <li>
-                                <input type="checkbox" id="orc" name="race" value="orc">
-                                <label for="orc"> Orc</label>
-                            </li>
-
-                            <li>
-                                <input type="checkbox" id="yuanTiPure" name="race" value="yuanTiPure">
-                                <label for="yuanTiPure">Yuan-ti Pureblood</label>
-                            </li>
-                        </ul>
-                    <li>
-                        <label for="btn-4" class="third">Monsters of the Multiverse<span
-                                class="fas fa-caret-down"></span></label>
-                        <input type="checkbox" id="btn-4">
-                        <ul>
-                            <li>
-                                <input type="checkbox" id="test" name="race" value="test">
-                                <label for="test">test</label>
-                            </li>
-                        </ul>
-                    </li>
-                    </li>
-                </ul>
-            </nav>
             <div class="custom-select">
                 <select>
-                    <option value="">--- Presets --- </option>
+                    <option value="" disabled selected hidden>--- Presets ---</option>
                     <option value="">Waterdeep</option>
                     <option value="">Baldur's Gate</option>
                     <option value="">Neverwinter</option>
@@ -224,21 +208,158 @@
                     <option value="">Cormyr</option>
                 </select>
             </div>
+
+
+
+
+
+
+
             <div class="button-group">
                 <button id="elfBtn">reset all</button>
                 <button id="generateBtn">Generate Character</button>
             </div>
         </div>
-
-
-
     </div>
+
+
 
     <div class="results">
         <p id="characterDescription"></p>
     </div>
 
     <script src="src/script.js"></script>
+    <script src="src/dropdown.js"></script>
 </body>
 
 </html>
+
+
+<!-- <nav>
+    <label for="btn-1" class="button"> Races <span class="fas fa-caret-down"></span>
+    </label>
+    <input type="checkbox" id="btn-1">
+    <ul class="menu">
+        <li>
+            <input type="checkbox" id="allRaces" name="all-races" value="allRaces">
+            <label for="allRaces"> All Races </label>
+        </li>
+        <li>
+            <label for="btn-2" class="first">Player's Handbook<span
+                    class="fas fa-caret-down"></span></label>
+            <input type="checkbox" id="btn-2">
+            <ul>
+                <li>
+                    <input type="checkbox" id="dwarf" name="race" value="dwarf">
+                    <label for="dwarf"> Dwarf </label>
+                </li>
+                <li>
+                    <input type="checkbox" id="elf" name="race" value="elf">
+                    <label for="elf"> Elf </label>
+                </li>
+                <li>
+                    <input type="checkbox" id="drow" name="race" value="drow">
+                    <label for="drow"> Drow</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="halfling" name="race" value="halfling">
+                    <label for="halfling"> Halfling</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="human" name="race" value="human">
+                    <label for="human"> Human</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="dragonborn" name="race" value="dragonborn">
+                    <label for="dragonborn"> Dragonborn</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="gnome" name="race" value="gnome">
+                    <label for="gnome"> Gnome</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="halfElf" name="race" value="halfElf">
+                    <label for="halfElf"> Half-Elf</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="halfOrc" name="race" value="halfOrc">
+                    <label for="halfOrc"> Half-Orc </label>
+                </li>
+                <li>
+                    <input type="checkbox" id="tiefling" name="race" value="tiefling">
+                    <label for="tiefling"> Tiefling</label>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <label for="btn-3" class="second">Volo's Guide to Monsters <span
+                    class="fas fa-caret-down"></span></label>
+            <input type="checkbox" id="btn-3">
+            <ul>
+                <li>
+                    <input type="checkbox" id="aasimar" name="race" value="aasimar">
+                    <label for="aasimar"> Aasimar</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="firbolg" name="race" value="firbolg">
+                    <label for="firbolg"> Firbolg</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="goliath" name="race" value="goliath">
+                    <label for="goliath"> Goliath</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="kenku" name="race" value="kenku">
+                    <label for="kenku"> Kenku</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="lizardfolk" name="race" value="lizardfolk">
+                    <label for="lizardfolk"> Lizardfolk</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="tabaxi" name="race" value="tabaxi">
+                    <label for="tabaxi"> Tabaxi</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="triton" name="race" value="triton">
+                    <label for="triton"> Triton</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="bugbear" name="race" value="bugbear">
+                    <label for="bugbear"> Bugbear</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="goblin" name="race" value="goblin">
+                    <label for="goblin"> Goblin</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="hobgoblin" name="race" value="hobgoblin">
+                    <label for="hobgoblin"> Hobgoblin</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="kobold" name="race" value="kobold">
+                    <label for="kobold"> Kobold</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="orc" name="race" value="orc">
+                    <label for="orc"> Orc</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="yuanTiPure" name="race" value="yuanTiPure">
+                    <label for="yuanTiPure">Yuan-ti Pureblood</label>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <label for="btn-4" class="third">Monsters of the Multiverse<span
+                    class="fas fa-caret-down"></span></label>
+            <input type="checkbox" id="btn-4">
+            <ul>
+                <li>
+                    <input type="checkbox" id="test" name="race" value="test">
+                    <label for="test">test</label>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</nav> -->
