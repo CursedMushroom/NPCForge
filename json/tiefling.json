@@ -1,4 +1,5 @@
 {
+    "race":"Tiefling",
     "fem-names": [
         "Akta",
         "Anakis",
@@ -166,7 +167,7 @@
                 "Gold"
             ]
         },
-        "eye-colors": [
+        "eyes": [
             "Red",
             "Black",
             "White",

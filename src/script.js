@@ -3,8 +3,7 @@ let racePool = [];
 function generateCharacter(data, pronouns) {
     let name, age, pronounSubject, pronounObject, pronounPossessive, collectiveNoun, possessiveNoun;
     let appearanceType, appearanceStyle, appearanceColor, eyes, height, build, skinColor, skinDetail, skinScar, skinBirthmark, skinTattoo, facialHair;
-
-    const { "fem-names": femNames, "masc-names": mascNames, "androgynous-names": androNames, ratio, ageMin, ageMax, appearance, surnames: surname } = data;
+    const { "fem-names": femNames, "masc-names": mascNames, "androgynous-names": androNames, ratio, ageMin, ageMax, appearance, surnames: surname, race } = data;
     const skin = appearance.skin;
     const totalRatio = ratio.feminine + ratio.masculine + ratio.androgynous;
 
@@ -57,6 +56,8 @@ function generateCharacter(data, pronouns) {
     height = getRandomElement(appearance.height);
     build = getRandomElement(appearance.build);
 
+    eyes = getRandomElement(appearance.eyes);
+
     if (appearance.hair) {
         appearanceType = getRandomElement(appearance.hair.type);
         appearanceStyle = appearanceType !== "Bald" ? getRandomElement(appearance.hair.style) : "None";
@@ -95,6 +96,30 @@ function generateCharacter(data, pronouns) {
     // Example of displaying on the HTML element with id 'characterDescription'
     const characterDescription = document.getElementById('characterDescription');
     characterDescription.textContent = `Name: ${name}, Age: ${age}, Hair: ${appearanceType} ${appearanceStyle} ${appearanceColor}, Facial Hair: ${facialHair}, Skin: ${skinColor}`;
+
+    const character = {
+        name: name,
+        age: age,
+        eyes: eyes,
+        pronounSubject: pronounSubject,
+        pronounObject: pronounObject,
+        pronounPossessive: pronounPossessive,
+        race: race,
+        // job: getRandomElement(appearance.job),
+        height: height,
+        build: build,
+        skinColor: skinColor,
+        appearanceType: appearanceType,
+        appearanceStyle: appearanceStyle,
+        appearanceColor: appearanceColor,
+        facialHair: facialHair,
+        skinDetail: skinDetail,
+        skinScar: skinScar,
+        skinBirthmark: skinBirthmark,
+        skinTattoo: skinTattoo,
+        // clothingAccessories: getRandomElement(appearance.clothingAccessories)
+    };
+    generateCard(character);
 }
 
 // Function to get a random element from an array
@@ -102,6 +127,45 @@ function getRandomElement(arr) {
     return arr[Math.floor(Math.random() * arr.length)];
 }
 
+function generateCard(character) {
+    const card = document.createElement('div');
+    card.classList.add('card');
+
+    card.innerHTML = `
+            <div class="card-title">
+                <h2 id="character-name"><b>${character.name}</b></h2>
+                <div class="card-buttons">
+                    <button class="regenerate"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button class="delete" onclick="deleteCard(event)" ><i class="fa-solid fa-x"></i></button>
+                    
+                </div>
+
+            </div>
+            <hr>
+            <div class="card-info">
+                <p class="character-pronouns"><span class="title">Pronouns:</span> ${character.pronounSubject}/${character.pronounObject}/${character.pronounPossessive}</p>
+                <p class="character-age"><span class="title">Age:</span> ${character.age}</p>
+                <p class="character-race"><span class="title">Race:</span> ${character.race}</p>
+                <div class="appearance-info">
+                <p class="character-height"><span class="title">Height:</span> ${character.height}</p>
+                <p class="character-build"><span class="title">Build:</span> ${character.build}</p>
+                <p class="character-skin-color"><span class="title">Skin Color:</span> ${character.skinColor}</p>
+                <p class="character-eyes"><span class="title">Eye Color:</span> ${character.eyes}</p>
+                <p class="character-hair"><span class="title">Hair Type:</span> ${character.appearanceType}</p>
+                
+                ${character.appearanceType !== "Bald" ? `<p class="character-hair-color"><span class="title">Hair Color:</span>${character.appearanceColor}</p>` : ""}
+                ${character.appearanceType !== "Bald" ? `<p class="character-hair-style"><span class="title">Hair Style:</span> ${character.appearanceStyle}</p>` : ""}
+                ${character.facialHair !== "None" ? `<p class="character-facial-hair"><span class="title">Facial Hair:</span> ${character.facialHair}</p>` : ""}
+                ${character.skinDetail !== "None" ? `<p class="character-skin-details"><span class="title">Skin Details:</span> ${character.skinDetail}</p>` : ""}
+                ${character.skinScar !== "None" ? `<p class="character-skin-scar"><span class="title">Skin Scar:</span> ${character.skinScar}</p>` : ""}
+                ${character.skinBirthmark !== "None" ? `<p class="character-skin-birthmark"><span class="title">Skin Birthmark:</span> ${character.skinBirthmark}</p>` : ""}
+                ${character.skinTattoo !== "None" ? `<p class="character-skin-tattoo"><span class="title">Skin Tattoo:</span> ${character.skinTattoo}</p>` : ""}
+            </div> </div>
+    `;
+
+    const results = document.querySelector('.results');
+    results.appendChild(card);
+}
 // Function to fetch JSON data and generate character
 async function fetchJSON(url) {
     try {
@@ -135,10 +199,15 @@ function getCheckedValues() {
     checkboxes.forEach((checkbox) => {
         values.push(checkbox.value);
     });
-    racePool=values;
+    racePool = values;
     console.log("Checked values: " + racePool.join(', '));
-   
+
 }
+
+function deleteCard(event) {
+    const card = event.target.closest('.card');
+    card.remove();
+};
 
 // Add event listener to the button after the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', function () {
@@ -146,7 +215,18 @@ document.addEventListener('DOMContentLoaded', function () {
         getCheckedValues();
     });
     document.getElementById('generateBtn').addEventListener('click', function () {
-        fetchJSON('json/human.json');
+        // fetchJSON('json/human.json');
+        getCheckedValues();
+        if (racePool.length === 0) {
+            alert
+                ('Please select at least 1 race');
+        }
+        else {
+            let choice = getRandomElement(racePool);
+            fetchJSON(`json/${choice}.json`);
+            console.log(`json/${choice}.json`);
+        }
+
     });
 });
 

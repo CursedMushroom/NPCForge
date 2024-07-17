@@ -55,16 +55,17 @@ body {
     gap: 10px;
 }
 
-.amount{
+.amount {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     padding: 10px;
     /* background-color: var(--temp2); */
 }
+
 #amount-text {
 
-    width:60%;
+    width: 60%;
 }
 
 #tool-tip {
@@ -229,7 +230,7 @@ nav ul {
     display: none;
 }
 
-[id^=btn]:checked + ul {
+[id^=btn]:checked+ul {
     display: block;
     height: 300px;
     overflow-y: auto;
@@ -354,7 +355,8 @@ select {
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
-    border-bottom: 1px solid #caced1; /* Underline */
+    border-bottom: 1px solid #caced1;
+    /* Underline */
 }
 
 .right-label {
@@ -365,6 +367,7 @@ select {
 .right-label input {
     margin-left: 5px;
 }
+
 .drop-select {
     width: 250px;
     position: relative;
@@ -384,9 +387,9 @@ select {
     -webkit-appearance: none;
     width: 100%;
     font-size: 1.15rem;
-    
-  
-    
+
+
+
     color: #000;
     cursor: pointer;
 }
@@ -411,7 +414,7 @@ select {
 
 .checkboxes {
     display: none;
-    height:400px;
+    height: 400px;
     overflow-y: auto;
     border: 1px solid #caced1;
     border-radius: 0.25rem;
@@ -436,9 +439,10 @@ select {
     display: block;
 }
 
-.amountSelect{
-    width:100px;
+.amountSelect {
+    width: 100px;
 }
+
 .gen-btn {
     display: none;
 }
@@ -447,16 +451,95 @@ select {
     display: none;
 }
 
-#race-section{
+#race-section {
     padding-left: 10px;
 }
 
+.results {
+    padding: 10px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    /* 5px rounded corners */
+    width: 350px;
+    background-color: var(--temp2);
+    height: 450px;
+    padding: 10px;
+    position: relative;
+
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+hr {
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right,
+            transparent,
+            var(--temp10) calc(50% - 25%),
+            var(--temp10) calc(50% + 25%),
+            transparent);
+}
+
+.card-buttons {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    display: flex;
+}
+
+.card-buttons button {
+    background-color: var(--temp8);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 2px 5px;
+    cursor: pointer;
+}
+
+.card-buttons button.regenerate {
+    background-color: var(--temp11);
+}
+
+.card-info {
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.card-info p {
+    margin: 0 0 10px;
+}
+
+.title {
+    font-weight: bold;
+    /* display: block; */
+    margin-bottom: 5px;
+}
+
+.appearance-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
+
 .results{
-    padding:10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid with minimum column width of 300px */
+    gap: 20px; /* Gap between grid items */
+    padding: 20px; /* Padding around the grid */
 }
 
 /* MEDIA QUERY */
 @media all and (max-width: 968px) {
+    .results{
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust column width for smaller screens */
+    }
     .navbar ul {
         margin-right: 0px;
         float: left;
