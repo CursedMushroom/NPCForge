@@ -70,14 +70,14 @@ function generateCharacter(data, pronouns) {
         skinColor = getRandomElement(appearanceColor);
     } else if (appearance.fur) {
         appearanceType = getRandomElement(appearance.fur.type);
-        appearanceStyle = "Furry";
+        appearanceStyle = "Fur";
         appearanceColor = getRandomElement(appearance.fur.color);
         skinColor = getRandomElement(appearanceColor);
     } else if (appearance.scales) {
         appearanceType = getRandomElement(appearance.scales.type);
         appearanceStyle = "Scaled";
         appearanceColor = getRandomElement(appearance.scales.color);
-        skinColor = getRandomElement(appearanceColor);
+        skinColor = appearanceColor;
     }
 
     skinDetail = (skin.details && skin.details.length > 0 && Math.random() < 0.4) ? getRandomElement(skin.details) : "None";
@@ -93,9 +93,8 @@ function generateCharacter(data, pronouns) {
     console.log(`Skin: Color: ${skinColor}, Detail: ${skinDetail}, Scar: ${skinScar}, Birthmark: ${skinBirthmark}, Tattoo: ${skinTattoo}`);
     console.log('--------------------------------------------------------------------');
 
-    // Example of displaying on the HTML element with id 'characterDescription'
-    const characterDescription = document.getElementById('characterDescription');
-    characterDescription.textContent = `Name: ${name}, Age: ${age}, Hair: ${appearanceType} ${appearanceStyle} ${appearanceColor}, Facial Hair: ${facialHair}, Skin: ${skinColor}`;
+    // const characterDescription = document.getElementById('characterDescription');
+    // characterDescription.textContent = `Name: ${name}, Age: ${age}, Hair: ${appearanceType} ${appearanceStyle} ${appearanceColor}, Facial Hair: ${facialHair}, Skin: ${skinColor}`;
 
     const character = {
         name: name,
@@ -131,36 +130,58 @@ function generateCard(character) {
     const card = document.createElement('div');
     card.classList.add('card');
 
-    card.innerHTML = `
-            <div class="card-title">
-                <h2 id="character-name"><b>${character.name}</b></h2>
-                <div class="card-buttons">
-                    <button class="regenerate"><i class="fa-solid fa-arrows-rotate"></i></button>
-                    <button class="delete" onclick="deleteCard(event)" ><i class="fa-solid fa-x"></i></button>
-                    
-                </div>
+    let hairOrScaleInfo = '';
+    console.log(character.appearanceStyle);
 
+    if (character.appearanceStyle === "Scaled") {
+        hairOrScaleInfo = `
+            <p class="character-scale-color"><span class="title">Scale Color:</span> ${character.appearanceColor}</p>
+            <p class="character-scale-type"><span class="title">Scale Type:</span> ${character.appearanceType}</p>
+        `;
+    } else if (character.appearanceStyle === "Feathered") {
+        hairOrScaleInfo = `
+            <p class="character-feather-color"><span class="title">Feather Color:</span> ${character.appearanceColor}</p>
+            <p class="character-feather-type"><span class="title">Feather Type:</span> ${character.appearanceType}</p>
+        `;
+    } else if (character.appearanceStyle === "Fur") {
+        hairOrScaleInfo = `
+            <p class="character-fur-color"><span class="title">Fur Color:</span> ${character.appearanceColor}</p>
+            <p class="character-fur-type"><span class="title">Fur Type:</span> ${character.appearanceType}</p>
+        `;
+    } else {
+        hairOrScaleInfo = `
+            <p class="character-hair"><span class="title">Hair Type:</span> ${character.appearanceType}</p>
+            ${character.appearanceType !== "Bald" ? `<p class="character-hair-color"><span class="title">Hair Color:</span> ${character.appearanceColor}</p>` : ""}
+            ${character.appearanceType !== "Bald" ? `<p class="character-hair-style"><span class="title">Hair Style:</span> ${character.appearanceStyle}</p>` : ""}
+        `;
+    }
+
+    card.innerHTML = `
+        <div class="card-title">
+            <h2 id="character-name"><b>${character.name}</b></h2>
+            <div class="card-buttons">
+                <button class="lock"><i class="fa-solid fa-unlock"></i></button>
+                <button class="delete" onclick="deleteCard(event)"><i class="fa-solid fa-x"></i></button>
             </div>
-            <hr>
-            <div class="card-info">
-                <p class="character-pronouns"><span class="title">Pronouns:</span> ${character.pronounSubject}/${character.pronounObject}/${character.pronounPossessive}</p>
-                <p class="character-age"><span class="title">Age:</span> ${character.age}</p>
-                <p class="character-race"><span class="title">Race:</span> ${character.race}</p>
-                <div class="appearance-info">
+        </div>
+        <hr>
+        <div class="card-info">
+            <p class="character-pronouns"><span class="title">Pronouns:</span> ${character.pronounSubject}/${character.pronounObject}/${character.pronounPossessive}</p>
+            <p class="character-age"><span class="title">Age:</span> ${character.age}</p>
+            <p class="character-race"><span class="title">Race:</span> ${character.race}</p>
+            <div class="appearance-info">
                 <p class="character-height"><span class="title">Height:</span> ${character.height}</p>
                 <p class="character-build"><span class="title">Build:</span> ${character.build}</p>
-                <p class="character-skin-color"><span class="title">Skin Color:</span> ${character.skinColor}</p>
+                ${character.appearanceStyle !== "Feathered" && character.appearanceStyle !== "Scaled" && character.appearanceStyle !== "Fur" ? `<p class="character-skin-color"><span class="title">Skin Color:</span> ${character.skinColor}</p>` : ""}
                 <p class="character-eyes"><span class="title">Eye Color:</span> ${character.eyes}</p>
-                <p class="character-hair"><span class="title">Hair Type:</span> ${character.appearanceType}</p>
-                
-                ${character.appearanceType !== "Bald" ? `<p class="character-hair-color"><span class="title">Hair Color:</span>${character.appearanceColor}</p>` : ""}
-                ${character.appearanceType !== "Bald" ? `<p class="character-hair-style"><span class="title">Hair Style:</span> ${character.appearanceStyle}</p>` : ""}
+                ${hairOrScaleInfo}
                 ${character.facialHair !== "None" ? `<p class="character-facial-hair"><span class="title">Facial Hair:</span> ${character.facialHair}</p>` : ""}
                 ${character.skinDetail !== "None" ? `<p class="character-skin-details"><span class="title">Skin Details:</span> ${character.skinDetail}</p>` : ""}
                 ${character.skinScar !== "None" ? `<p class="character-skin-scar"><span class="title">Skin Scar:</span> ${character.skinScar}</p>` : ""}
                 ${character.skinBirthmark !== "None" ? `<p class="character-skin-birthmark"><span class="title">Skin Birthmark:</span> ${character.skinBirthmark}</p>` : ""}
                 ${character.skinTattoo !== "None" ? `<p class="character-skin-tattoo"><span class="title">Skin Tattoo:</span> ${character.skinTattoo}</p>` : ""}
-            </div> </div>
+            </div>
+        </div>
     `;
 
     const results = document.querySelector('.results');
@@ -197,11 +218,12 @@ function getCheckedValues() {
     const checkboxes = document.querySelectorAll('input[name="race"]:checked');
     const values = [];
     checkboxes.forEach((checkbox) => {
-        values.push(checkbox.value);
+        if (!checkbox.id.includes('All')) { // Exclude "All" checkboxes
+            values.push(checkbox.value);
+        }
     });
     racePool = values;
     console.log("Checked values: " + racePool.join(', '));
-
 }
 
 function deleteCard(event) {
@@ -222,9 +244,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 ('Please select at least 1 race');
         }
         else {
+            const selectElement = document.getElementById('npcAmount');
+            const selectedValue = selectElement.value;
+
+            for (let i = 0; i < selectedValue; i++) {
             let choice = getRandomElement(racePool);
-            fetchJSON(`json/${choice}.json`);
-            console.log(`json/${choice}.json`);
+            fetchJSON(`json/${choice}.json`);}
+            // console.log(`json/${choice}.json`);
         }
 
     });

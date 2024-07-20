@@ -30,6 +30,9 @@ body {
     padding: 10px;
 }
 
+#character-name b {
+    font-family: "IM Fell Great Primer SC", serif;
+}
 
 .searchInputs {
     padding: 10px;
@@ -93,6 +96,7 @@ body {
     font-weight: 600px;
     line-height: 70px;
     padding-left: 60px;
+    font-family: "IM Fell Great Primer SC", serif;
     /* display: none; */
 
 }
@@ -185,6 +189,10 @@ body {
 }
 
 
+#book-title strong{
+    font-size: 14px;
+    font-family: "IM Fell Great Primer SC", serif;
+}
 
 /* -------------------------------------------------------------------------- */
 
@@ -307,6 +315,7 @@ nav ul li span {
 .custom-select {
     width: 250px;
     position: relative;
+    font-family: "Bellefair", serif;
 }
 
 select {
@@ -322,6 +331,7 @@ select {
     border-radius: 0.25rem;
     color: #000;
     cursor: pointer;
+    font-family: "Bellefair", serif;
 }
 
 .custom-select::before,
@@ -392,6 +402,7 @@ select {
 
     color: #000;
     cursor: pointer;
+    font-family: "Bellefair", serif;
 }
 
 .dropdown-icon::before,
@@ -412,6 +423,10 @@ select {
     border-top: var(--size) solid black;
 }
 
+#selected-value {
+    font-family: "Bellefair", serif;
+}
+
 .checkboxes {
     display: none;
     height: 400px;
@@ -429,6 +444,7 @@ select {
 .checkboxes label {
     display: block;
     padding: 0.2em 0;
+    font-family: "Bellefair", serif;
 }
 
 .checkboxes input {
@@ -451,13 +467,10 @@ select {
     display: none;
 }
 
-#race-section {
+.race-section {
     padding-left: 10px;
 }
 
-.results {
-    padding: 10px;
-}
 
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -492,7 +505,9 @@ hr {
     right: 2px;
     display: flex;
 }
-
+option {
+    font-family: "Bellefair", serif;
+}
 .card-buttons button {
     background-color: var(--temp8);
     color: white;
@@ -502,7 +517,7 @@ hr {
     cursor: pointer;
 }
 
-.card-buttons button.regenerate {
+.card-buttons button.lock {
     background-color: var(--temp11);
 }
 
@@ -510,16 +525,20 @@ hr {
     border-radius: 8px;
     max-width: 400px;
     margin: 0 auto;
+    padding: 10px;
+
 }
 
 .card-info p {
     margin: 0 0 10px;
+    font-family: "Bellefair", serif;
 }
 
 .title {
     font-weight: bold;
     /* display: block; */
     margin-bottom: 5px;
+    font-family: "Bellefair", serif;
 }
 
 .appearance-info {
@@ -528,18 +547,19 @@ hr {
     gap: 5px;
 }
 
-.results{
+.results {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid with minimum column width of 300px */
-    gap: 20px; /* Gap between grid items */
-    padding: 20px; /* Padding around the grid */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
 }
 
 /* MEDIA QUERY */
 @media all and (max-width: 968px) {
-    .results{
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust column width for smaller screens */
+    .results {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
+
     .navbar ul {
         margin-right: 0px;
         float: left;
@@ -548,6 +568,7 @@ hr {
     .logo {
         padding-left: 30px;
         width: 100%;
+
     }
 
     .navbar ul li,

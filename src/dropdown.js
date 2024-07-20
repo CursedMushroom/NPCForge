@@ -15,22 +15,27 @@ document.addEventListener("click", function(event) {
 
 function updateSelectedValue(event) {
     event.stopPropagation();
-    const checkboxes = document.querySelectorAll("#checkboxes input:checked");
-    const count = checkboxes.length;
+    const allCheckboxes = document.querySelectorAll("#checkboxes input[type='checkbox']");
+    const checkboxes = Array.from(allCheckboxes).filter(checkbox => checkbox.checked && !checkbox.id.includes('All'));
 
-    let selectedValue;
-    if (count === 0) {
-        selectedValue = "--- Races ---";
+    const selectedValue = checkboxes
+        .map(checkbox => checkbox.parentNode.textContent.trim())
+        .slice(0, 2)
+        .join(", ") || "--- Race ---";
+
+    const remainingCount = checkboxes.length - 2;
+    if (remainingCount > 0) {
+        document.getElementById("selected-value").textContent = `${selectedValue} +${remainingCount} more selected`;
     } else {
-        const selectedNames = Array.from(checkboxes)
-            .map(checkbox => checkbox.parentNode.textContent.trim());
-
-        if (count > 2) {
-            selectedValue = `${selectedNames.slice(0, 2).join(", ")} +${count - 2} selected`;
-        } else {
-            selectedValue = selectedNames.join(", ");
-        }
+        document.getElementById("selected-value").textContent = selectedValue;
     }
+}
 
-    document.getElementById("selected-value").textContent = selectedValue;
+function toggleAll(event, sectionId) {
+    const allChecked = event.target.checked;
+    const checkboxes = document.querySelectorAll(`#${sectionId} input[type="checkbox"]`);
+    checkboxes.forEach(checkbox => {
+        checkbox.checked = allChecked;
+        updateSelectedValue(event);
+    });
 }

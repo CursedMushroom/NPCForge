@@ -247,7 +247,8 @@
                 "Leg",
                 "Thigh",
                 "Calf",
-                "Foot"
+                "Foot",
+                "Tail"
             ]
         }
     }
