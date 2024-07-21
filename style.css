@@ -189,7 +189,7 @@ body {
 }
 
 
-#book-title strong{
+#book-title strong {
     font-size: 14px;
     font-family: "IM Fell Great Primer SC", serif;
 }
@@ -477,22 +477,28 @@ select {
     transition: 0.3s;
     border-radius: 5px;
     /* 5px rounded corners */
-    width: 350px;
+    width: 390px;
     background-color: var(--temp2);
-    height: 650px;
+    height: auto;
     padding: 10px;
     position: relative;
 
 }
 
+.character-child{
+    border-style: double;
+    padding:5px;
+}
 /* On mouse-over, add a deeper shadow */
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
-.character-personality{
+
+.character-personality {
     display: flex;
     justify-content: space-between;
 }
+
 hr {
     margin-bottom: 5px;
     border-image-slice: 1;
@@ -502,7 +508,8 @@ hr {
             var(--temp10) calc(50% + 25%),
             transparent);
 }
-#core-hr{
+
+#core-hr {
     margin-top: 0px;
     margin-bottom: 0px;
     border-image-slice: 1;
@@ -512,15 +519,18 @@ hr {
             var(--temp10) calc(50% + 25%),
             transparent);
 }
+
 .card-buttons {
     position: absolute;
     top: 2px;
     right: 2px;
     display: flex;
 }
+
 option {
     font-family: "Bellefair", serif;
 }
+
 .card-buttons button {
     background-color: var(--temp8);
     color: white;
@@ -554,7 +564,8 @@ option {
     font-family: "Bellefair", serif;
 }
 
-.appearance-info, .card-profession {
+.appearance-info,
+.card-profession, .character-children {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 5px;
@@ -564,7 +575,7 @@ option {
 
 .results {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
     gap: 20px;
     padding: 20px;
 }
@@ -574,6 +585,10 @@ option {
 @media all and (max-width: 968px) {
     .results {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    .card {
+        width: auto;
     }
 
     .navbar ul {

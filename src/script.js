@@ -1,9 +1,11 @@
 let racePool = [];
 
-function generateCharacter(data, pronouns, wealthData, voiceData, personalityData) {
+function generateCharacter(data, pronouns, wealthData, voiceData, personalityData, familyData) {
 
     //charcter info//
-    let name, age, pronounSubject, pronounObject, pronounPossessive, collectiveNoun, possessiveNoun, voice;
+    let name, age, pronounSubject, pronounObject, pronounPossessive, voice;
+    let spouse;
+    let children = [];
     let job, underClothing, overClothing, accessories, jewelry;
     let personality = [];
     let likes = [];
@@ -56,8 +58,8 @@ function generateCharacter(data, pronouns, wealthData, voiceData, personalityDat
             facialHair = "None";
         }
     }
-
-    name += ` ${getRandomElement(surname)}`;
+    let surnameF = getRandomElement(surname);
+    name += ` ${surnameF}`;
     age = Math.floor(Math.random() * (ageMax - ageMin + 1)) + ageMin;
     height = getRandomElement(appearance.height);
     build = getRandomElement(appearance.build);
@@ -97,7 +99,6 @@ function generateCharacter(data, pronouns, wealthData, voiceData, personalityDat
     const selectedWealthData = wealthData[wealthSelect];
 
     job = getRandomElement(selectedWealthData.jobs);
-    console.log(job);
 
     if (pronounSubject === "he") {// masc clothing
         underClothing = `${getRandomElement(selectedWealthData.clothing.underClothingColor)} ${getRandomElement(selectedWealthData.clothing.mascUnderClothing)}`;
@@ -139,14 +140,138 @@ function generateCharacter(data, pronouns, wealthData, voiceData, personalityDat
     }
 
     //personality info
-    console.log(personalityData.traits);
     personality.push(getRandomElement(personalityData.traits.positive)); //positive trait
     personality.push(getRandomElement(personalityData.traits.negative)); //negative trait
     personality.push(getRandomElement(personalityData.traits.neutral)); //neutral trait
 
-    for (let i = 0; i < 3; i++) {
-        likes.push(getRandomElement(personalityData.likes));
-        dislikes.push(getRandomElement(personalityData.dislikes));
+    let availableLikes = [...personalityData.likes];
+    let availableDislikes = [...personalityData.dislikes];
+
+    for (let i = 0; likes.length < 3 && dislikes.length < 3; i++) {
+        let like = getRandomElement(availableLikes);
+        likes.push(like);
+        availableLikes = availableLikes.filter(item => item !== like);
+
+        let dislike = getRandomElement(availableDislikes);
+        dislikes.push(dislike);
+        availableDislikes = availableDislikes.filter(item => item !== dislike);
+    }
+
+    //family info
+
+    //if married -> generate spouse
+    //if children, random number -> generate children
+
+    if (Math.random() < 0.5) {//50% chance of being married
+        const spouseRandom = Math.random() * totalRatio;
+        let minSpouseAge = Math.max(age - 10, ageMin);
+        let maxSpouseAge = Math.min(age + 10, ageMax);
+
+        if (spouseRandom < ratio.feminine) {
+            spouse = {
+                name: getRandomElement(femNames) + ` ${surnameF}`,
+                age: Math.floor(Math.random() * (maxSpouseAge - minSpouseAge + 1)) + minSpouseAge,
+                pronouns: ["she", "her", "her"],
+                status: getRandomElement(familyData.married)
+            };
+        } else if (spouseRandom < ratio.feminine + ratio.masculine) {
+            spouse = {
+                name: getRandomElement(mascNames) + ` ${surnameF}`,
+                age: Math.floor(Math.random() * (maxSpouseAge - minSpouseAge + 1)) + minSpouseAge,
+                pronouns: ["he", "him", "his"],
+                status: getRandomElement(familyData.married)
+            };
+
+        } else {
+            spouse = {
+                name: getRandomElement(androNames) + ` ${surnameF}`,
+                age: Math.floor(Math.random() * (maxSpouseAge - minSpouseAge + 1)) + minSpouseAge,
+                pronouns: ["they", "them", "their"],
+                status: getRandomElement(familyData.married)
+            };
+        }
+
+        //generate children
+        if (Math.random() < 0.5) {
+            let numChildren = Math.random() < 0.7 ? Math.floor(Math.random() * 6) : Math.floor(Math.random() * (10 - 6 + 1)) + 6;
+
+            for (let i = 0; i < numChildren; i++) {
+                let childRandom = Math.random() * totalRatio;
+                let childName = "";
+                let childAge = Math.floor(Math.random() * (age - ageMin)) + 1;;
+                if (childRandom < ratio.feminine) {
+                    childName = getRandomElement(femNames) + ` ${surnameF}`;
+                    children.push({
+                        name: childName,
+                        age: childAge,
+                        pronouns: ["she", "her", "her"],
+                        status: getRandomElement(familyData.parentChildRelationship)
+                    });
+                } else if (childRandom < ratio.feminine + ratio.masculine) {
+                    childName = getRandomElement(mascNames) + ` ${surnameF}`;
+                    children.push({
+                        name: childName,
+                        age: childAge,
+                        pronouns: ["he", "him", "his"],
+                        status: getRandomElement(familyData.parentChildRelationship)
+                    });
+                } else {
+                    childName = getRandomElement(androNames) + ` ${surnameF}`;
+                    children.push({
+                        name: childName,
+                        age: childAge,
+                        pronouns: ["they", "them", "their"],
+                        status: getRandomElement(familyData.parentChildRelationship)
+                    });
+                }
+            }
+        } else {
+            children = [];
+        }
+    } else {
+        spouse = {
+            name: "None",
+            age: "None",
+            pronouns: ["None", "None", "None"],
+            status: getRandomElement(familyData.single)
+        };
+
+        if (Math.random() < 0.8) {
+            let numChildren = Math.random() < 0.7 ? Math.floor(Math.random() * 6) : Math.floor(Math.random() * (10 - 6 + 1)) + 6;
+
+            for (let i = 0; i < numChildren; i++) {
+                let childRandom = Math.random() * totalRatio;
+                let childName = "";
+                let childAge = Math.floor(Math.random() * (age - ageMin)) + 1;;
+                if (childRandom < ratio.feminine) {
+                    childName = getRandomElement(femNames) + ` ${surnameF}`;
+                    children.push({
+                        name: childName,
+                        age: childAge,
+                        pronouns: ["she", "her", "her"],
+                        status: getRandomElement(familyData.parentChildRelationship)
+                    });
+                } else if (childRandom < ratio.feminine + ratio.masculine) {
+                    childName = getRandomElement(mascNames) + ` ${surnameF}`;
+                    children.push({
+                        name: childName,
+                        age: childAge,
+                        pronouns: ["he", "him", "his"],
+                        status: getRandomElement(familyData.parentChildRelationship)
+                    });
+                } else {
+                    childName = getRandomElement(androNames) + ` ${surnameF}`;
+                    children.push({
+                        name: childName,
+                        age: childAge,
+                        pronouns: ["they", "them", "their"],
+                        status: getRandomElement(familyData.parentChildRelationship)
+                    });
+                }
+            }
+        } else {
+            children = [];
+        }
     }
 
 
@@ -178,7 +303,9 @@ function generateCharacter(data, pronouns, wealthData, voiceData, personalityDat
         jewelry: jewelry,
         personality: personality,
         likes: likes,
-        dislikes: dislikes
+        dislikes: dislikes,
+        spouse: spouse,
+        children: children
     };
     generateCard(character);
 }
@@ -194,6 +321,7 @@ function generateCard(character) {
     card.classList.add('card');
 
     let hairOrScaleInfo = '';
+    let childrenInfo = '';
 
 
     if (character.appearanceStyle === "Scaled") {
@@ -217,6 +345,20 @@ function generateCard(character) {
             ${character.appearanceType !== "Bald" ? `<p class="character-hair-color"><span class="title">Hair Color:</span> ${character.appearanceColor}</p>` : ""}
             ${character.appearanceType !== "Bald" ? `<p class="character-hair-style"><span class="title">Hair Style:</span> ${character.appearanceStyle}</p>` : ""}
         `;
+    }
+
+    if (character.children.length > 0) {
+        for (let i = 0; i < character.children.length; i++) {
+            childrenInfo += `
+            <div class="character-child">
+                <p class="character-child-name"><span class="title">Name:</span> ${character.children[i].name}</p>
+                <p class="character-child-age"><span class="title">Age:</span> ${character.children[i].age}</p>
+                <p class="character-child-pronouns"><span class="title">Pronouns:</span> ${character.children[i].pronouns[0]}/${character.children[i].pronouns[1]}/${character.children[i].pronouns[2]}</p>
+                <p class="character-child-status"><span class="title">Status:</span> ${character.children[i].status}</p></div>
+            `;
+
+        }
+
     }
 
     card.innerHTML = `
@@ -259,6 +401,16 @@ function generateCard(character) {
             <p class="character-likes"><span class="title">Likes:</span> ${character.likes.join(', ')}</p>
             <p class="character-dislikes"><span class="title">Dislikes:</span> ${character.dislikes.join(', ')}</p>
             </div>
+            <hr>
+            <div class="card-family">
+            <p class="character-status"><span class="title">Relationship Status:</span> ${character.spouse.status}</p>
+            ${character.spouse.name !== "None" ? `<p class="character-spouse-name"><span class="title">Name:</span> ${character.spouse.name}</p>` : ""}
+            ${character.spouse.age !== "None" ? `<p class="character-spouse-age"><span class="title">Age:</span> ${character.spouse.age}</p>` : ""}
+            ${character.spouse.pronouns[0] !== "None" ? `<p class="character-spouse-pronouns"><span class="title">Pronouns:</span> ${character.spouse.pronouns[0]}/${character.spouse.pronouns[1]}/${character.spouse.pronouns[2]}</p>` : ""}
+            <hr>
+            ${character.children.length > 0 ? `<span class="title">Children</span>` : ""}
+            ${character.children.length > 0 ? `<div class="character-children">${childrenInfo} </div>` : ""}
+            </div>
         </div>
     `;
 
@@ -299,7 +451,13 @@ async function fetchJSON(url) {
         }
         const personalityData = await personalityResponse.json();
 
-        generateCharacter(data, pronounsData, wealthData, voiceData, personalityData);
+        const familyResponse = await fetch('json/family.json');
+        if (!familyResponse.ok) {
+            throw new Error('Network response for family was not ok ' + familyResponse.statusText);
+        }
+        const familyData = await familyResponse.json();
+
+        generateCharacter(data, pronounsData, wealthData, voiceData, personalityData, familyData);
     } catch (error) {
         console.error('There has been a problem with your fetch operation:', error);
     }
