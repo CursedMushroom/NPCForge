@@ -1,13 +1,17 @@
 let racePool = [];
 
-function generateCharacter(data, pronouns) {
-    let name, age, pronounSubject, pronounObject, pronounPossessive, collectiveNoun, possessiveNoun;
+function generateCharacter(data, pronouns, wealthData, voiceData) {
+
+    //charcter info//
+    let name, age, pronounSubject, pronounObject, pronounPossessive, collectiveNoun, possessiveNoun, voice;
+    let job, underClothing, overClothing, accessories, jewelry;
     let appearanceType, appearanceStyle, appearanceColor, eyes, height, build, skinColor, skinDetail, skinScar, skinBirthmark, skinTattoo, facialHair;
     const { "fem-names": femNames, "masc-names": mascNames, "androgynous-names": androNames, ratio, ageMin, ageMax, appearance, surnames: surname, race } = data;
     const skin = appearance.skin;
     const totalRatio = ratio.feminine + ratio.masculine + ratio.androgynous;
 
     const random = Math.random() * totalRatio;
+
 
     if (random < ratio.feminine) {
         name = getRandomElement(femNames);
@@ -52,11 +56,10 @@ function generateCharacter(data, pronouns) {
 
     name += ` ${getRandomElement(surname)}`;
     age = Math.floor(Math.random() * (ageMax - ageMin + 1)) + ageMin;
-
     height = getRandomElement(appearance.height);
     build = getRandomElement(appearance.build);
-
     eyes = getRandomElement(appearance.eyes);
+    voice= getRandomElement(voiceData.voiceTypes);
 
     if (appearance.hair) {
         appearanceType = getRandomElement(appearance.hair.type);
@@ -84,17 +87,53 @@ function generateCharacter(data, pronouns) {
     skinScar = (skin.scar && skin.scar.length > 0 && Math.random() < 0.4) ? `${getRandomElement(skin.scar)} on the ${getRandomElement(skin.bodyPart)}` : "None";
     skinBirthmark = (skin.birthmark && skin.birthmark.length > 0 && Math.random() < 0.4) ? `${getRandomElement(skin.birthmark)} on the ${getRandomElement(skin.bodyPart)}` : "None";
     skinTattoo = (skin.tattoos && skin.tattoos.length > 0 && Math.random() < 0.4) ? `${getRandomElement(skin.tattoos)} on the ${getRandomElement(skin.bodyPart)}` : "None";
+ 
+    
+    //wealth info (job, clothing, accessories)
+    const wealthSelect = document.getElementById('npcWealth').value;
+    const selectedWealthData = wealthData[wealthSelect];
 
-    console.log(`Name: ${name}, Age: ${age}`);
-    console.log(`Pronouns: ${pronounSubject}/${pronounObject}/${pronounPossessive}`);
-    console.log(`Hair: ${appearanceType} ${appearanceStyle} ${appearanceColor}`);
-    console.log(`Facial Hair: ${facialHair}`);
-    console.log(`Height: ${height}, Build: ${build}`);
-    console.log(`Skin: Color: ${skinColor}, Detail: ${skinDetail}, Scar: ${skinScar}, Birthmark: ${skinBirthmark}, Tattoo: ${skinTattoo}`);
-    console.log('--------------------------------------------------------------------');
+    job = getRandomElement(selectedWealthData.jobs);
+    console.log(job);
 
-    // const characterDescription = document.getElementById('characterDescription');
-    // characterDescription.textContent = `Name: ${name}, Age: ${age}, Hair: ${appearanceType} ${appearanceStyle} ${appearanceColor}, Facial Hair: ${facialHair}, Skin: ${skinColor}`;
+    if (pronounSubject === "he") {// masc clothing
+        underClothing = `${getRandomElement(selectedWealthData.clothing.underClothingColor)} ${getRandomElement(selectedWealthData.clothing.mascUnderClothing)}`;
+        overClothing = `${getRandomElement(selectedWealthData.clothing.overClothingColor)} ${getRandomElement(selectedWealthData.clothing.mascOverClothing)}`;
+        accessories = getRandomElement(selectedWealthData.clothing.accessory);
+        jewelry = getRandomElement(selectedWealthData.clothing.jewelry);
+
+        
+    }
+    if (pronounSubject === "she") {//fem clothing
+
+        underClothing = `${getRandomElement(selectedWealthData.clothing.underClothingColor)} ${getRandomElement(selectedWealthData.clothing.femUnderClothing)}`;
+        overClothing = `${getRandomElement(selectedWealthData.clothing.overClothingColor)} ${getRandomElement(selectedWealthData.clothing.femOverClothing)}`;
+        accessories = getRandomElement(selectedWealthData.clothing.accessory);
+        jewelry = getRandomElement(selectedWealthData.clothing.jewelry);
+
+
+    }
+    if (pronounSubject === "they") { //50/50 masc/fem clothing
+
+        if (Math.random() < 0.5) {//masc clothing
+            underClothing = `${getRandomElement(selectedWealthData.clothing.underClothingColor)} ${getRandomElement(selectedWealthData.clothing.mascUnderClothing)}`;
+            overClothing = `${getRandomElement(selectedWealthData.clothing.overClothingColor)} ${getRandomElement(selectedWealthData.clothing.mascOverClothing)}`;
+            accessories = getRandomElement(selectedWealthData.clothing.accessory);
+            jewelry = getRandomElement(selectedWealthData.clothing.jewelry);
+
+
+
+        }
+        else {//fem clothing
+            underClothing = `${getRandomElement(selectedWealthData.clothing.underClothingColor)} ${getRandomElement(selectedWealthData.clothing.femUnderClothing)}`;
+            overClothing = `${getRandomElement(selectedWealthData.clothing.overClothingColor)} ${getRandomElement(selectedWealthData.clothing.femOverClothing)}`;
+            accessories = getRandomElement(selectedWealthData.clothing.accessory);
+            jewelry = getRandomElement(selectedWealthData.clothing.jewelry);
+
+
+        }
+
+    }
 
     const character = {
         name: name,
@@ -104,7 +143,7 @@ function generateCharacter(data, pronouns) {
         pronounObject: pronounObject,
         pronounPossessive: pronounPossessive,
         race: race,
-        // job: getRandomElement(appearance.job),
+        voice: voice,
         height: height,
         build: build,
         skinColor: skinColor,
@@ -116,10 +155,15 @@ function generateCharacter(data, pronouns) {
         skinScar: skinScar,
         skinBirthmark: skinBirthmark,
         skinTattoo: skinTattoo,
-        // clothingAccessories: getRandomElement(appearance.clothingAccessories)
+        job: job,
+        underClothing: underClothing,
+        overClothing: overClothing,
+        accessories: accessories,
+        jewelry: jewelry
     };
     generateCard(character);
 }
+
 
 // Function to get a random element from an array
 function getRandomElement(arr) {
@@ -131,7 +175,7 @@ function generateCard(character) {
     card.classList.add('card');
 
     let hairOrScaleInfo = '';
-    console.log(character.appearanceStyle);
+
 
     if (character.appearanceStyle === "Scaled") {
         hairOrScaleInfo = `
@@ -164,14 +208,16 @@ function generateCard(character) {
                 <button class="delete" onclick="deleteCard(event)"><i class="fa-solid fa-x"></i></button>
             </div>
         </div>
-        <hr>
+        <hr id="core-hr">
         <div class="card-info">
             <p class="character-pronouns"><span class="title">Pronouns:</span> ${character.pronounSubject}/${character.pronounObject}/${character.pronounPossessive}</p>
             <p class="character-age"><span class="title">Age:</span> ${character.age}</p>
             <p class="character-race"><span class="title">Race:</span> ${character.race}</p>
+            <p class="character-job"><span class="title">Job:</span> ${character.job}</p>
             <div class="appearance-info">
                 <p class="character-height"><span class="title">Height:</span> ${character.height}</p>
                 <p class="character-build"><span class="title">Build:</span> ${character.build}</p>
+                <p class="character-voice"><span class="title">Voice:</span> ${character.voice}</p>
                 ${character.appearanceStyle !== "Feathered" && character.appearanceStyle !== "Scaled" && character.appearanceStyle !== "Fur" ? `<p class="character-skin-color"><span class="title">Skin Color:</span> ${character.skinColor}</p>` : ""}
                 <p class="character-eyes"><span class="title">Eye Color:</span> ${character.eyes}</p>
                 ${hairOrScaleInfo}
@@ -180,6 +226,13 @@ function generateCard(character) {
                 ${character.skinScar !== "None" ? `<p class="character-skin-scar"><span class="title">Skin Scar:</span> ${character.skinScar}</p>` : ""}
                 ${character.skinBirthmark !== "None" ? `<p class="character-skin-birthmark"><span class="title">Skin Birthmark:</span> ${character.skinBirthmark}</p>` : ""}
                 ${character.skinTattoo !== "None" ? `<p class="character-skin-tattoo"><span class="title">Skin Tattoo:</span> ${character.skinTattoo}</p>` : ""}
+            </div>
+            <hr>
+            <div class="card-profession">
+                <p class="character-under-clothing"><span class="title">Under Clothing:</span> ${character.underClothing}</p>
+                <p class="character-over-clothing"><span class="title">Over Clothing:</span> ${character.overClothing}</p>
+                <p class="character-accessories"><span class="title">Accessories:</span> ${character.accessories}</p>
+                <p class="character-jewelry"><span class="title">Jewelry:</span> ${character.jewelry}</p>
             </div>
         </div>
     `;
@@ -203,16 +256,25 @@ async function fetchJSON(url) {
         }
         const pronounsData = await pronounsResponse.json();
 
-        generateCharacter(data, pronounsData);
+        const wealthResponse = await fetch('json/wealth.json');
+        if (!wealthResponse.ok) {
+            throw new Error('Network response for wealth was not ok ' + wealthResponse.statusText);
+        }
+        const wealthData = await wealthResponse.json();
+
+        const voiceResponse = await fetch('json/voice.json');
+        if (!voiceResponse.ok) {
+            throw new Error('Network response for voice was not ok ' + voiceResponse.statusText);
+        }
+        const voiceData = await voiceResponse.json();
+
+        console.log(voiceData)
+
+        generateCharacter(data, pronounsData, wealthData, voiceData);
     } catch (error) {
         console.error('There has been a problem with your fetch operation:', error);
     }
 }
-
-// Call fetchJSON 
-fetchJSON('json/human.json');
-
-
 
 function getCheckedValues() {
     const checkboxes = document.querySelectorAll('input[name="race"]:checked');
@@ -237,20 +299,30 @@ document.addEventListener('DOMContentLoaded', function () {
         getCheckedValues();
     });
     document.getElementById('generateBtn').addEventListener('click', function () {
-        // fetchJSON('json/human.json');
+       
         getCheckedValues();
         if (racePool.length === 0) {
-            alert
-                ('Please select at least 1 race');
+            alert('Please select at least 1 race');
+            return; 
         }
+
+        const wealthSelectElement = document.getElementById('npcWealth');
+        const selectedWealthValue = wealthSelectElement.value;
+
+        if (selectedWealthValue === "") {
+            alert('Please select a wealth distribution');
+            return; 
+        }
+
+
         else {
             const selectElement = document.getElementById('npcAmount');
             const selectedValue = selectElement.value;
 
             for (let i = 0; i < selectedValue; i++) {
-            let choice = getRandomElement(racePool);
-            fetchJSON(`json/${choice}.json`);}
-            // console.log(`json/${choice}.json`);
+                let choice = getRandomElement(racePool);
+                fetchJSON(`json/${choice}.json`);
+            }
         }
 
     });

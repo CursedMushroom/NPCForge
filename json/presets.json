@@ -62,7 +62,7 @@
             "Githzerai",
             "Githyanki"
         ],
-        "wealth_dis": "Varied"
+        "wealth_dis": "Balanced"
     },
     "Sharn": {
         "races": [
@@ -98,7 +98,7 @@
             "Dwarf",
             "Thri-kreen"
         ],
-        "wealth_dis": "Varied"
+        "wealth_dis": "Balanced"
     },
     "Greyhawk City": {
         "races": [
@@ -137,7 +137,7 @@
             "Triton",
             "Sea Elf"
         ],
-        "wealth_dis": "Varied"
+        "wealth_dis": "Balanced"
     },
     "Chult": {
         "races": [
@@ -147,7 +147,7 @@
             "Yuan-ti",
             "Aarakocra"
         ],
-        "wealth_dis": "Varied"
+        "wealth_dis": "Balanced"
     },
     "Ravnica": {
         "races": [
@@ -157,7 +157,7 @@
             "Centaur",
             "Vedalken"
         ],
-        "wealth_dis": "Varied"
+        "wealth_dis": "Balanced"
     },
     "Theros": {
         "races": [
@@ -167,7 +167,7 @@
             "Triton",
             "Centaur"
         ],
-        "wealth_dis": "Varied"
+        "wealth_dis": "Balanced"
     },
     "Wildemount": {
         "races": [
@@ -177,7 +177,7 @@
             "Halfling",
             "Dragonborn"
         ],
-        "wealth_dis": "Varied"
+        "wealth_dis": "Balanced"
     },
     "Mount Celestia": {
         "races": [
@@ -190,7 +190,7 @@
         "races": [
             "Tiefling"
         ],
-        "wealth_dis": "Varied"
+        "wealth_dis": "Balanced"
     },
     "Limbo": {
         "races": [
@@ -211,26 +211,26 @@
             "Air Genasi",
             "Aarakocra"
         ],
-        "wealth_dis": "Varied"
+        "wealth_dis": "Balanced"
     },
     "Elemental Plane of Earth": {
         "races": [
             "Earth Genasi",
             "Gnome"
         ],
-        "wealth_dis": "Varied"
+        "wealth_dis": "Balanced"
     },
     "Elemental Plane of Fire": {
         "races": [
             "Fire Genasi"
         ],
-        "wealth_dis": "Varied"
+        "wealth_dis": "Balanced"
     },
     "Elemental Plane of Water": {
         "races": [
             "Water Genasi",
             "Triton"
         ],
-        "wealth_dis": "Varied"
+        "wealth_dis": "Balanced"
     }
 }

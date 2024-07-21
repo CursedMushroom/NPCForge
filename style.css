@@ -491,6 +491,7 @@ select {
 }
 
 hr {
+    margin-bottom: 5px;
     border-image-slice: 1;
     border-image-source: linear-gradient(to right,
             transparent,
@@ -498,7 +499,16 @@ hr {
             var(--temp10) calc(50% + 25%),
             transparent);
 }
-
+#core-hr{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right,
+            transparent,
+            var(--temp10) calc(50% - 25%),
+            var(--temp10) calc(50% + 25%),
+            transparent);
+}
 .card-buttons {
     position: absolute;
     top: 2px;
@@ -541,11 +551,13 @@ option {
     font-family: "Bellefair", serif;
 }
 
-.appearance-info {
+.appearance-info, .card-profession {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 5px;
 }
+
+
 
 .results {
     display: grid;
@@ -553,6 +565,7 @@ option {
     gap: 20px;
     padding: 20px;
 }
+
 
 /* MEDIA QUERY */
 @media all and (max-width: 968px) {
