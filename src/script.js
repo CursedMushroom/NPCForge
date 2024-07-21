@@ -1,10 +1,13 @@
 let racePool = [];
 
-function generateCharacter(data, pronouns, wealthData, voiceData) {
+function generateCharacter(data, pronouns, wealthData, voiceData, personalityData) {
 
     //charcter info//
     let name, age, pronounSubject, pronounObject, pronounPossessive, collectiveNoun, possessiveNoun, voice;
     let job, underClothing, overClothing, accessories, jewelry;
+    let personality = [];
+    let likes = [];
+    let dislikes = [];
     let appearanceType, appearanceStyle, appearanceColor, eyes, height, build, skinColor, skinDetail, skinScar, skinBirthmark, skinTattoo, facialHair;
     const { "fem-names": femNames, "masc-names": mascNames, "androgynous-names": androNames, ratio, ageMin, ageMax, appearance, surnames: surname, race } = data;
     const skin = appearance.skin;
@@ -59,7 +62,7 @@ function generateCharacter(data, pronouns, wealthData, voiceData) {
     height = getRandomElement(appearance.height);
     build = getRandomElement(appearance.build);
     eyes = getRandomElement(appearance.eyes);
-    voice= getRandomElement(voiceData.voiceTypes);
+    voice = getRandomElement(voiceData.voiceTypes);
 
     if (appearance.hair) {
         appearanceType = getRandomElement(appearance.hair.type);
@@ -87,8 +90,8 @@ function generateCharacter(data, pronouns, wealthData, voiceData) {
     skinScar = (skin.scar && skin.scar.length > 0 && Math.random() < 0.4) ? `${getRandomElement(skin.scar)} on the ${getRandomElement(skin.bodyPart)}` : "None";
     skinBirthmark = (skin.birthmark && skin.birthmark.length > 0 && Math.random() < 0.4) ? `${getRandomElement(skin.birthmark)} on the ${getRandomElement(skin.bodyPart)}` : "None";
     skinTattoo = (skin.tattoos && skin.tattoos.length > 0 && Math.random() < 0.4) ? `${getRandomElement(skin.tattoos)} on the ${getRandomElement(skin.bodyPart)}` : "None";
- 
-    
+
+
     //wealth info (job, clothing, accessories)
     const wealthSelect = document.getElementById('npcWealth').value;
     const selectedWealthData = wealthData[wealthSelect];
@@ -102,7 +105,7 @@ function generateCharacter(data, pronouns, wealthData, voiceData) {
         accessories = getRandomElement(selectedWealthData.clothing.accessory);
         jewelry = getRandomElement(selectedWealthData.clothing.jewelry);
 
-        
+
     }
     if (pronounSubject === "she") {//fem clothing
 
@@ -135,6 +138,19 @@ function generateCharacter(data, pronouns, wealthData, voiceData) {
 
     }
 
+    //personality info
+    console.log(personalityData.traits);
+    personality.push(getRandomElement(personalityData.traits.positive)); //positive trait
+    personality.push(getRandomElement(personalityData.traits.negative)); //negative trait
+    personality.push(getRandomElement(personalityData.traits.neutral)); //neutral trait
+
+    for (let i = 0; i < 3; i++) {
+        likes.push(getRandomElement(personalityData.likes));
+        dislikes.push(getRandomElement(personalityData.dislikes));
+    }
+
+
+
     const character = {
         name: name,
         age: age,
@@ -159,7 +175,10 @@ function generateCharacter(data, pronouns, wealthData, voiceData) {
         underClothing: underClothing,
         overClothing: overClothing,
         accessories: accessories,
-        jewelry: jewelry
+        jewelry: jewelry,
+        personality: personality,
+        likes: likes,
+        dislikes: dislikes
     };
     generateCard(character);
 }
@@ -234,6 +253,12 @@ function generateCard(character) {
                 <p class="character-accessories"><span class="title">Accessories:</span> ${character.accessories}</p>
                 <p class="character-jewelry"><span class="title">Jewelry:</span> ${character.jewelry}</p>
             </div>
+            <hr>
+            <div class="card-personality">
+            <div class="character-personality"><p id="pos-trait">${character.personality[0]}</p> <p id="neg-trait">${character.personality[1]}</p> <p id="neu-trait">${character.personality[2]}</p></div>
+            <p class="character-likes"><span class="title">Likes:</span> ${character.likes.join(', ')}</p>
+            <p class="character-dislikes"><span class="title">Dislikes:</span> ${character.dislikes.join(', ')}</p>
+            </div>
         </div>
     `;
 
@@ -268,9 +293,13 @@ async function fetchJSON(url) {
         }
         const voiceData = await voiceResponse.json();
 
-        console.log(voiceData)
+        const personalityResponse = await fetch('json/personality.json');
+        if (!personalityResponse.ok) {
+            throw new Error('Network response for personality was not ok ' + personalityResponse.statusText);
+        }
+        const personalityData = await personalityResponse.json();
 
-        generateCharacter(data, pronounsData, wealthData, voiceData);
+        generateCharacter(data, pronounsData, wealthData, voiceData, personalityData);
     } catch (error) {
         console.error('There has been a problem with your fetch operation:', error);
     }
@@ -299,11 +328,11 @@ document.addEventListener('DOMContentLoaded', function () {
         getCheckedValues();
     });
     document.getElementById('generateBtn').addEventListener('click', function () {
-       
+
         getCheckedValues();
         if (racePool.length === 0) {
             alert('Please select at least 1 race');
-            return; 
+            return;
         }
 
         const wealthSelectElement = document.getElementById('npcWealth');
@@ -311,7 +340,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (selectedWealthValue === "") {
             alert('Please select a wealth distribution');
-            return; 
+            return;
         }
 
 

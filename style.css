@@ -479,7 +479,7 @@ select {
     /* 5px rounded corners */
     width: 350px;
     background-color: var(--temp2);
-    height: 450px;
+    height: 650px;
     padding: 10px;
     position: relative;
 
@@ -489,7 +489,10 @@ select {
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
-
+.character-personality{
+    display: flex;
+    justify-content: space-between;
+}
 hr {
     margin-bottom: 5px;
     border-image-slice: 1;
