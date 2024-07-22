@@ -1,4 +1,5 @@
 let racePool = [];
+let lockedCards = [];
 
 function generateCharacter(data, pronouns, wealthData, voiceData, personalityData, familyData) {
 
@@ -316,6 +317,21 @@ function getRandomElement(arr) {
     return arr[Math.floor(Math.random() * arr.length)];
 }
 
+function toggleLock(event) {
+    const card = event.target.closest('.card');
+    const lockIcon = card.querySelector('.lock i');
+
+    if (lockIcon.classList.contains('fa-unlock')) {
+        lockIcon.classList.remove('fa-unlock');
+        lockIcon.classList.add('fa-lock');
+        lockedCards.push(card);
+    } else {
+        lockIcon.classList.remove('fa-lock');
+        lockIcon.classList.add('fa-unlock');
+        lockedCards = lockedCards.filter(lockedCard => lockedCard !== card);
+    }
+}
+
 function generateCard(character) {
     const card = document.createElement('div');
     card.classList.add('card');
@@ -365,7 +381,7 @@ function generateCard(character) {
         <div class="card-title">
             <h2 id="character-name"><b>${character.name}</b></h2>
             <div class="card-buttons">
-                <button class="lock"><i class="fa-solid fa-unlock"></i></button>
+                <button class="lock" onclick="toggleLock(event)"><i class="fa-solid fa-unlock"></i></button>
                 <button class="delete" onclick="deleteCard(event)"><i class="fa-solid fa-x"></i></button>
             </div>
         </div>
@@ -478,6 +494,7 @@ function getCheckedValues() {
 function deleteCard(event) {
     const card = event.target.closest('.card');
     card.remove();
+    lockedCards = lockedCards.filter(lockedCard => lockedCard !== card);
 };
 
 // Add event listener to the button after the DOM is fully loaded
@@ -503,6 +520,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
         else {
+            const results = document.querySelector('.results');
+            results.innerHTML = '';
+            lockedCards.forEach(card => results.appendChild(card));
             const selectElement = document.getElementById('npcAmount');
             const selectedValue = selectElement.value;
 

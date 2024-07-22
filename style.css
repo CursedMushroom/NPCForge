@@ -30,6 +30,23 @@ body {
     padding: 10px;
 }
 
+.info {
+    padding: 10px;
+
+
+}
+
+.info p {
+    font-family: "Bellefair", serif;
+    font-size: 18px;
+}
+
+.info h1 {
+    font-family: "IM Fell Great Primer SC", serif;
+    margin-bottom: 15px;
+    font-size: 32px;
+}
+
 #character-name b {
     font-family: "IM Fell Great Primer SC", serif;
 }
@@ -471,6 +488,13 @@ select {
     padding-left: 10px;
 }
 
+#info-explain {
+    padding: 10px;
+}
+
+#info-explain p {
+    margin: 10px;
+}
 
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -485,10 +509,11 @@ select {
 
 }
 
-.character-child{
+.character-child {
     border-style: double;
-    padding:5px;
+    padding: 5px;
 }
+
 /* On mouse-over, add a deeper shadow */
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
@@ -565,7 +590,8 @@ option {
 }
 
 .appearance-info,
-.card-profession, .character-children {
+.card-profession,
+.character-children {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 5px;
