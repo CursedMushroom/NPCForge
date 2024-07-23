@@ -39,3 +39,17 @@ function toggleAll(event, sectionId) {
         updateSelectedValue(event);
     });
 }
+
+function toggleVisibility() {
+    event.stopPropagation();
+    const infoDiv = document.getElementById('info-explain');
+    const icon = document.getElementById('toggle-icon');
+    if (infoDiv.style.display === 'block' || infoDiv.style.display === '') {
+        infoDiv.style.display = 'none';
+        icon.classList.add('rotate');
+        
+    } else {
+        infoDiv.style.display = 'block';
+        icon.classList.remove('rotate');
+    }
+}

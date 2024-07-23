@@ -86,6 +86,7 @@ body {
 #amount-text {
 
     width: 60%;
+    font-family: "Bellefair", serif;
 }
 
 #tool-tip {
@@ -138,6 +139,7 @@ body {
     line-height: 70px;
     font-size: 18px;
     padding: 8px 15px;
+    font-family: "Bellefair", serif;
 }
 
 #navbarIcon {
@@ -148,8 +150,6 @@ body {
 .navbar ul li a:hover {
     color: cyan;
     border-radius: 5px;
-    box-shadow: 0 0 5px #33ffff,
-        0 0 10px #66ffff;
 }
 
 .navbar ul ul li a:hover {
@@ -191,6 +191,8 @@ body {
 
 .navbar ul ul li a {
     line-height: 50px;
+    font-size: 16px;
+    font-family: "Bellefair", serif;
 
 }
 
@@ -214,119 +216,7 @@ body {
 /* -------------------------------------------------------------------------- */
 
 
-/* Race Dropdown Menu */
-nav {
-    background: #ffffff;
-    width: 250px;
-    padding: 8px 25px;
-    position: relative;
-    border-radius: 5px;
-    z-index: 3;
-}
 
-nav label {
-    color: rgb(0, 0, 0);
-    font-size: 22px;
-    font-weight: 500;
-    cursor: pointer;
-}
-
-.button {
-    width: 100%;
-}
-
-.button span {
-    float: right;
-    line-height: 35px;
-    padding-right: 10px;
-    font-size: 40px;
-    transition: transform 200ms linear;
-}
-
-
-nav ul {
-    position: absolute;
-    background: #94a2ac;
-    list-style: none;
-    top: 50px;
-    left: 0;
-    width: 100%;
-    border-radius: 5px;
-    display: none;
-}
-
-[id^=btn]:checked+ul {
-    display: block;
-    height: 300px;
-    overflow-y: auto;
-}
-
-nav .menu:before {
-    position: absolute;
-    content: '';
-    height: 20px;
-    width: 20px;
-    background: #ffffff;
-    right: 30px;
-    top: -10px;
-    transform: rotate(45deg);
-}
-
-nav ul li {
-    line-height: 40px;
-    padding-left: 20px;
-    cursor: pointer;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-}
-
-nav ul li label {
-    font-size: 16px;
-    color: rgb(255, 255, 255);
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    display: block;
-}
-
-nav ul li a:hover,
-nav ul li label:hover {
-    color: cyan;
-}
-
-nav ul ul {
-    position: static;
-}
-
-nav ul ul li {
-    line-height: 30px;
-    border-bottom: none;
-}
-
-nav ul ul li a {
-    color: #e6e6e6;
-    font-size: 17px;
-}
-
-nav ul li span {
-    font-size: 20px;
-    float: right;
-    margin-top: 10px;
-    padding: 0 10px;
-}
-
-#btn-1,
-#btn-2,
-#btn-3,
-#btn-4 {
-    display: none;
-}
-
-
-
-/* ---------------------------------------------------------------------------------------------------------------------------- */
 
 /* Custom Dropdown Selector */
 .custom-select {
@@ -490,10 +380,41 @@ select {
 
 #info-explain {
     padding: 10px;
+    display: block;
 }
 
 #info-explain p {
     margin: 10px;
+}
+
+#explain-button {
+    display: flex;
+    align-items: center;
+
+    padding-top: 10px;
+    cursor: pointer;
+}
+
+#explain-button p {
+    margin-right: 10px;
+}
+
+#explain-button button {
+    border: none;
+}
+
+#explain-button button i {
+    display: block;
+    transition: all 0.4s ease;
+}
+
+/* #explain-button button i:hover {
+    transform: rotateZ(-180deg);
+} */
+
+.rotate {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
 }
 
 .card {
@@ -663,6 +584,7 @@ option {
         padding: 0 20px;
         line-height: 70px;
         cursor: pointer;
+        font-family: "Bellefair", serif;
     }
 
     .nav-show:hover {

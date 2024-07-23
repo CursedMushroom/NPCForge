@@ -1,5 +1,7 @@
 let racePool = [];
 let lockedCards = [];
+const wealthOptions = ["opulent", "wealthy", "prosperous", "balanced", "modest", "impoverished", "destitute"];
+
 
 function generateCharacter(data, pronouns, wealthData, voiceData, personalityData, familyData) {
 
@@ -97,7 +99,15 @@ function generateCharacter(data, pronouns, wealthData, voiceData, personalityDat
 
     //wealth info (job, clothing, accessories)
     const wealthSelect = document.getElementById('npcWealth').value;
-    const selectedWealthData = wealthData[wealthSelect];
+    let selectedWealth;
+    if (wealthSelect === "random") {
+        const randomIndex = Math.floor(Math.random() * wealthOptions.length);
+        selectedWealth = wealthOptions[randomIndex];
+    } else {
+        selectedWealth = wealthSelect;
+    }
+
+    const selectedWealthData = wealthData[selectedWealth];
 
     job = getRandomElement(selectedWealthData.jobs);
 
