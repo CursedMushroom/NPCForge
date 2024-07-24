@@ -1,236 +1,236 @@
 {
     "Waterdeep": {
         "races": [
-            "Human",
-            "Dwarf",
-            "Elf",
-            "Halfling",
-            "Gnome"
+            "human",
+            "dwarf",
+            "elf",
+            "halfling",
+            "gnome"
         ],
-        "wealth_dis": "Wealthy"
+        "wealth_dis": "wealthy"
     },
     "Baldur's Gate": {
         "races": [
-            "Human",
-            "Half-Elf",
-            "Tiefling",
-            "Dwarf"
+            "human",
+            "halfElf",
+            "tiefling",
+            "dwarf"
         ],
-        "wealth_dis": "Wealthy"
+        "wealth_dis": "wealthy"
     },
     "Neverwinter": {
         "races": [
-            "Human",
-            "Half-Elf",
-            "Dwarf",
-            "Tiefling"
+            "human",
+            "halfElf",
+            "dwarf",
+            "tiefling"
         ],
-        "wealth_dis": "Prosperous"
+        "wealth_dis": "prosperous"
     },
     "Silverymoon": {
         "races": [
-            "Elf",
-            "Human",
-            "Half-Elf",
-            "Dwarf",
-            "Gnome"
+            "elf",
+            "human",
+            "halfElf",
+            "dwarf",
+            "gnome"
         ],
-        "wealth_dis": "Wealthy"
+        "wealth_dis": "wealthy"
     },
     "Icewind Dale": {
         "races": [
-            "Human",
-            "Dwarf",
-            "Gnome",
-            "Half-Orc"
+            "human",
+            "dwarf",
+            "gnome",
+            "halfOrc"
         ],
-        "wealth_dis": "Modest"
+        "wealth_dis": "modest"
     },
     "Cormyr": {
         "races": [
-            "Human",
-            "Elf",
-            "Half-Elf",
-            "Halfling"
+            "human",
+            "elf",
+            "halfElf",
+            "halfling"
         ],
-        "wealth_dis": "Prosperous"
+        "wealth_dis": "prosperous"
     },
     "Sigil (City of Doors)": {
         "races": [
-            "Human",
-            "Tiefling",
-            "Githzerai",
-            "Githyanki"
+            "human",
+            "tiefling",
+            "githzerai",
+            "githyanki"
         ],
-        "wealth_dis": "Balanced"
+        "wealth_dis": "balanced"
     },
     "Sharn": {
         "races": [
-            "Human",
-            "Warforged",
-            "Halfling",
-            "Elf",
-            "Gnome"
+            "human",
+            "warforged",
+            "halfling",
+            "elf",
+            "gnome"
         ],
-        "wealth_dis": "Wealthy"
+        "wealth_dis": "wealthy"
     },
     "Stormreach": {
         "races": [
-            "Human",
-            "Elf",
-            "Warforged",
-            "Half-Orc",
-            "Shifter"
+            "human",
+            "elf",
+            "warforged",
+            "halfOrc",
+            "shifter"
         ],
-        "wealth_dis": "Prosperous"
+        "wealth_dis": "prosperous"
     },
     "Barovia": {
         "races": [
-            "Human",
-            "Elf",
-            "Drow"
+            "human",
+            "elf",
+            "drow"
         ],
-        "wealth_dis": "Impoverished"
+        "wealth_dis": "impoverished"
     },
     "Tyr": {
         "races": [
-            "Human",
-            "Dwarf",
-            "Thri-kreen"
+            "human",
+            "dwarf",
+            "thrikreen"
         ],
-        "wealth_dis": "Balanced"
+        "wealth_dis": "balanced"
     },
     "Greyhawk City": {
         "races": [
-            "Human",
-            "Elf",
-            "Half-Elf",
-            "Dwarf",
-            "Halfling"
+            "human",
+            "elf",
+            "halfElf",
+            "dwarf",
+            "halfling"
         ],
-        "wealth_dis": "Wealthy"
+        "wealth_dis": "wealthy"
     },
     "Solace": {
         "races": [
-            "Human",
-            "Elf",
-            "Dwarf",
-            "Kender"
+            "human",
+            "elf",
+            "dwarf",
+            "kender"
         ],
-        "wealth_dis": "Modest"
+        "wealth_dis": "modest"
     },
     "Phandalin": {
         "races": [
-            "Human",
-            "Dwarf",
-            "Elf",
-            "Halfling",
-            "Gnome"
+            "human",
+            "dwarf",
+            "elf",
+            "halfling",
+            "gnome"
         ],
-        "wealth_dis": "Modest"
+        "wealth_dis": "modest"
     },
     "Saltmarsh": {
         "races": [
-            "Human",
-            "Half-Elf",
-            "Halfling",
-            "Triton",
-            "Sea Elf"
+            "human",
+            "halfElf",
+            "halfling",
+            "triton",
+            "seaElf"
         ],
-        "wealth_dis": "Balanced"
+        "wealth_dis": "balanced"
     },
     "Chult": {
         "races": [
-            "Human",
-            "Tabaxi",
-            "Tortle",
-            "Yuan-ti",
-            "Aarakocra"
+            "human",
+            "tabaxi",
+            "tortle",
+            "yuanti",
+            "aarakocra"
         ],
-        "wealth_dis": "Balanced"
+        "wealth_dis": "balanced"
     },
     "Ravnica": {
         "races": [
-            "Human",
-            "Elf",
-            "Goblin",
-            "Centaur",
-            "Vedalken"
+            "human",
+            "elf",
+            "goblin",
+            "centaur",
+            "vedalken"
         ],
-        "wealth_dis": "Balanced"
+        "wealth_dis": "balanced"
     },
     "Theros": {
         "races": [
-            "Human",
-            "Leonin",
-            "Satyr",
-            "Triton",
-            "Centaur"
+            "human",
+            "leonin",
+            "satyr",
+            "triton",
+            "centaur"
         ],
-        "wealth_dis": "Balanced"
+        "wealth_dis": "balanced"
     },
     "Wildemount": {
         "races": [
-            "Human",
-            "Elf",
-            "Dwarf",
-            "Halfling",
-            "Dragonborn"
+            "human",
+            "elf",
+            "dwarf",
+            "halfling",
+            "dragonborn"
         ],
-        "wealth_dis": "Balanced"
+        "wealth_dis": "balanced"
     },
     "Mount Celestia": {
         "races": [
-            "Astral Elf",
-            "Aasimar"
+            "astral elf",
+            "aasimar"
         ],
-        "wealth_dis": "Opulent"
+        "wealth_dis": "opulent"
     },
     "The Abyss": {
         "races": [
-            "Tiefling"
+            "tiefling"
         ],
-        "wealth_dis": "Balanced"
+        "wealth_dis": "balanced"
     },
     "Limbo": {
         "races": [
-            "Githzerai"
+            "githzerai"
         ],
-        "wealth_dis": "Chaotic"
+        "wealth_dis": "chaotic"
     },
     "Mechanus": {
         "races": [
-            "Modron",
-            "Construct",
-            "Gnome"
+            "modron",
+            "construct",
+            "gnome"
         ],
-        "wealth_dis": "Wealthy"
+        "wealth_dis": "wealthy"
     },
     "Elemental Plane of Air": {
         "races": [
-            "Air Genasi",
-            "Aarakocra"
+            "airGenasi",
+            "aarakocra"
         ],
-        "wealth_dis": "Balanced"
+        "wealth_dis": "balanced"
     },
     "Elemental Plane of Earth": {
         "races": [
-            "Earth Genasi",
-            "Gnome"
+            "earthGenasi",
+            "gnome"
         ],
-        "wealth_dis": "Balanced"
+        "wealth_dis": "balanced"
     },
     "Elemental Plane of Fire": {
         "races": [
-            "Fire Genasi"
+            "fireGenasi"
         ],
-        "wealth_dis": "Balanced"
+        "wealth_dis": "balanced"
     },
     "Elemental Plane of Water": {
         "races": [
-            "Water Genasi",
-            "Triton"
+            "waterGenasi",
+            "triton"
         ],
-        "wealth_dis": "Balanced"
+        "wealth_dis": "balanced"
     }
 }

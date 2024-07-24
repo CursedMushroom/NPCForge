@@ -362,13 +362,13 @@
             "type": [
                 "Straight",
                 "Curly",
-                "Wavy"
+                "Wavy",
+                "Bald"
             ],
             "style": [
                 "Shoulder-length with beard beads",
                 "Bob with sideburn braids",
                 "Topknot with a braided beard",
-                "Bald",
                 "Cropped and tidy",
                 "Dreadlocks with a beard braid",
                 "Ponytail with beard rings",

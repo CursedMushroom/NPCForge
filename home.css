@@ -1,0 +1,298 @@
+/* font-family: "IM Fell Great Primer SC", serif; */
+/* font-family: "Bellefair", serif; */
+:root {
+    --temp1: #f5f5f5;
+    --temp2: #f0f0f0;
+    --temp3: #e6e6e6;
+    --temp4: #d9d9d9;
+    --temp5: #cccccc;
+    --temp6: #b3b3b3;
+    --temp7: #999999;
+    --temp8: #666666;
+    --temp9: #4d4d4d;
+    --temp10: #333333;
+    --temp11: #1a1a1a;
+    --temp12: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Bellefair", serif;
+}
+
+body {
+    background: var(--temp5);
+    background-image: url('images/background-overlay.png');
+}
+
+h1 {
+    font-family: "IM Fell Great Primer SC", serif;
+    font-size: 3.5rem;
+    color: var(--temp12);
+    text-align: center;
+    margin: 1rem 0;
+    margin-top: 4rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+#get-started {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+}
+
+p {
+    font-size: 1.5rem;
+    color: var(--temp12);
+    text-align: center;
+    margin: 1rem;
+}
+
+.navbar {
+    background: #1b1b1b;
+
+}
+
+.navbar:after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+.logo {
+    float: left;
+    color: white;
+    font-size: 27px;
+    font-weight: 600px;
+    line-height: 70px;
+    padding-left: 60px;
+    font-family: "IM Fell Great Primer SC", serif;
+    /* display: none; */
+
+}
+
+.navbar ul {
+    float: right;
+    list-style: none;
+    margin-right: 40px;
+    position: relative;
+}
+
+.navbar ul li {
+    float: left;
+    display: inline-block;
+    background: #1b1b1b;
+    margin: 0 5px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    line-height: 70px;
+    font-size: 20px;
+    padding: 8px 15px;
+    font-family: "Bellefair", serif;
+}
+
+#navbarIcon {
+    margin-left: 15px;
+    font-size: 15px;
+}
+
+.navbar ul li a:hover {
+    color: cyan;
+    border-radius: 5px;
+}
+
+.navbar ul ul li a:hover {
+    color: cyan;
+    border-radius: 5px;
+    box-shadow: none;
+
+}
+
+.navbar ul ul {
+    position: absolute;
+    top: 90px;
+    border-top: 3px solid cyan;
+    opacity: 0;
+    visibility: hidden;
+    transition: top .3s;
+    z-index: 2;
+
+}
+
+.navbar ul ul ul {
+    border-top: none;
+}
+
+.navbar ul li:hover>ul {
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.navbar ul ul li {
+    position: relative;
+    margin: 0px;
+    width: 150px;
+    float: none;
+    display: list-item;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.navbar ul ul li a {
+    line-height: 50px;
+    font-size: 16px;
+    font-family: "Bellefair", serif;
+
+}
+
+.navbar ul ul ul li {
+    position: relative;
+    top: -70px;
+    left: 150px;
+}
+
+.nav-show,
+.icon {
+    display: none;
+}
+
+
+.gen-btn {
+    display: none;
+}
+
+.hide-input {
+    display: none;
+}
+#sign-off{
+    font-size: 40px;
+    font-family: "IM Fell Great Primer SC", serif;
+}
+
+#town-forge-btn {
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+    padding: 14px 28px;
+    font-size: 24px;
+    cursor: pointer;
+    font-family: "IM Fell Great Primer SC", serif;
+    margin:20px;
+    
+}
+
+#town-forge-btn {
+    border-left-style:none;
+    border-right-style:none;
+    border-color: #000000;
+    color: rgb(0, 0, 0);
+  }
+  
+  #town-forge-btn:hover {
+    background-color: #000000;
+    color: white;
+  }
+
+
+@media all and (max-width: 968px) {
+
+
+    .navbar ul {
+        margin-right: 0px;
+        float: left;
+    }
+
+    .logo {
+        padding-left: 30px;
+        width: 100%;
+
+    }
+
+    .navbar ul li,
+    .navbar ul ul li {
+        display: block;
+        width: 100%;
+    }
+
+    .navbar ul ul {
+        top: 70px;
+        position: static;
+        border-top: none;
+        float: none;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .navbar ul ul ul li {
+        position: static;
+    }
+
+    .navbar ul ul li {
+        border-bottom: none;
+    }
+
+    .navbar ul ul a {
+        padding-left: 80px;
+    }
+
+    .nav-show {
+        display: block;
+        color: white;
+        font-size: 18px;
+        padding: 0 20px;
+        line-height: 70px;
+        cursor: pointer;
+        font-family: "Bellefair", serif;
+    }
+
+    .nav-show:hover {
+        color: cyan;
+    }
+
+    .icon {
+        display: block;
+        color: white;
+        position: absolute;
+        right: 40px;
+        line-height: 70px;
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    .navbar ul li a:hover {
+        box-shadow: none;
+    }
+
+    .nav-show+a,
+    ul {
+        display: none;
+    }
+
+    [id^=nav-btn]:checked+ul,
+    [id^=gen-btn]:checked+ul {
+        display: block;
+    }
+
+    #town-forge-btn {
+        width:80%;
+        
+    }
+
+}

@@ -423,7 +423,7 @@ function generateCard(character) {
             </div>
             <hr>
             <div class="card-personality">
-            <div class="character-personality"><p id="pos-trait">${character.personality[0]}</p> <p id="neg-trait">${character.personality[1]}</p> <p id="neu-trait">${character.personality[2]}</p></div>
+            <div class="character-personality"><p id="pos-trait">${character.personality[0]}</p><p>|<p><p id="neg-trait">${character.personality[1]}</p><p>|<p><p id="neu-trait">${character.personality[2]}</p></div>
             <p class="character-likes"><span class="title">Likes:</span> ${character.likes.join(', ')}</p>
             <p class="character-dislikes"><span class="title">Dislikes:</span> ${character.dislikes.join(', ')}</p>
             </div>
@@ -434,7 +434,7 @@ function generateCard(character) {
             ${character.spouse.age !== "None" ? `<p class="character-spouse-age"><span class="title">Age:</span> ${character.spouse.age}</p>` : ""}
             ${character.spouse.pronouns[0] !== "None" ? `<p class="character-spouse-pronouns"><span class="title">Pronouns:</span> ${character.spouse.pronouns[0]}/${character.spouse.pronouns[1]}/${character.spouse.pronouns[2]}</p>` : ""}
             <hr>
-            ${character.children.length > 0 ? `<span class="title">Children</span>` : ""}
+            ${character.children.length > 0 ? `<span class="title">Children : ${character.children.length}</span>` : ""}
             ${character.children.length > 0 ? `<div class="character-children">${childrenInfo} </div>` : ""}
             </div>
         </div>
@@ -509,8 +509,16 @@ function deleteCard(event) {
 
 // Add event listener to the button after the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById('elfBtn').addEventListener('click', function () {
-        getCheckedValues();
+    document.getElementById('reset').addEventListener('click', function () {
+        const presetSelect = document.getElementById('presetSelect');
+        const races = document.querySelectorAll('input[name="race"]');
+        const wealthSelect = document.getElementById('npcWealth');
+
+        races.forEach(race => race.checked = false);
+        wealthSelect.value = "random";
+        presetSelect.value = "";
+
+        updateSelectedValue();
     });
     document.getElementById('generateBtn').addEventListener('click', function () {
 
