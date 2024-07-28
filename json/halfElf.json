@@ -411,7 +411,13 @@
                 "Leg",
                 "Thigh",
                 "Calf",
-                "Foot"
+                "Foot",
+                "Side",
+                "Ribs",
+                "Waist",
+                "Stomach",
+                "Hip",
+                "Nape"
             ]
         }
     }

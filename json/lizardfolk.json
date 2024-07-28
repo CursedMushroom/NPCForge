@@ -281,7 +281,7 @@
                 "Cultural iconography"
             ],
             "bodyPart": [
-                "Face",
+               "Face",
                 "Neck",
                 "Shoulder",
                 "Back",
@@ -293,6 +293,12 @@
                 "Thigh",
                 "Calf",
                 "Foot",
+                "Side",
+                "Ribs",
+                "Waist",
+                "Stomach",
+                "Hip",
+                "Nape",
                 "Tail"
             ]
         }

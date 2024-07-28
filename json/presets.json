@@ -55,7 +55,7 @@
         ],
         "wealth_dis": "prosperous"
     },
-    "Sigil (City of Doors)": {
+    "Sigil": {
         "races": [
             "human",
             "tiefling",
@@ -232,5 +232,18 @@
             "triton"
         ],
         "wealth_dis": "balanced"
-    }
+    },
+    "Ravenloft": { 
+        "race":[
+            "dhampir",
+            "hexblood",
+            "reborn",
+            "human",
+            "elf",
+            "dwarf",
+            "halfling",
+            "gnome"
+        ],
+        "wealth_dis": "impoverished"
+     }
 }

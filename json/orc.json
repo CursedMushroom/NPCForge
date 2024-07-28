@@ -222,7 +222,7 @@
                 "Battle achievements"
             ],
             "bodyPart": [
-                "Face",
+               "Face",
                 "Neck",
                 "Shoulder",
                 "Back",
@@ -233,7 +233,13 @@
                 "Leg",
                 "Thigh",
                 "Calf",
-                "Foot"
+                "Foot",
+                "Side",
+                "Ribs",
+                "Waist",
+                "Stomach",
+                "Hip",
+                "Nape"
             ]
         }
     }

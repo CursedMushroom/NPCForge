@@ -295,6 +295,12 @@
                 "Thigh",
                 "Calf",
                 "Foot",
+                "Side",
+                "Ribs",
+                "Waist",
+                "Stomach",
+                "Hip",
+                "Nape",
                 "Tail"
             ]
         }

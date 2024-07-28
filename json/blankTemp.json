@@ -50,28 +50,8 @@
             "color": [
             ],
             "details": [
-                "Freckles",
-                "Moles",
-                "Age spots",
-                "Wrinkles",
-                "Dimples",
-                "Smooth",
-                "Rough",
-                "Oily",
-                "Dry",
-                "Scarred",
-                "Sunburned",
-                "Tanned"
             ],
             "scar": [
-                "Clean cut",
-                "Jagged",
-                "Burn scar",
-                "Battle scar",
-                "Whip marks",
-                "Claw marks",
-                "Pockmarks",
-                "Surgical scar"
             ],
             "birthmark": [
             ],
@@ -89,7 +69,13 @@
                 "Leg",
                 "Thigh",
                 "Calf",
-                "Foot"
+                "Foot",
+                "Side",
+                "Ribs",
+                "Waist",
+                "Stomach",
+                "Hip",
+                "Nape"
             ]
         }
     }
