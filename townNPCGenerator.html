@@ -379,7 +379,41 @@
 
 
                     </div>
+                    <div class="container">
+                        <label id="book-title"><strong>Guide to Ravnica</strong></label>
+                        <label for="ravnicaAll" class="right-label">
+                            All <input type="checkbox" id="ravnicaAll" name="race"
+                                onclick="toggleAll(event, 'ravnica-section')" />
+                        </label>
+                    </div>
+                    <div class="race-section" id="ravnica-section">
+                        <label for="centaur2">
+                            <input type="checkbox" id="centaur2" name="race" value="centaur"
+                                onclick="updateSelectedValue(event)" /> Centaur
+                        </label>
 
+                        <label for="loxodon">
+                            <input type="checkbox" id="loxodon" name="race" value="loxodon"
+                                onclick="updateSelectedValue(event)" /> Loxodon
+                        </label>
+
+                        <label for="minotaur2">
+                            <input type="checkbox" id="minotaur2" name="race" value="minotaur"
+                                onclick="updateSelectedValue(event)" /> Minotaur
+                        </label>
+
+                        <label for="simicHybrid">
+                            <input type="checkbox" id="simicHybrid" name="race" value="simicHybrid"
+                                onclick="updateSelectedValue(event)" /> Simic Hybrid
+                        </label>
+
+                        <label for="vedalken">
+                            <input type="checkbox" id="vedalken" name="race" value="vedalken"
+                                onclick="updateSelectedValue(event)" /> Vedalken
+                        </label>
+                    
+                    
+                    </div>
 
 
                 </div>
