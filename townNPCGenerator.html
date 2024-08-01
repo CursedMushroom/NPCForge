@@ -415,6 +415,35 @@
                     
                     </div>
 
+                    <div class="container">
+                        <label id="book-title"><strong>Eberron: RLW</strong></label>
+                        <label for="eberronAll" class="right-label">
+                            All <input type="checkbox" id="eberronAll" name="race"
+                                onclick="toggleAll(event, 'eberron-section')" />
+                        </label>
+                    </div>
+                    <div class="race-section" id="eberron-section">
+                        <label for="changeling2">
+                            <input type="checkbox" id="changeling2" name="race" value="changeling"
+                                onclick="updateSelectedValue(event)" /> Changeling
+                        </label>
+                        <label for="kalashtar">
+                            <input type="checkbox" id="kalashtar" name="race" value="kalashtar"
+                                onclick="updateSelectedValue(event)" /> Kalashtar
+                        </label>
+                        <label for="shifter2">
+                            <input type="checkbox" id="shifter2" name="race" value="shifter"
+                                onclick="updateSelectedValue(event)" /> Shifter
+                        </label>
+                        <label for="warforged">
+                            <input type="checkbox" id="warforged" name="race" value="warforged"
+                                onclick="updateSelectedValue(event)" /> Warforged
+                        </label>
+
+                    
+                    
+                    </div>
+
 
                 </div>
             </div>
