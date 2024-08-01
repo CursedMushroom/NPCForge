@@ -439,9 +439,25 @@
                             <input type="checkbox" id="warforged" name="race" value="warforged"
                                 onclick="updateSelectedValue(event)" /> Warforged
                         </label>
+                    </div>
 
-                    
-                    
+                    <div class="container">
+                        <label id="book-title"><strong>Mythic Odysseys of Theros</strong></label>
+                        <label for="therosAll" class="right-label">
+                            All <input type="checkbox" id="therosAll" name="race"
+                                onclick="toggleAll(event, 'theros-section')" />
+                        </label>
+                    </div>
+                    <div class="race-section" id="theros-section">
+                        <label for="leonin">
+                            <input type="checkbox" id="leonin" name="race" value="leonin"
+                                onclick="updateSelectedValue(event)" /> Leonin
+                        </label>
+                        <label for="satyr2">
+                            <input type="checkbox" id="satyr2" name="race" value="satyr"
+                                onclick="updateSelectedValue(event)" /> Satyr
+                        </label>
+                        
                     </div>
 
 
