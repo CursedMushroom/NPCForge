@@ -25,9 +25,10 @@ function handlePresetChange() {
 
         // Check off the corresponding races
         preset.races.forEach(raceName => {
-            const raceCheckbox = document.querySelector(`input[name="race"][value="${raceName.toLowerCase()}"]`);
+            const raceCheckbox = document.querySelector(`input[name="race"][value="${raceName}"]`);
             if (raceCheckbox) {
                 raceCheckbox.checked = true;
+                console.log('Checked:', raceName);
             }
             
         });

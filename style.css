@@ -270,10 +270,13 @@ select {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom:3px;
+    padding-top:10px;
     box-sizing: border-box;
     border-bottom: 1px solid #caced1;
-    /* Underline */
+    
 }
 
 .right-label {

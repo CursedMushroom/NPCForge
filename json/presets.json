@@ -145,7 +145,7 @@
             "tabaxi",
             "tortle",
             "yuanti",
-            "aarakocra"
+            "aarackocra"
         ],
         "wealth_dis": "balanced"
     },
@@ -181,7 +181,7 @@
     },
     "Mount Celestia": {
         "races": [
-            "astral elf",
+            "astralElf",
             "aasimar"
         ],
         "wealth_dis": "opulent"
@@ -209,7 +209,7 @@
     "Elemental Plane of Air": {
         "races": [
             "airGenasi",
-            "aarakocra"
+            "aarackocra"
         ],
         "wealth_dis": "balanced"
     },
