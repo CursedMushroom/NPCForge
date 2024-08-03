@@ -524,7 +524,7 @@
                     <div class="race-section" id="ravenloft-section">
                         <label for="dhampir">
                             <input type="checkbox" id="dhampir" name="race" value="dhampir"
-                                onclick="updateSelectedValue(event)" />Dhampir
+                                onclick="updateSelectedValue(event)" /> Dhampir
                         </label>
                         <label for="hexblood">
                             <input type="checkbox" id="hexblood" name="race" value="hexblood"
@@ -533,6 +533,38 @@
                         <label for="reborn">
                             <input type="checkbox" id="reborn" name="race" value="reborn"
                                 onclick="updateSelectedValue(event)" /> Reborn
+                        </label>
+                    </div>
+
+
+
+                    <div class="container">
+                        <label id="book-title"><strong>Other</strong></label>
+                        <label for="otherAll" class="right-label">
+                            All <input type="checkbox" id="otherAll" name="race"
+                                onclick="toggleAll(event, 'other-section')" />
+                        </label>
+                    </div>
+                    <div class="race-section" id="other-section">
+                        <label for="kender">
+                            <input type="checkbox" id="kender" name="race" value="kender"
+                                onclick="updateSelectedValue(event)" /> Kender
+                        </label>
+                        <label for="owlin">
+                            <input type="checkbox" id="owlin" name="race" value="owlin"
+                                onclick="updateSelectedValue(event)" /> Owlin
+                        </label>
+                        <label for="verdan">
+                            <input type="checkbox" id="verdan" name="race" value="verdan"
+                                onclick="updateSelectedValue(event)" /> Verdan
+                        </label>
+                        <label for="grung">
+                            <input type="checkbox" id="grung" name="race" value="grung"
+                                onclick="updateSelectedValue(event)" /> Grung
+                        </label>
+                        <label for="locathah">
+                            <input type="checkbox" id="locathah" name="race" value="locathah"
+                                onclick="updateSelectedValue(event)" /> Locathah
                         </label>
                     </div>
 

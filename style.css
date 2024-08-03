@@ -11,6 +11,15 @@
     --temp10: #333333;
     --temp11: #1a1a1a;
     --temp12: #000000;
+
+    --maybe: #898dc5;
+    /* --brightpurple: #c287e8; */
+    /* --lightpurple: #bfacc8; */
+    /* --darkpurple: #4a4063; */
+    /* --maybe:#54577c; */
+    /* --anothergrey: #c8c6d7; */
+    /* --grey:#fff7f8; */
+    /* --darkgrey: #474350; */
 }
 
 * {
@@ -148,12 +157,12 @@ body {
 }
 
 .navbar ul li a:hover {
-    color: cyan;
+    color: var(--maybe);
     border-radius: 5px;
 }
 
 .navbar ul ul li a:hover {
-    color: cyan;
+    color: var(--maybe);
     border-radius: 5px;
     box-shadow: none;
 
@@ -162,7 +171,7 @@ body {
 .navbar ul ul {
     position: absolute;
     top: 90px;
-    border-top: 3px solid cyan;
+    border-top: 3px solid var(--maybe);
     opacity: 0;
     visibility: hidden;
     transition: top .3s;
@@ -272,11 +281,11 @@ select {
     width: 100%;
     padding-left: 10px;
     padding-right: 10px;
-    padding-bottom:3px;
-    padding-top:10px;
+    padding-bottom: 3px;
+    padding-top: 10px;
     box-sizing: border-box;
     border-bottom: 1px solid #caced1;
-    
+
 }
 
 .right-label {
@@ -591,7 +600,8 @@ option {
     }
 
     .nav-show:hover {
-        color: cyan;
+        color: var(--maybe);
+
     }
 
     .icon {
