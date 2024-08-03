@@ -512,7 +512,28 @@
                             <input type="checkbox" id="wechselkind" name="race" value="wechselkind"
                                 onclick="updateSelectedValue(event)" /> Wechselkind
                         </label>
+                    </div>
 
+                    <div class="container">
+                        <label id="book-title"><strong>Guide to Ravenloft</strong></label>
+                        <label for="ravenloftAll" class="right-label">
+                            All <input type="checkbox" id="ravenloftAll" name="race"
+                                onclick="toggleAll(event, 'ravenloft-section')" />
+                        </label>
+                    </div>
+                    <div class="race-section" id="ravenloft-section">
+                        <label for="dhampir">
+                            <input type="checkbox" id="dhampir" name="race" value="dhampir"
+                                onclick="updateSelectedValue(event)" />Dhampir
+                        </label>
+                        <label for="hexblood">
+                            <input type="checkbox" id="hexblood" name="race" value="hexblood"
+                                onclick="updateSelectedValue(event)" /> Hexblood
+                        </label>
+                        <label for="reborn">
+                            <input type="checkbox" id="reborn" name="race" value="reborn"
+                                onclick="updateSelectedValue(event)" /> Reborn
+                        </label>
                     </div>
 
 
