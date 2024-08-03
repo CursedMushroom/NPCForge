@@ -71,10 +71,12 @@
                         will be set to random/any, races will be cleared, and presets will be deselected, giving you a
                         fresh start for your next batch of NPCs.</p>
                     <div id="icon-explain">
-                        <p><span class="title"><i class="fa-solid fa-lock"></i>  |  <i class="fa-solid fa-unlock"></i></span> : This
-                                will lock the NPC, allowing it to stay on a refreash, unlocking it will allow it to
-                                refreash.</p>
-                        <p><span class="title"><i class="fa-solid fa-x"></i></span>: This will delete the NPC from the current NPC pool.</p>
+                        <p><span class="title"><i class="fa-solid fa-lock"></i> | <i
+                                    class="fa-solid fa-unlock"></i></span> : This
+                            will lock the NPC, allowing it to stay on a refreash, unlocking it will allow it to
+                            refreash.</p>
+                        <p><span class="title"><i class="fa-solid fa-x"></i></span>: This will delete the NPC from the
+                            current NPC pool.</p>
                     </div>
                 </div>
             </div>
@@ -411,10 +413,9 @@
                             <input type="checkbox" id="vedalken" name="race" value="vedalken"
                                 onclick="updateSelectedValue(event)" /> Vedalken
                         </label>
-                    
-                    
-                    </div>
 
+
+                    </div>
                     <div class="container">
                         <label id="book-title"><strong>Eberron: RLW</strong></label>
                         <label for="eberronAll" class="right-label">
@@ -440,7 +441,6 @@
                                 onclick="updateSelectedValue(event)" /> Warforged
                         </label>
                     </div>
-
                     <div class="container">
                         <label id="book-title"><strong>Mythic Odysseys of Theros</strong></label>
                         <label for="therosAll" class="right-label">
@@ -457,10 +457,8 @@
                             <input type="checkbox" id="satyr2" name="race" value="satyr"
                                 onclick="updateSelectedValue(event)" /> Satyr
                         </label>
-                        
+
                     </div>
-
-
                     <div class="container">
                         <label id="book-title"><strong>Spelljammer</strong></label>
                         <label for="spellJammerAll" class="right-label">
@@ -493,7 +491,28 @@
                             <input type="checkbox" id="thriKreen" name="race" value="thriKreen"
                                 onclick="updateSelectedValue(event)" /> Thri-Kreen
                         </label>
-                        
+                    </div>
+
+
+
+
+                    <div class="container">
+                        <label id="book-title"><strong>Grim Hollow</strong></label>
+                        <label for="grimHollowAll" class="right-label">
+                            All <input type="checkbox" id="grimHollowAll" name="race"
+                                onclick="toggleAll(event, 'grimHollow-section')" />
+                        </label>
+                    </div>
+                    <div class="race-section" id="grimHollow-section">
+                        <label for="disembodied">
+                            <input type="checkbox" id="disembodied" name="race" value="disembodied"
+                                onclick="updateSelectedValue(event)" /> The Disembodied
+                        </label>
+                        <label for="wechselkind">
+                            <input type="checkbox" id="wechselkind" name="race" value="wechselkind"
+                                onclick="updateSelectedValue(event)" /> Wechselkind
+                        </label>
+
                     </div>
 
 
