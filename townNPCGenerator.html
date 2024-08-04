@@ -14,31 +14,12 @@
         href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=IM+Fell+Great+Primer+SC&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="navbar.css">
 </head>
 
 <body>
-    <div class="navbar">
-        <div class="logo">NPCForge</div>
-        <label for="nav-btn" class="icon"><span class="fa fa-bars"></span>
-        </label>
-        <input type="checkbox" id="nav-btn" class="hide-input">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li>
-                <label for="gen-btn" class="nav-show">Generators +</label>
-                <a>Generators <span class="fas fa-caret-down" id="navbarIcon"></span></a>
-                <input type="checkbox" id="gen-btn" class="hide-input">
-                <ul>
-                    <li>
-                        <a href="townNPCGenerator.html">Town NPC's</a>
-                        <a href="#">Generator</a>
-                        <a href="#">Generator</a>
-                    </li>
-                </ul>
-            </li>
-            <li><a href="#">About</a></li>
-        </ul>
-    </div>
+    <div id="navbar-container"></div>
 
 
     <div class="searchDiv">
@@ -640,6 +621,7 @@
     <script src="src/script.js"></script>
     <script src="src/dropdown.js"></script>
     <script src="src/presets.js"></script>
+    <script src="src/navbar.js"></script>
 </body>
 
 </html>
