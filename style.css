@@ -1,25 +1,20 @@
 :root {
-    --temp1: #f5f5f5;
-    --temp2: #f0f0f0;
-    --temp3: #e6e6e6;
-    --temp4: #d9d9d9;
-    --temp5: #cccccc;
-    --temp6: #b3b3b3;
-    --temp7: #999999;
-    --temp8: #666666;
-    --temp9: #4d4d4d;
-    --temp10: #333333;
-    --temp11: #1a1a1a;
-    --temp12: #000000;
+    --brightpurple: #c287e8;
+    --lightpurple: #bfacc8;
+    --darkpurple: #231d31;
+    --grey: #fff7f8;
+    --anothergrey: #c8c6d7;
+    --darkgrey: #474350;
+    --maybe: #54577c;
+    --complementary: #898dc5;
 
-    --maybe: #898dc5;
-    /* --brightpurple: #c287e8; */
-    /* --lightpurple: #bfacc8; */
-    /* --darkpurple: #4a4063; */
-    /* --maybe:#54577c; */
-    /* --anothergrey: #c8c6d7; */
-    /* --grey:#fff7f8; */
-    /* --darkgrey: #474350; */
+    --positive-trait: #4caf50;
+    --negative-trait: #982649;
+    --neutral-trait: #55656d;
+    --likes-header: #4f8bab;
+    --dislikes-header: #a4508b;
+    --delete-button: #b74151;
+    --lock-button: #5c6bc0;
 }
 
 * {
@@ -30,12 +25,12 @@
 }
 
 body {
-    background: var(--temp5);
+    background-color: var(--grey);
     background-image: url('images/background-overlay.png');
 }
 
 .searchDiv {
-    background-color: var(--temp2);
+    background-color: var(--grey);
     padding: 10px;
 }
 
@@ -58,12 +53,14 @@ body {
 
 #character-name b {
     font-family: "IM Fell Great Primer SC", serif;
+    color: var(--maybe);
 }
 
 .searchInputs {
     padding: 10px;
     width: 100%;
-    background-color: var(--temp7);
+    background-color: var(--maybe);
+
     display: flex;
     /* flex-wrap: wrap; */
     gap: 10px 20px;
@@ -81,7 +78,7 @@ body {
 .button-group {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
 }
 
 .amount {
@@ -89,13 +86,14 @@ body {
     justify-content: space-evenly;
     align-items: center;
     padding: 10px;
-    /* background-color: var(--temp2); */
 }
 
 #amount-text {
 
     width: 60%;
     font-family: "Bellefair", serif;
+    color: #ffffff;
+    font-size: 18px;
 }
 
 #tool-tip {
@@ -106,7 +104,7 @@ body {
 
 /* Top Navbar */
 .navbar {
-    background: #1b1b1b;
+    background: var(--darkpurple);
 
 }
 
@@ -138,7 +136,7 @@ body {
 .navbar ul li {
     float: left;
     display: inline-block;
-    background: #1b1b1b;
+    background: var(--darkpurple);
     margin: 0 5px;
 }
 
@@ -157,12 +155,12 @@ body {
 }
 
 .navbar ul li a:hover {
-    color: var(--maybe);
+    color: var(--complementary);
     border-radius: 5px;
 }
 
 .navbar ul ul li a:hover {
-    color: var(--maybe);
+    color: var(--complementary);
     border-radius: 5px;
     box-shadow: none;
 
@@ -171,7 +169,7 @@ body {
 .navbar ul ul {
     position: absolute;
     top: 90px;
-    border-top: 3px solid var(--maybe);
+    border-top: 3px solid var(--complementary);
     opacity: 0;
     visibility: hidden;
     transition: top .3s;
@@ -405,24 +403,29 @@ select {
 
     padding-top: 10px;
     cursor: pointer;
+
 }
 
 #explain-button p {
     margin-right: 10px;
+    color: var(--darkpurple);
 }
 
 #explain-button button {
     border: none;
 }
 
+input[type="checkbox"] {
+    accent-color: var(--complementary);
+}
+
 #explain-button button i {
     display: block;
     transition: all 0.4s ease;
+    background-color: var(--grey);
+    color: var(--darkpurple);
 }
 
-/* #explain-button button i:hover {
-    transform: rotateZ(-180deg);
-} */
 
 .rotate {
     transform: rotate(180deg);
@@ -433,9 +436,8 @@ select {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
     border-radius: 5px;
-    /* 5px rounded corners */
     width: 390px;
-    background-color: var(--temp2);
+    background-color: var(--grey);
     height: auto;
     padding: 10px;
     position: relative;
@@ -445,16 +447,17 @@ select {
 .character-child {
     border-style: double;
     padding: 5px;
+    border-color: var(--darkpurple);
 }
 
-/* On mouse-over, add a deeper shadow */
 .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px 0 rgba(18, 3, 27, 0.2);
 }
 
 .character-personality {
     display: flex;
     justify-content: space-between;
+    font-size: 18px;
 }
 
 hr {
@@ -462,8 +465,8 @@ hr {
     border-image-slice: 1;
     border-image-source: linear-gradient(to right,
             transparent,
-            var(--temp10) calc(50% - 25%),
-            var(--temp10) calc(50% + 25%),
+            #606060 calc(50% - 25%),
+            #606060 calc(50% + 25%),
             transparent);
 }
 
@@ -473,8 +476,8 @@ hr {
     border-image-slice: 1;
     border-image-source: linear-gradient(to right,
             transparent,
-            var(--temp10) calc(50% - 25%),
-            var(--temp10) calc(50% + 25%),
+            #333333 calc(50% - 25%),
+            #333333 calc(50% + 25%),
             transparent);
 }
 
@@ -490,7 +493,7 @@ option {
 }
 
 .card-buttons button {
-    background-color: var(--temp8);
+    background-color: var(--delete-button);
     color: white;
     border: none;
     border-radius: 4px;
@@ -499,7 +502,7 @@ option {
 }
 
 .card-buttons button.lock {
-    background-color: var(--temp11);
+    background-color: var(--lock-button);
 }
 
 .card-info {
@@ -520,6 +523,29 @@ option {
     /* display: block; */
     margin-bottom: 5px;
     font-family: "Bellefair", serif;
+    color: var(--darkpurple);
+}
+
+#pos-trait {
+    color: var(--positive-trait);
+
+}
+
+#neg-trait {
+    color: var(--negative-trait);
+}
+
+#neu-trait {
+    color: var(--neutral-trait);
+}
+
+
+.character-likes {
+    color: var(--likes-header);
+}
+
+.character-dislikes {
+    color: var(--dislikes-header);
 }
 
 .appearance-info,
@@ -539,6 +565,17 @@ option {
     padding: 20px;
 }
 
+.btn-group-btn {
+    padding: 2px;
+    border-radius: 5px;
+    font-family: "Bellefair", serif;
+    font-size: 15px;
+}
+
+.btn-group-btn:hover {
+    background-color: var(--complementary);
+    color: white;
+}
 
 /* MEDIA QUERY */
 @media all and (max-width: 968px) {
@@ -600,7 +637,7 @@ option {
     }
 
     .nav-show:hover {
-        color: var(--maybe);
+        color: var(--complementary);
 
     }
 
@@ -630,5 +667,9 @@ option {
 
     .searchInputs {
         flex-direction: column;
+    }
+
+    .btn-group-btn {
+        width: 100%;
     }
 }
