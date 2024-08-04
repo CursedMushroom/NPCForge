@@ -74,7 +74,7 @@
                         <p><span class="title"><i class="fa-solid fa-lock"></i> | <i
                                     class="fa-solid fa-unlock"></i></span> : This
                             will lock the NPC, allowing it to stay on a refreash, unlocking it will allow it to
-                            refreash.</p>
+                            leave on refreash.</p>
                         <p><span class="title"><i class="fa-solid fa-x"></i></span>: This will delete the NPC from the
                             current NPC pool.</p>
                     </div>
@@ -125,6 +125,7 @@
                 </div>
 
                 <div id="checkboxes" class="checkboxes">
+
                     <div class="container">
                         <label id="book-title"><strong>Player's Handbook</strong></label>
                         <label for="PHBAll" class="right-label">
@@ -475,6 +476,10 @@
                             <input type="checkbox" id="autognome" name="race" value="autognome"
                                 onclick="updateSelectedValue(event)" /> Autognome
                         </label>
+                        <label for="construct">
+                            <input type="checkbox" id="construct" name="race" value="construct"
+                                onclick="updateSelectedValue(event)" /> Construct
+                        </label>
                         <label for="giff">
                             <input type="checkbox" id="giff" name="race" value="giff"
                                 onclick="updateSelectedValue(event)" /> Giff
@@ -482,6 +487,10 @@
                         <label for="hadozee">
                             <input type="checkbox" id="hadozee" name="race" value="hadozee"
                                 onclick="updateSelectedValue(event)" /> Hadozee
+                        </label>
+                        <label for="modron">
+                            <input type="checkbox" id="modron" name="race" value="modron"
+                                onclick="updateSelectedValue(event)" /> Modron
                         </label>
                         <label for="plasmoid">
                             <input type="checkbox" id="plasmoid" name="race" value="plasmoid"
@@ -491,6 +500,7 @@
                             <input type="checkbox" id="thriKreen" name="race" value="thriKreen"
                                 onclick="updateSelectedValue(event)" /> Thri-Kreen
                         </label>
+
                     </div>
 
 
@@ -604,6 +614,9 @@
                     <option value="Elemental Plane of Fire">Elemental Plane of Fire</option>
                     <option value="Elemental Plane of Water">Elemental Plane of Water</option>
                     <option value="Ravenloft">Ravenloft</option>
+                    <option value="All Birds">All Birds</option>
+                    <option value="All Elves">All Elves</option>
+                    <option value="Elemental Beings">Elemental Beings</option>
                 </select>
             </div>
 

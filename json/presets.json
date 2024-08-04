@@ -144,7 +144,7 @@
             "human",
             "tabaxi",
             "tortle",
-            "yuanti",
+            "yuanTiPure",
             "aarackocra"
         ],
         "wealth_dis": "balanced"
@@ -198,14 +198,6 @@
         ],
         "wealth_dis": "random"
     },
-    "Mechanus": {
-        "races": [
-            "modron",
-            "construct",
-            "gnome"
-        ],
-        "wealth_dis": "wealthy"
-    },
     "Elemental Plane of Air": {
         "races": [
             "airGenasi",
@@ -234,7 +226,7 @@
         "wealth_dis": "balanced"
     },
     "Ravenloft": { 
-        "race":[
+        "races":[
             "dhampir",
             "hexblood",
             "reborn",
@@ -245,5 +237,33 @@
             "gnome"
         ],
         "wealth_dis": "impoverished"
-     }
+     },
+     "All Birds": {
+        "races": [
+            "aarackocra",
+            "owlin",
+            "kenku"
+        ],
+        "wealth_dis": "random"
+    },
+    "All Elves": {
+        "races":[
+            "elf",
+            "drow",
+            "shadarKai",
+            "seaElf",
+            "astralElf"
+        ],
+    "wealth_dis": "random"},
+
+    "Elemental Beings": {
+        "races": [
+            "fireGenasi",
+            "earthGenasi",
+            "waterGenasi",
+            "airGenasi"
+        ],
+        "wealth_dis": "random"
+    }
+
 }
