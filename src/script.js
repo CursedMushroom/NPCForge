@@ -546,7 +546,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             for (let i = 0; i < selectedValue; i++) {
                 let choice = getRandomElement(racePool);
-                fetchJSON(`json/${choice}.json`);
+                fetchJSON(`json/races/${choice}.json`);
             }
         }
 

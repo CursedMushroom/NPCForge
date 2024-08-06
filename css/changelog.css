@@ -18,13 +18,13 @@ body, h1, h2, p, ul {
 
 body {
     background-color: var(--grey);
-    background-image: url('images/background-overlay.png');
+    background-image: url('/images/background-overlay.png');
 }
 
 header {
     background: var(--darkgrey);
     color: var(--grey);
-    background-image: url('images/background-overlay.png');
+    background-image: url('/images/background-overlay.png');
     padding: 20px;
     text-align: center;
     height:auto;
