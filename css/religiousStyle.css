@@ -1,0 +1,507 @@
+:root {
+    --brightpurple: #c287e8;
+    --lightpurple: #bfacc8;
+    --darkpurple: #231d31;
+    --grey: #fff7f8;
+    --anothergrey: #c8c6d7;
+    --darkgrey: #474350;
+    --maybe: #54577c;
+    --complementary: #898dc5;
+
+    --positive-trait: #4caf50;
+    --negative-trait: #982649;
+    --neutral-trait: #55656d;
+    --likes-header: #4f8bab;
+    --dislikes-header: #a4508b;
+    --delete-button: #b74151;
+    --lock-button: #5c6bc0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--grey);
+    background-image: url('/images/background-overlay.png');
+}
+
+.searchDiv {
+    background-color: var(--grey);
+    padding: 10px;
+}
+
+.info {
+    padding: 10px;
+
+
+}
+
+.info p {
+    font-family: "Bellefair", serif;
+    font-size: 18px;
+}
+
+.info h1 {
+    font-family: "IM Fell Great Primer SC", serif;
+    margin-bottom: 15px;
+    font-size: 32px;
+}
+
+#character-name b {
+    font-family: "IM Fell Great Primer SC", serif;
+    color: var(--maybe);
+}
+
+.searchInputs {
+    padding: 10px;
+    width: 100%;
+    background-color: var(--maybe);
+    display: grid;
+    grid-template-rows: repeat(2, auto); /* Two rows */
+    grid-template-columns: 1fr; /* One column */
+    gap: 10px; /* Gap between rows */
+    position: relative;
+    z-index: 1;
+}
+
+#search-Row {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap within the row */
+    gap: 10px 20px; /* Adjust spacing between items */
+    align-items: center;
+}
+
+#search-Row > * {
+    flex: 1 1 auto; /* Allows items to grow and shrink */
+}
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.amount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap:10px;
+}
+
+#amount-text {
+
+    /* width: 40%; */
+    font-family: "Bellefair", serif;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+#tool-tip {
+    transform: translate(10%, -55%);
+    font-size: 1.2em;
+}
+
+
+
+#book-title strong {
+    font-size: 14px;
+    font-family: "IM Fell Great Primer SC", serif;
+}
+
+
+
+
+
+
+/* Custom Dropdown Selector */
+.custom-select {
+    /* width: 250px; */
+    position: relative;
+    font-family: "Bellefair", serif;
+}
+
+select {
+    appearance: none;
+    /* safari */
+    -webkit-appearance: none;
+    /* other styles for aesthetics */
+    width: 100%;
+    font-size: 1.15rem;
+    padding: 0.675em 1em 0.675em 1em;
+    background-color: #fff;
+    border: 1px solid #caced1;
+    border-radius: 0.25rem;
+    color: #000;
+    cursor: pointer;
+    font-family: "Bellefair", serif;
+}
+
+
+
+.custom-select::before,
+.custom-select::after {
+    --size: 0.3rem;
+    position: absolute;
+    content: "";
+    right: 1rem;
+    pointer-events: none;
+}
+
+.custom-select::before {
+    border-left: var(--size) solid transparent;
+    border-right: var(--size) solid transparent;
+    border-bottom: var(--size) solid black;
+    top: 40%;
+}
+
+.custom-select::after {
+    border-left: var(--size) solid transparent;
+    border-right: var(--size) solid transparent;
+    border-top: var(--size) solid black;
+    top: 55%;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------- */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 3px;
+    padding-top: 10px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #caced1;
+
+}
+
+.right-label {
+    display: flex;
+    align-items: center;
+}
+
+.right-label input {
+    margin-left: 5px;
+}
+
+.drop-select {
+    width: 250px;
+    position: relative;
+}
+
+.select-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.675em 1em 0.675em 1em;
+    background-color: #fff;
+    border: 1px solid #caced1;
+    border-radius: 0.25rem;
+    cursor: pointer;
+
+    appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    font-size: 1.15rem;
+
+
+
+    color: #000;
+    cursor: pointer;
+    font-family: "Bellefair", serif;
+}
+
+.dropdown-icon::before,
+.dropdown-icon::after {
+    --size: 0.3rem;
+    content: "";
+    display: block;
+    border-left: var(--size) solid transparent;
+    border-right: var(--size) solid transparent;
+    margin-bottom: 0.1rem;
+}
+
+.dropdown-icon::before {
+    border-bottom: var(--size) solid black;
+}
+
+.dropdown-icon::after {
+    border-top: var(--size) solid black;
+}
+
+#selected-value {
+    font-family: "Bellefair", serif;
+}
+
+.checkboxes {
+    display: none;
+    height: 400px;
+    overflow-y: auto;
+    border: 1px solid #caced1;
+    border-radius: 0.25rem;
+    padding: 0.5em;
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.checkboxes label {
+    display: block;
+    padding: 0.2em 0;
+    font-family: "Bellefair", serif;
+}
+
+.checkboxes input {
+    margin-right: 0.5em;
+}
+
+.show {
+    display: block;
+}
+
+.amountSelect {
+    /* width: 200px; */
+}
+
+.gen-btn {
+    display: none;
+}
+
+.hide-input {
+    display: none;
+}
+
+.race-section {
+    padding-left: 10px;
+}
+
+#info-explain {
+    padding: 10px;
+    display: block;
+}
+
+#info-explain p {
+    margin: 10px;
+}
+
+#info-explain ul {
+    margin: 10px;
+}
+#info-explain li {
+    margin-left:40px;
+    font-family: "Bellefair", serif;
+    /* margin: 5px; */
+}
+#explain-button {
+    display: flex;
+    align-items: center;
+
+    padding-top: 10px;
+    cursor: pointer;
+
+}
+
+#explain-button p {
+    margin-right: 10px;
+    /* color: var(--darkpurple); */
+}
+
+#explain-button button {
+    border: none;
+}
+
+input[type="checkbox"] {
+    accent-color: var(--complementary);
+}
+
+#explain-button button i {
+    display: block;
+    transition: all 0.4s ease;
+    background-color: var(--grey);
+    color: var(--darkpurple);
+}
+
+
+.rotate {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    width: 390px;
+    background-color: var(--grey);
+    height: auto;
+    padding: 10px;
+    position: relative;
+
+}
+
+.character-child {
+    border-style: double;
+    padding: 5px;
+    border-color: var(--darkpurple);
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(18, 3, 27, 0.2);
+}
+
+.character-personality {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+}
+
+hr {
+    margin-bottom: 5px;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right,
+            transparent,
+            #606060 calc(50% - 25%),
+            #606060 calc(50% + 25%),
+            transparent);
+}
+
+#core-hr {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right,
+            transparent,
+            #333333 calc(50% - 25%),
+            #333333 calc(50% + 25%),
+            transparent);
+}
+
+.card-buttons {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    display: flex;
+}
+
+option {
+    font-family: "Bellefair", serif;
+}
+
+.card-buttons button {
+    background-color: var(--delete-button);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 2px 5px;
+    cursor: pointer;
+}
+
+.card-buttons button.lock {
+    background-color: var(--lock-button);
+}
+
+.card-info {
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 10px;
+
+}
+
+.card-info p {
+    margin: 0 0 10px;
+    font-family: "Bellefair", serif;
+}
+
+.title {
+    font-weight: bold;
+    /* display: block; */
+    margin-bottom: 5px;
+    font-family: "Bellefair", serif;
+    color: var(--darkpurple);
+}
+
+#pos-trait {
+    color: var(--positive-trait);
+
+}
+
+#neg-trait {
+    color: var(--negative-trait);
+}
+
+#neu-trait {
+    color: var(--neutral-trait);
+}
+
+
+.character-likes {
+    color: var(--likes-header);
+}
+
+.character-dislikes {
+    color: var(--dislikes-header);
+}
+
+.appearance-info,
+.card-profession,
+.character-children {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
+
+
+
+.results {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.btn-group-btn {
+    padding: 2px;
+    border-radius: 5px;
+    font-family: "Bellefair", serif;
+    font-size: 15px;
+}
+
+.btn-group-btn:hover {
+    background-color: var(--complementary);
+    color: white;
+}
+
+#info-toggle-text {
+    font-family: "Bellefair", serif;
+    font-size: 12px;
+    color: var(--lightpurple);
+}
+
+/* MEDIA QUERY */
+@media all and (max-width: 968px) {
+    .results {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    .card {
+        width: auto;
+    }
+
+   
+
+    #search-Row {
+        flex-direction: column;
+    }
+
+    .btn-group-btn {
+        width: 100%;
+    }
+}

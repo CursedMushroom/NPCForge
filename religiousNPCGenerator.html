@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NPCF Religious Npc's Generator</title>
+    <link rel="stylesheet" href="css/religiousStyle.css">
+    <script src="https://kit.fontawesome.com/5f42132cef.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lancelot&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=IM+Fell+Great+Primer+SC&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/navbar.css">
+</head>
+
+<body>
+    <div id="navbar-container"></div>
+
+
+    <div class="searchDiv">
+        <div class="info">
+            <h1>Town NPC's Generator</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis facilis totam numquam odit? Sit,
+                atque! Quam voluptates facere labore ad aperiam porro eos exercitationem, recusandae praesentium
+                laboriosam, accusamus beatae et molestiae dolores distinctio. Reiciendis porro ad, exercitationem
+                cupiditate quam voluptates culpa error consectetur deserunt veniam quos repellat quasi nostrum. Ipsa?
+            </p>
+
+            <div id="key">
+                <div id="explain-button" onclick="toggleVisibility()">
+                    <p>What everything does: </p>
+                    <p id="info-toggle-text">(Hide info) </p>
+                    <button onclick="toggleVisibility()"><i class="fa-solid fa-chevron-down"
+                            id="toggle-icon"></i></button>
+                </div>
+                <div id="info-explain">
+                    <p><span class="title">Amount of NPCs to generate:</span> Determines the number of NPCs to be
+                        created in one go. Each time you generate new NPCs, the current pool will reset unless
+                        individual NPCs are locked.</p>
+
+                    <p><span class="title">Hierarchy Position Ratios:</span> Influences the socioeconomic status of the
+                        generated NPCs, impacting their careers and clothing. The ratios will define how many NPCs hold
+                        high, mid, or low-ranking positions within their religious or church hierarchy, affecting their
+                        influence and power within the organization.</p>
+
+                    <p><span class="title">Races:</span> Currently offers a comprehensive selection of nearly all races
+                        available in Dungeons & Dragons. Select from various races to determine which types of
+                        characters will be generated, influencing their appearance, abilities, and cultural background.
+                    </p>
+                    <p><span class="title">Presets:</span> Provides predefined settings for generating NPCs based on
+                        common themes or scenarios. Choose from options like Traditional Hierarchies, Fantasy Orders,
+                        Divine Hierarchies, Arcane Orders, or Mystic Cults to tailor the generated NPCs to specific
+                        types of religious or church organizations.</p>
+
+                    <p><span class="title">Reset All:</span> Resets all settings to their defaults. Wealth distribution
+                        will be set to random/any, races will be cleared, and presets will be deselected, giving you a
+                        fresh start for your next batch of NPCs.</p>
+                    <hr>
+                    <p><span class="title">Gender:</span> Specifies the gender of the generated NPCs. Options include
+                        Male, Female, Androgynous, or Any, allowing for a diverse range of characters suitable for
+                        various narrative needs.</p>
+
+                    <p><span class="title">Clothing:</span> Select the style of clothing that NPCs will be wearing,
+                        including options such as Luxurious, Practical, Simple, or Mystical. This choice will reflect
+                        their socioeconomic status and role within the religious hierarchy.</p>
+
+
+
+                    <p><span class="title">Breakdown Card:</span> Provides detailed information about each generated
+                        NPC, including:</p>
+                    <ul>
+                        <li><span class="title">Religious Symbol:</span> Displays the emblem or icon associated with the
+                            NPC's religious order or deity. This symbol represents their faith and role within their
+                            religious community.</li>
+                        <li><span class="title">Alignment:</span> Indicates the moral and ethical stance of the NPC,
+                            such as Lawful Good, Neutral Evil, etc. Alignment helps to determine their motivations and
+                            behavior.</li>
+                        <li><span class="title">Colors:</span> Lists the colors associated with the NPC's religious
+                            order or personal preferences. These colors often symbolize their faith and can be seen in
+                            their clothing, symbols, and other personal items.</li>
+                        <li><span class="title">Story Hook:</span> Offers a potential plot point or story element
+                            related to the NPC. This could include their role in ongoing events, a secret they guard, or
+                            a quest they are involved in.</li>
+                    </ul>
+
+
+
+                   <hr>
+                    <div id="icon-explain">
+                        <p><span class="title"><i class="fa-solid fa-lock"></i> | <i
+                                    class="fa-solid fa-unlock"></i></span>: This will lock the NPC, allowing it to stay
+                            on refresh. Unlocking it will allow it to leave on refresh.</p>
+                        <p><span class="title"><i class="fa-solid fa-x"></i></span>: This will delete the NPC from the
+                            current NPC pool.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="searchInputs">
+            <div id="search-Row">
+                <div class="amount">
+                    <p for="amount" id="amount-text">Amount of NPCS to Generate:</p>
+                    <div class="custom-select amountSelect">
+                        <select id="npcAmount">
+                            <option value="10">10</option>
+                            <option value="15">15</option>
+                            <option value="20">20</option>
+                            <option value="25">25</option>
+                            <option value="30">30</option>
+                            <option value="35">35</option>
+                            <option value="40">40</option>
+                            <option value="45">45</option>
+                            <option value="50">50</option>
+                            <option value="70">70</option>
+                            <option value="100">100</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="amount">
+                    <p for="amount" id="amount-text">Hierarchy Position Ratios:</p>
+                    <div class="custom-select amountSelect">
+                        <select id="npcAmount">
+                            <option value="20:50:30">Standard Distribution 20:50:30</option>
+                            <option value="33:33:34">Equal Distribution 33:33:34</option>
+                            <option value="40:40:20">High Dominant 40:40:20</option>
+                            <option value="10:30:60">Low Dominant 10:30:60</option>
+                            <option value="30:40:30">Balanced High and Low 30:40:30</option>
+                            <option value="15:70:15">Mid Dominant 15:70:15</option>
+                            <option value="25:50:25">High and Mid Balanced 25:50:25</option>
+                            <option value="35:20:45">High and Low Extremes 35:20:45</option>
+                            <option value="10:60:30">Mid and Low Extremes 10:60:30</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="drop-select">
+                    <div class="select-box" onclick="toggleDropdown(event)">
+                        <span id="selected-value">--- Races ---</span>
+                        <div class="dropdown-icon"></div>
+                    </div>
+                    <div id="checkboxes" class="checkboxes">
+                        <div class="container">
+                            <label id="book-title"><strong>Player's Handbook</strong></label>
+                            <label for="PHBAll" class="right-label">
+                                All <input type="checkbox" id="PHBAll" name="race"
+                                    onclick="toggleAll(event, 'phb-section')" />
+                            </label>
+                        </div>
+                        <div class="race-section" id="phb-section">
+                            <label for="dwarf">
+                                <input type="checkbox" id="dwarf" name="race" value="dwarf"
+                                    onclick="updateSelectedValue(event)" /> Dwarf
+                            </label>
+                            <label for="elf">
+                                <input type="checkbox" id="elf" name="race" value="elf"
+                                    onclick="updateSelectedValue(event)" /> Elf
+                            </label>
+                            <label for="drow">
+                                <input type="checkbox" id="drow" name="race" value="drow"
+                                    onclick="updateSelectedValue(event)" /> Drow
+                            </label>
+                            <label for="halfling">
+                                <input type="checkbox" id="halfling" name="race" value="halfling"
+                                    onclick="updateSelectedValue(event)" /> Halfling
+                            </label>
+                            <label for="human">
+                                <input type="checkbox" id="human" name="race" value="human"
+                                    onclick="updateSelectedValue(event)" /> Human
+                            </label>
+                            <label for="dragonborn">
+                                <input type="checkbox" id="dragonborn" name="race" value="dragonborn"
+                                    onclick="updateSelectedValue(event)" /> Dragonborn
+                            </label>
+                            <label for="gnome">
+                                <input type="checkbox" id="gnome" name="race" value="gnome"
+                                    onclick="updateSelectedValue(event)" /> Gnome
+                            </label>
+                            <label for="half-elf">
+                                <input type="checkbox" id="half-elf" name="race" value="halfElf"
+                                    onclick="updateSelectedValue(event)" /> Half-Elf
+                            </label>
+                            <label for="half-orc">
+                                <input type="checkbox" id="half-orc" name="race" value="halfOrc"
+                                    onclick="updateSelectedValue(event)" /> Half-Orc
+                            </label>
+                            <label for="tiefling">
+                                <input type="checkbox" id="tiefling" name="race" value="tiefling"
+                                    onclick="updateSelectedValue(event)" /> Tiefling
+                            </label>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="custom-select">
+                    <select id="presetSelect" onchange="handlePresetChange()">
+                        <option value="" disabled selected hidden>--- Presets ---</option>
+                        <option value="">None</option>
+                        <option value="Waterdeep">Waterdeep</option>
+                        <option value="Baldur's Gate">Baldur's Gate</option>
+                        <option value="Neverwinter">Neverwinter</option>
+                        <option value="Silverymoon">Silverymoon</option>
+                        <option value="Icewind Dale">Icewind Dale</option>
+                        <option value="Cormyr">Cormyr</option>
+                        <option value="Sigil">Sigil (City of Doors)</option>
+                        <option value="Sharn">Sharn</option>
+                        <option value="Stormreach">Stormreach</option>
+                        <option value="Barovia">Barovia</option>
+                        <option value="Tyr">Tyr</option>
+                        <option value="Greyhawk City">Greyhawk City</option>
+                        <option value="Solace">Solace</option>
+                        <option value="Phandalin">Phandalin</option>
+                        <option value="Saltmarsh">Saltmarsh</option>
+                        <option value="Chult">Chult</option>
+                        <option value="Ravnica">Ravnica</option>
+                        <option value="Theros">Theros</option>
+                        <option value="Wildmount">Wildmount</option>
+                        <option value="Mount Celestia">Mount Celestia</option>
+                        <option value="The Abyss">The Abyss</option>
+                        <option value="Limbo">Limbo</option>
+                        <option value="Mechanus">Mechanus</option>
+                        <option value="Elemental Plane of Air">Elemental Plane of Air</option>
+                        <option value="Elemental Plane of Earth">Elemental Plane of Earth</option>
+                        <option value="Elemental Plane of Fire">Elemental Plane of Fire</option>
+                        <option value="Elemental Plane of Water">Elemental Plane of Water</option>
+                        <option value="Ravenloft">Ravenloft</option>
+                        <option value="All Birds">All Birds</option>
+                        <option value="All Elves">All Elves</option>
+                        <option value="Elemental Beings">Elemental Beings</option>
+                    </select>
+                </div>
+                <div class="button-group">
+                    <button class="btn-group-btn" id="reset">Reset All</button>
+                    <button class="btn-group-btn" id="generateBtn">Generate Character</button>
+                </div>
+            </div>
+            <hr>
+            <div id="search-Row">
+                <div class="drop-select">
+                    <div class="select-box" onclick="toggleDropdown(event)">
+                        <span id="selected-value">--- Races ---</span>
+                        <div class="dropdown-icon"></div>
+                    </div>
+                    <div id="checkboxes" class="checkboxes">
+                        <div class="container">
+                            <label id="book-title"><strong>Player's Handbook</strong></label>
+                            <label for="PHBAll" class="right-label">
+                                All <input type="checkbox" id="PHBAll" name="race"
+                                    onclick="toggleAll(event, 'phb-section')" />
+                            </label>
+                        </div>
+                        <div class="race-section" id="phb-section">
+                            <label for="dwarf">
+                                <input type="checkbox" id="dwarf" name="race" value="dwarf"
+                                    onclick="updateSelectedValue(event)" /> Dwarf
+                            </label>
+                            <label for="elf">
+                                <input type="checkbox" id="elf" name="race" value="elf"
+                                    onclick="updateSelectedValue(event)" /> Elf
+                            </label>
+                            <label for="drow">
+                                <input type="checkbox" id="drow" name="race" value="drow"
+                                    onclick="updateSelectedValue(event)" /> Drow
+                            </label>
+                            <label for="halfling">
+                                <input type="checkbox" id="halfling" name="race" value="halfling"
+                                    onclick="updateSelectedValue(event)" /> Halfling
+                            </label>
+                            <label for="human">
+                                <input type="checkbox" id="human" name="race" value="human"
+                                    onclick="updateSelectedValue(event)" /> Human
+                            </label>
+                            <label for="dragonborn">
+                                <input type="checkbox" id="dragonborn" name="race" value="dragonborn"
+                                    onclick="updateSelectedValue(event)" /> Dragonborn
+                            </label>
+                            <label for="gnome">
+                                <input type="checkbox" id="gnome" name="race" value="gnome"
+                                    onclick="updateSelectedValue(event)" /> Gnome
+                            </label>
+                            <label for="half-elf">
+                                <input type="checkbox" id="half-elf" name="race" value="halfElf"
+                                    onclick="updateSelectedValue(event)" /> Half-Elf
+                            </label>
+                            <label for="half-orc">
+                                <input type="checkbox" id="half-orc" name="race" value="halfOrc"
+                                    onclick="updateSelectedValue(event)" /> Half-Orc
+                            </label>
+                            <label for="tiefling">
+                                <input type="checkbox" id="tiefling" name="race" value="tiefling"
+                                    onclick="updateSelectedValue(event)" /> Tiefling
+                            </label>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="custom-select">
+                    <select id="presetSelect" onchange="handlePresetChange()">
+                        <option value="" disabled selected hidden>--- Presets ---</option>
+                        <option value="">None</option>
+                        <option value="Waterdeep">Waterdeep</option>
+                        <option value="Baldur's Gate">Baldur's Gate</option>
+                        <option value="Neverwinter">Neverwinter</option>
+                        <option value="Silverymoon">Silverymoon</option>
+                        <option value="Icewind Dale">Icewind Dale</option>
+                        <option value="Cormyr">Cormyr</option>
+                        <option value="Sigil">Sigil (City of Doors)</option>
+                        <option value="Sharn">Sharn</option>
+                        <option value="Stormreach">Stormreach</option>
+                        <option value="Barovia">Barovia</option>
+                        <option value="Tyr">Tyr</option>
+                        <option value="Greyhawk City">Greyhawk City</option>
+                        <option value="Solace">Solace</option>
+                        <option value="Phandalin">Phandalin</option>
+                        <option value="Saltmarsh">Saltmarsh</option>
+                        <option value="Chult">Chult</option>
+                        <option value="Ravnica">Ravnica</option>
+                        <option value="Theros">Theros</option>
+                        <option value="Wildmount">Wildmount</option>
+                        <option value="Mount Celestia">Mount Celestia</option>
+                        <option value="The Abyss">The Abyss</option>
+                        <option value="Limbo">Limbo</option>
+                        <option value="Mechanus">Mechanus</option>
+                        <option value="Elemental Plane of Air">Elemental Plane of Air</option>
+                        <option value="Elemental Plane of Earth">Elemental Plane of Earth</option>
+                        <option value="Elemental Plane of Fire">Elemental Plane of Fire</option>
+                        <option value="Elemental Plane of Water">Elemental Plane of Water</option>
+                        <option value="Ravenloft">Ravenloft</option>
+                        <option value="All Birds">All Birds</option>
+                        <option value="All Elves">All Elves</option>
+                        <option value="Elemental Beings">Elemental Beings</option>
+                    </select>
+                </div>
+
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                <label for="vehicle1"> I have a bike </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="results">
+        <p id="characterDescription"> No NPC's have been Generated</p>
+
+
+    </div>
+
+    <!-- <script src="src/script.js"></script> -->
+    <script src="src/dropdown.js"></script>
+    <script src="src/presets.js"></script>
+    <script src="src/navbar.js"></script>
+
+
+</body>

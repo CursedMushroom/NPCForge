@@ -44,12 +44,15 @@ function toggleVisibility() {
     event.stopPropagation();
     const infoDiv = document.getElementById('info-explain');
     const icon = document.getElementById('toggle-icon');
+    const infoText = document.getElementById('info-toggle-text');
     if (infoDiv.style.display === 'block' || infoDiv.style.display === '') {
         infoDiv.style.display = 'none';
         icon.classList.add('rotate');
+        infoText.textContent = '(Show info)';
         
     } else {
         infoDiv.style.display = 'block';
         icon.classList.remove('rotate');
+        infoText.textContent = '(Hide info)';
     }
 }
