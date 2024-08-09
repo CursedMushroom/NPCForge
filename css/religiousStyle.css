@@ -61,23 +61,28 @@ body {
     width: 100%;
     background-color: var(--maybe);
     display: grid;
-    grid-template-rows: repeat(2, auto); /* Two rows */
-    grid-template-columns: 1fr; /* One column */
-    gap: 10px; /* Gap between rows */
+    grid-template-rows: repeat(2, auto);
+    /* Two rows */
+    grid-template-columns: 1fr;
+    /* One column */
+    gap: 10px;
+    /* Gap between rows */
     position: relative;
     z-index: 1;
 }
 
 #search-Row {
     display: flex;
-    flex-wrap: wrap; /* Allows items to wrap within the row */
-    gap: 10px 20px; /* Adjust spacing between items */
+    flex-wrap: wrap;
+    gap: 10px 20px;
     align-items: center;
 }
 
-#search-Row > * {
-    flex: 1 1 auto; /* Allows items to grow and shrink */
+#search-Row>* {
+    flex: 1 1 auto;
+    /* Allows items to grow and shrink */
 }
+
 .button-group {
     display: flex;
     flex-direction: column;
@@ -89,7 +94,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 10px;
-    gap:10px;
+    gap: 10px;
 }
 
 #amount-text {
@@ -216,6 +221,27 @@ select {
     font-family: "Bellefair", serif;
 }
 
+/* #gender-box{
+   margin-left:20px;
+    width:80%;
+} */
+#breakdown-check {
+    font-size: 1.15rem;
+    padding: 0.675em 1em 0.675em 1em;
+    background-color: #fff;
+    border-radius: 0.25rem;
+
+    
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#breakdown-check label {
+    font-family: "Bellefair", serif;
+    cursor: pointer;
+}
+
 .dropdown-icon::before,
 .dropdown-icon::after {
     --size: 0.3rem;
@@ -234,13 +260,18 @@ select {
     border-top: var(--size) solid black;
 }
 
-#selected-value {
+#selected-value,
+#selected-gender-value {
     font-family: "Bellefair", serif;
 }
 
+
 .checkboxes {
     display: none;
-    height: 400px;
+    max-height: 400px;
+    /* Limits the maximum height */
+    height: auto;
+    /* Allows height to adjust based on content */
     overflow-y: auto;
     border: 1px solid #caced1;
     border-radius: 0.25rem;
@@ -266,9 +297,6 @@ select {
     display: block;
 }
 
-.amountSelect {
-    /* width: 200px; */
-}
 
 .gen-btn {
     display: none;
@@ -294,11 +322,13 @@ select {
 #info-explain ul {
     margin: 10px;
 }
+
 #info-explain li {
-    margin-left:40px;
+    margin-left: 40px;
     font-family: "Bellefair", serif;
     /* margin: 5px; */
 }
+
 #explain-button {
     display: flex;
     align-items: center;
@@ -495,7 +525,7 @@ option {
         width: auto;
     }
 
-   
+
 
     #search-Row {
         flex-direction: column;
