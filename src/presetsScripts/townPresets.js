@@ -1,7 +1,7 @@
 let presetData;
 
 
-fetch('json/presets.json')
+fetch('json/presets/townPresets.json')
 .then(response => response.json())
 .then(data => {
     presetData = data;

@@ -1,0 +1,1836 @@
+{
+    "High Priest & Council": {
+        "name": "High Priest & Council",
+        "prompts":[],
+        "symbols":[],
+        "alignment":[],
+        "roles": {
+            "high": [
+                "High Priest",
+                "Archdeacon"
+            ],
+            "mid": [
+                "Bishop",
+                "Canon"
+            ],
+            "low": [
+                "Dean"
+            ]
+        },
+        "gender": [
+            "Male",
+            "Female",
+            "nonBinary"
+        ],
+        "hierarchyPositionRatios": "40:30:30",
+        "clothing": {
+            "high": {
+                "High Priest": {
+                    "clothing": [
+                        "Ornate Vestments",
+                        "Golden Cincture"
+                    ],
+                    "accessories": [
+                        "Ceremonial Staff",
+                        "Holy Amulet",
+                        "Priestly Hat"
+                    ],
+                    "footwear": [
+                        "Embroidered Sandals"
+                    ]
+                },
+                "Archdeacon": {
+                    "clothing": [
+                        "Richly Embroidered Robes",
+                        "Gold-Trimmed Sash"
+                    ],
+                    "accessories": [
+                        "Signet Ring",
+                        "Holy Symbol Necklace",
+                        "Decorative Cloak"
+                    ],
+                    "footwear": [
+                        "Leather Sandals with Gold Buckles"
+                    ]
+                }
+            },
+            "mid": {
+                "Bishop": {
+                    "clothing": [
+                        "Decorative Robes",
+                        "Bishop's Mitre"
+                    ],
+                    "accessories": [
+                        "Silver Crucifix",
+                        "Bishop's Ring"
+                    ],
+                    "footwear": [
+                        "Simple Leather Shoes"
+                    ]
+                },
+                "Canon": {
+                    "clothing": [
+                        "Formal Cassock",
+                        "Simple Stole"
+                    ],
+                    "accessories": [
+                        "Holy Relic Pendant"
+                    ],
+                    "footwear": [
+                        "Plain Leather Shoes"
+                    ]
+                }
+            },
+            "low": {
+                "Dean": {
+                    "clothing": [
+                        "Plain Robes",
+                        "Simple Belt"
+                    ],
+                    "accessories": [
+                        "Basic Cross Necklace"
+                    ],
+                    "footwear": [
+                        "Basic Sandals"
+                    ]
+                }
+            }
+        }
+    },
+    "Monastic Order": {
+        "name": "Monastic Order",
+        "roles": {
+            "high": [
+                "Grandmaster",
+                "Master"
+            ],
+            "mid": [
+                "Monk",
+                "Novice"
+            ],
+            "low": [
+                "Lay Brother"
+            ]
+        },
+        "gender": [
+            "Male"
+        ],
+        "hierarchyPositionRatios": "30:40:30",
+        "clothing": {
+            "high": {
+                "Grandmaster": {
+                    "clothing": [
+                        "Exquisite Robes",
+                        "Golden Sash"
+                    ],
+                    "accessories": [
+                        "Master's Staff",
+                        "Sacred Amulet",
+                        "Golden Ring"
+                    ],
+                    "footwear": [
+                        "Embroidered Slippers"
+                    ]
+                },
+                "Master": {
+                    "clothing": [
+                        "Richly Adorned Robes",
+                        "Silk Sash"
+                    ],
+                    "accessories": [
+                        "Ceremonial Dagger",
+                        "Symbolic Pendant"
+                    ],
+                    "footwear": [
+                        "Soft Leather Sandals"
+                    ]
+                }
+            },
+            "mid": {
+                "Monk": {
+                    "clothing": [
+                        "Simple Robes",
+                        "Belted Tunic"
+                    ],
+                    "accessories": [
+                        "Wooden Meditation Beads",
+                        "Small Amulet"
+                    ],
+                    "footwear": [
+                        "Basic Sandals"
+                    ]
+                },
+                "Novice": {
+                    "clothing": [
+                        "Plain Robes",
+                        "Simple Belt"
+                    ],
+                    "accessories": [
+                        "Basic Meditation Beads"
+                    ],
+                    "footwear": [
+                        "Plain Cloth Shoes"
+                    ]
+                }
+            },
+            "low": {
+                "Lay Brother": {
+                    "clothing": [
+                        "Rough-Spun Robes",
+                        "Basic Belt"
+                    ],
+                    "accessories": [
+                        "Minimalist Necklace"
+                    ],
+                    "footwear": [
+                        "Rough Sandals"
+                    ]
+                }
+            }
+        }
+    },
+    "Holy Order of Warriors": {
+        "name": "Holy Order of Warriors",
+        "roles": {
+            "high": [
+                "Grand Knight",
+                "Knight Commander"
+            ],
+            "mid": [
+                "Knight",
+                "Squire"
+            ],
+            "low": [
+                "Page"
+            ]
+        },
+        "gender": [
+            "Female"
+        ],
+        "hierarchyPositionRatios": "35:40:25",
+        "clothing": {
+            "high": {
+                "Grand Knight": {
+                    "clothing": [
+                        "Decorative Plate Armor",
+                        "High Commander's Cloak"
+                    ],
+                    "accessories": [
+                        "Grand Knight's Crest",
+                        "Enchanted Gauntlets",
+                        "Ornate Sword"
+                    ],
+                    "footwear": [
+                        "Reinforced Boots"
+                    ]
+                },
+                "Knight Commander": {
+                    "clothing": [
+                        "Commander's Plate Armor",
+                        "Regal Cloak"
+                    ],
+                    "accessories": [
+                        "Commander's Emblem",
+                        "Commander's Sword"
+                    ],
+                    "footwear": [
+                        "Heavy Duty Boots"
+                    ]
+                }
+            },
+            "mid": {
+                "Knight": {
+                    "clothing": [
+                        "Standard Plate Armor",
+                        "Knight's Cape"
+                    ],
+                    "accessories": [
+                        "Knight's Badge",
+                        "Functional Sword"
+                    ],
+                    "footwear": [
+                        "Sturdy Boots"
+                    ]
+                },
+                "Squire": {
+                    "clothing": [
+                        "Simple Armor",
+                        "Squire's Tunic"
+                    ],
+                    "accessories": [
+                        "Training Sword",
+                        "Squire's Badge"
+                    ],
+                    "footwear": [
+                        "Leather Boots"
+                    ]
+                }
+            },
+            "low": {
+                "Page": {
+                    "clothing": [
+                        "Basic Uniform",
+                        "Page's Tunic"
+                    ],
+                    "accessories": [
+                        "Page's Satchel"
+                    ],
+                    "footwear": [
+                        "Basic Leather Shoes"
+                    ]
+                }
+            }
+        }
+    },
+    "Mystic Circle": {
+        "name": "Mystic Circle",
+        "roles": {
+            "high": [
+                "Archmage",
+                "High Seer"
+            ],
+            "mid": [
+                "Mystic",
+                "Adept"
+            ],
+            "low": [
+                "Initiate"
+            ]
+        },
+        "gender": [
+            "Male",
+            "Female",
+            "nonBinary"
+        ],
+        "hierarchyPositionRatios": "30:40:30",
+        "clothing": {
+            "high": {
+                "Archmage": {
+                    "clothing": [
+                        "Enchanted Robes",
+                        "Mystic Cloak"
+                    ],
+                    "accessories": [
+                        "Arcane Staff",
+                        "Orb of Power",
+                        "Mystic Amulet"
+                    ],
+                    "footwear": [
+                        "Elven Slippers"
+                    ]
+                },
+                "High Seer": {
+                    "clothing": [
+                        "Prophetic Garments",
+                        "Seer's Mantle"
+                    ],
+                    "accessories": [
+                        "Seer's Crystal",
+                        "Divination Tools"
+                    ],
+                    "footwear": [
+                        "Silk Slippers"
+                    ]
+                }
+            },
+            "mid": {
+                "Mystic": {
+                    "clothing": [
+                        "Mystic Robes",
+                        "Ceremonial Belt"
+                    ],
+                    "accessories": [
+                        "Mystic Wand",
+                        "Focus Crystal"
+                    ],
+                    "footwear": [
+                        "Comfortable Sandals"
+                    ]
+                },
+                "Adept": {
+                    "clothing": [
+                        "Adept's Robes",
+                        "Functional Cloak"
+                    ],
+                    "accessories": [
+                        "Adept's Staff",
+                        "Magic Focus"
+                    ],
+                    "footwear": [
+                        "Sturdy Sandals"
+                    ]
+                }
+            },
+            "low": {
+                "Initiate": {
+                    "clothing": [
+                        "Basic Robes",
+                        "Initiate's Tunic"
+                    ],
+                    "accessories": [
+                        "Basic Wand"
+                    ],
+                    "footwear": [
+                        "Simple Shoes"
+                    ]
+                }
+            }
+        }
+    },
+    "Temple Guardians": {
+        "name": "Temple Guardians",
+        "roles": {
+            "high": [
+                "Temple Guardian"
+            ],
+            "mid": [
+                "Sentinel",
+                "Protector"
+            ],
+            "low": [
+                "Watcher",
+                "Acolyte"
+            ]
+        },
+        "gender": [
+            "nonBinary"
+        ],
+        "hierarchyPositionRatios": "35:40:25",
+        "clothing": {
+            "high": {
+                "Temple Guardian": {
+                    "clothing": [
+                        "Sacred Armor",
+                        "Guardian's Robes"
+                    ],
+                    "accessories": [
+                        "Temple Staff",
+                        "Guardian's Amulet",
+                        "Holy Symbol"
+                    ],
+                    "footwear": [
+                        "Enchanted Sandals"
+                    ]
+                }
+            },
+            "mid": {
+                "Sentinel": {
+                    "clothing": [
+                        "Ceremonial Armor",
+                        "Sentinel's Tunic"
+                    ],
+                    "accessories": [
+                        "Sentinel's Shield",
+                        "Protective Pendant"
+                    ],
+                    "footwear": [
+                        "Sturdy Boots"
+                    ]
+                },
+                "Protector": {
+                    "clothing": [
+                        "Protective Gear",
+                        "Guardian's Cloak"
+                    ],
+                    "accessories": [
+                        "Protective Gauntlets",
+                        "Sacred Charm"
+                    ],
+                    "footwear": [
+                        "Reinforced Boots"
+                    ]
+                }
+            },
+            "low": {
+                "Watcher": {
+                    "clothing": [
+                        "Simple Tunic",
+                        "Light Armor"
+                    ],
+                    "accessories": [
+                        "Watcher's Staff"
+                    ],
+                    "footwear": [
+                        "Practical Sandals"
+                    ]
+                },
+                "Acolyte": {
+                    "clothing": [
+                        "Acolyte's Robes",
+                        "Simple Cloak"
+                    ],
+                    "accessories": [
+                        "Acolyte's Pendant"
+                    ],
+                    "footwear": [
+                        "Basic Shoes"
+                    ]
+                }
+            }
+        }
+    },
+    "Divine Scholars": {
+        "name": "Divine Scholars",
+        "roles": {
+            "high": [
+                "Chief Scholar",
+                "Senior Scholar"
+            ],
+            "mid": [
+                "Scholar",
+                "Researcher"
+            ],
+            "low": [
+                "Student"
+            ]
+        },
+        "gender": [
+            "Male",
+            "Female",
+            "nonBinary"
+        ],
+        "hierarchyPositionRatios": "25:45:30",
+        "clothing": {
+            "high": {
+                "Chief Scholar": {
+                    "clothing": [
+                        "Ornate Robes",
+                        "Scholar's Mantle"
+                    ],
+                    "accessories": [
+                        "Chief's Staff",
+                        "Golden Amulet",
+                        "Ceremonial Ring"
+                    ],
+                    "footwear": [
+                        "Elegant Sandals"
+                    ]
+                },
+                "Senior Scholar": {
+                    "clothing": [
+                        "Richly Decorated Robes",
+                        "Senior Scholar's Cloak"
+                    ],
+                    "accessories": [
+                        "Senior's Staff",
+                        "Silver Pendant",
+                        "Ceremonial Dagger"
+                    ],
+                    "footwear": [
+                        "Decorative Shoes"
+                    ]
+                }
+            },
+            "mid": {
+                "Scholar": {
+                    "clothing": [
+                        "Simple Robes",
+                        "Scholar's Vest"
+                    ],
+                    "accessories": [
+                        "Scholar's Tome",
+                        "Bronze Pendant"
+                    ],
+                    "footwear": [
+                        "Comfortable Boots"
+                    ]
+                },
+                "Researcher": {
+                    "clothing": [
+                        "Practical Robes",
+                        "Researcher's Tunic"
+                    ],
+                    "accessories": [
+                        "Researcher's Toolbelt",
+                        "Utility Pouch"
+                    ],
+                    "footwear": [
+                        "Sturdy Boots"
+                    ]
+                }
+            },
+            "low": {
+                "Student": {
+                    "clothing": [
+                        "Basic Robes",
+                        "Student's Tunic"
+                    ],
+                    "accessories": [
+                        "Student's Satchel"
+                    ],
+                    "footwear": [
+                        "Simple Shoes"
+                    ]
+                }
+            }
+        }
+    },
+    "Sacred Healers": {
+        "name": "Sacred Healers",
+        "roles": {
+            "high": [
+                "High Healer"
+            ],
+            "mid": [
+                "Healer",
+                "Medic"
+            ],
+            "low": [
+                "Herbalist",
+                "Novice Healer"
+            ]
+        },
+        "gender": [
+            "Female",
+            "nonBinary"
+        ],
+        "hierarchyPositionRatios": "30:40:30",
+        "clothing": {
+            "high": {
+                "High Healer": {
+                    "clothing": [
+                        "Elaborate Robes",
+                        "High Healer's Cloak"
+                    ],
+                    "accessories": [
+                        "Healer's Staff",
+                        "Gold Pendant of Healing",
+                        "Ceremonial Belt"
+                    ],
+                    "footwear": [
+                        "Luxurious Sandals"
+                    ]
+                }
+            },
+            "mid": {
+                "Healer": {
+                    "clothing": [
+                        "Simple Robes",
+                        "Healer's Tunic"
+                    ],
+                    "accessories": [
+                        "Healing Staff",
+                        "Silver Amulet",
+                        "Pouch of Remedies"
+                    ],
+                    "footwear": [
+                        "Comfortable Shoes"
+                    ]
+                },
+                "Medic": {
+                    "clothing": [
+                        "Practical Robes",
+                        "Medic's Apron"
+                    ],
+                    "accessories": [
+                        "Medic's Toolbelt",
+                        "Utility Pouch"
+                    ],
+                    "footwear": [
+                        "Sturdy Boots"
+                    ]
+                }
+            },
+            "low": {
+                "Herbalist": {
+                    "clothing": [
+                        "Basic Robes",
+                        "Herbalist's Tunic"
+                    ],
+                    "accessories": [
+                        "Herbalist's Satchel",
+                        "Wristbands of Herbs"
+                    ],
+                    "footwear": [
+                        "Simple Sandals"
+                    ]
+                },
+                "Novice Healer": {
+                    "clothing": [
+                        "Plain Robes",
+                        "Novice's Tunic"
+                    ],
+                    "accessories": [
+                        "Novice's Satchel",
+                        "Basic Healing Kit"
+                    ],
+                    "footwear": [
+                        "Basic Shoes"
+                    ]
+                }
+            }
+        }
+    },
+    "Celestial Envoys": {
+        "name": "Celestial Envoys",
+        "roles": {
+            "high": [
+                "Starseer",
+                "Celestial Envoy"
+            ],
+            "mid": [
+                "Navigator",
+                "Skywatcher",
+                "Herald",
+                "Messenger"
+            ],
+            "low": [
+                "Cartographer",
+                "Apprentice Navigator",
+                "Attendant",
+                "Aspirant"
+            ]
+        },
+        "gender": [
+            "Male",
+            "Female",
+            "nonBinary"
+        ],
+        "hierarchyPositionRatios": "35:35:30",
+        "clothing": {
+            "high": {
+                "Celestial Envoy": {
+                    "clothing": [
+                        "Regal Robes",
+                        "Celestial Cloak"
+                    ],
+                    "accessories": [
+                        "Enchanted Staff",
+                        "Gold Circlet",
+                        "Opal Pendant"
+                    ],
+                    "footwear": [
+                        "Elegant Sandals"
+                    ]
+                },
+                "Starseer": {
+                    "clothing": [
+                        "Starseer's Robe",
+                        "Celestial Cloak"
+                    ],
+                    "accessories": [
+                        "Astral Scepter",
+                        "Starry Diadem"
+                    ],
+                    "footwear": [
+                        "Enchanted Boots"
+                    ]
+                }
+            },
+            "mid": {
+                "Navigator": {
+                    "clothing": [
+                        "Navigator's Tunic",
+                        "Stellar Vest"
+                    ],
+                    "accessories": [
+                        "Navigator's Compass",
+                        "Star Map"
+                    ],
+                    "footwear": [
+                        "Traveling Boots"
+                    ]
+                },
+                "Skywatcher": {
+                    "clothing": [
+                        "Skywatcher's Attire",
+                        "Moonlit Cloak"
+                    ],
+                    "accessories": [
+                        "Skywatcher's Binoculars",
+                        "Celestial Pendant"
+                    ],
+                    "footwear": [
+                        "Sturdy Sandals"
+                    ]
+                },
+                "Herald": {
+                    "clothing": [
+                        "Formal Tunic",
+                        "Herald's Cloak"
+                    ],
+                    "accessories": [
+                        "Herald's Scepter",
+                        "Silver Pendant"
+                    ],
+                    "footwear": [
+                        "Polished Boots"
+                    ]
+                },
+                "Messenger": {
+                    "clothing": [
+                        "Practical Tunic",
+                        "Messenger's Cape"
+                    ],
+                    "accessories": [
+                        "Messenger's Satchel",
+                        "Leather Bracers"
+                    ],
+                    "footwear": [
+                        "Comfortable Boots"
+                    ]
+                }
+            },
+            "low": {
+                "Attendant": {
+                    "clothing": [
+                        "Serviceable Tunic",
+                        "Attendant's Vest"
+                    ],
+                    "accessories": [
+                        "Utility Belt",
+                        "Simple Necklace"
+                    ],
+                    "footwear": [
+                        "Sturdy Shoes"
+                    ]
+                },
+                "Aspirant": {
+                    "clothing": [
+                        "Basic Robes",
+                        "Aspirant's Tunic"
+                    ],
+                    "accessories": [
+                        "Simple Satchel",
+                        "Wristband"
+                    ],
+                    "footwear": [
+                        "Basic Sandals"
+                    ]
+                },
+                "Cartographer": {
+                    "clothing": [
+                        "Cartographer's Smock",
+                        "Field Vest"
+                    ],
+                    "accessories": [
+                        "Mapping Tools",
+                        "Drawing Compass"
+                    ],
+                    "footwear": [
+                        "Comfortable Boots"
+                    ]
+                },
+                "Apprentice Navigator": {
+                    "clothing": [
+                        "Apprentice's Garb",
+                        "Simple Vest"
+                    ],
+                    "accessories": [
+                        "Basic Compass",
+                        "Navigation Kit"
+                    ],
+                    "footwear": [
+                        "Basic Sandals"
+                    ]
+                }
+            }
+        }
+    },
+    "Cult of the Hidden": {
+        "name": "Cult of the Hidden",
+        "roles": {
+            "high": [
+                "Cult Leader",
+                "High Priestess"
+            ],
+            "mid": [
+                "Cultist"
+            ],
+            "low": [
+                "Acolyte",
+                "Novice"
+            ]
+        },
+        "gender": [
+            "Male",
+            "Female"
+        ],
+        "hierarchyPositionRatios": "40:40:20",
+        "clothing": {
+            "high": {
+                "Cult Leader": {
+                    "clothing": [
+                        "Dark Ritual Robes",
+                        "Cult Leader's Cloak"
+                    ],
+                    "accessories": [
+                        "Ornate Staff",
+                        "Silver Mask",
+                        "Mystic Amulet"
+                    ],
+                    "footwear": [
+                        "Decorative Sandals"
+                    ]
+                },
+                "High Priestess": {
+                    "clothing": [
+                        "Enchanted Gown",
+                        "High Priestess's Veil"
+                    ],
+                    "accessories": [
+                        "Enchanted Staff",
+                        "Gold Mask",
+                        "Sacred Pendant"
+                    ],
+                    "footwear": [
+                        "Elegant Slippers"
+                    ]
+                }
+            },
+            "mid": {
+                "Cultist": {
+                    "clothing": [
+                        "Ritual Garb",
+                        "Cultist's Hood"
+                    ],
+                    "accessories": [
+                        "Cultist's Dagger",
+                        "Simple Ring"
+                    ],
+                    "footwear": [
+                        "Basic Sandals"
+                    ]
+                }
+            },
+            "low": {
+                "Acolyte": {
+                    "clothing": [
+                        "Simple Tunic",
+                        "Acolyte's Sash"
+                    ],
+                    "accessories": [
+                        "Prayer Beads",
+                        "Simple Pendant"
+                    ],
+                    "footwear": [
+                        "Basic Shoes"
+                    ]
+                },
+                "Novice": {
+                    "clothing": [
+                        "Basic Robes",
+                        "Novice's Belt"
+                    ],
+                    "accessories": [
+                        "Simple Satchel",
+                        "Wristband"
+                    ],
+                    "footwear": [
+                        "Basic Sandals"
+                    ]
+                }
+            }
+        }
+    },
+    "Religious Inquisition": {
+        "name": "Religious Inquisition",
+        "roles": {
+            "high": [
+                "Grand Inquisitor"
+            ],
+            "mid": [
+                "Inquisitor",
+                "Investigator"
+            ],
+            "low": [
+                "Interrogator",
+                "Informant"
+            ]
+        },
+        "gender": [
+            "Male",
+            "Female",
+            "nonBinary"
+        ],
+        "hierarchyPositionRatios": "40:40:20",
+        "clothing": {
+            "high": {
+                "Grand Inquisitor": {
+                    "clothing": [
+                        "Inquisitor's Grand Robe",
+                        "High Ceremonial Cloak"
+                    ],
+                    "accessories": [
+                        "Inquisitor's Staff",
+                        "Encrusted Ring",
+                        "Ceremonial Pendant"
+                    ],
+                    "footwear": [
+                        "Elegant Boots"
+                    ]
+                }
+            },
+            "mid": {
+                "Inquisitor": {
+                    "clothing": [
+                        "Inquisitor's Robe",
+                        "Leather Tunic"
+                    ],
+                    "accessories": [
+                        "Inquisitor's Dagger",
+                        "Signet Ring"
+                    ],
+                    "footwear": [
+                        "Sturdy Boots"
+                    ]
+                },
+                "Investigator": {
+                    "clothing": [
+                        "Investigator's Outfit",
+                        "Practical Vest"
+                    ],
+                    "accessories": [
+                        "Magnifying Glass",
+                        "Notebook"
+                    ],
+                    "footwear": [
+                        "Functional Shoes"
+                    ]
+                }
+            },
+            "low": {
+                "Interrogator": {
+                    "clothing": [
+                        "Interrogator's Garb",
+                        "Simple Tunic"
+                    ],
+                    "accessories": [
+                        "Interrogator's Tools",
+                        "Basic Whip"
+                    ],
+                    "footwear": [
+                        "Basic Sandals"
+                    ]
+                },
+                "Informant": {
+                    "clothing": [
+                        "Informant's Cloak",
+                        "Casual Garb"
+                    ],
+                    "accessories": [
+                        "Information Pouch",
+                        "Simple Amulet"
+                    ],
+                    "footwear": [
+                        "Comfortable Shoes"
+                    ]
+                }
+            }
+        }
+    },
+    "Temple Artisans": {
+        "name": "Temple Artisans",
+        "roles": {
+            "high": [
+                "Master Artisan"
+            ],
+            "mid": [
+                "Artisan"
+            ],
+            "low": [
+                "Craftsman",
+                "Apprentice",
+                "Laborer"
+            ]
+        },
+        "gender": [
+            "Male",
+            "Female",
+            "nonBinary"
+        ],
+        "hierarchyPositionRatios": "25:45:30",
+        "clothing": {
+            "high": {
+                "Master Artisan": {
+                    "clothing": [
+                        "Master Artisan's Robe",
+                        "Decorative Apron"
+                    ],
+                    "accessories": [
+                        "Artisan's Pendant",
+                        "Master's Ring"
+                    ],
+                    "footwear": [
+                        "Crafted Leather Boots"
+                    ]
+                }
+            },
+            "mid": {
+                "Artisan": {
+                    "clothing": [
+                        "Artisan's Tunic",
+                        "Work Apron"
+                    ],
+                    "accessories": [
+                        "Artisan's Belt",
+                        "Tool Pouch"
+                    ],
+                    "footwear": [
+                        "Sturdy Work Boots"
+                    ]
+                }
+            },
+            "low": {
+                "Craftsman": {
+                    "clothing": [
+                        "Craftsman's Garb",
+                        "Simple Apron"
+                    ],
+                    "accessories": [
+                        "Craftsman's Belt",
+                        "Basic Tools"
+                    ],
+                    "footwear": [
+                        "Durable Sandals"
+                    ]
+                },
+                "Apprentice": {
+                    "clothing": [
+                        "Apprentice's Uniform",
+                        "Basic Apron"
+                    ],
+                    "accessories": [
+                        "Apprentice's Tools",
+                        "Basic Satchel"
+                    ],
+                    "footwear": [
+                        "Simple Shoes"
+                    ]
+                },
+                "Laborer": {
+                    "clothing": [
+                        "Laborer's Tunic",
+                        "Work Pants"
+                    ],
+                    "accessories": [
+                        "Utility Belt",
+                        "Basic Work Gloves"
+                    ],
+                    "footwear": [
+                        "Rugged Boots"
+                    ]
+                }
+            }
+        }
+    },
+    "Sacred Scribes": {
+        "name": "Sacred Scribes",
+        "roles": {
+            "high": [
+                "Chief Scribe"
+            ],
+            "mid": [
+                "Scribe",
+                "Copyist"
+            ],
+            "low": [
+                "Illuminator",
+                "Parchment Keeper"
+            ]
+        },
+        "gender": [
+            "Male",
+            "Female",
+            "nonBinary"
+        ],
+        "hierarchyPositionRatios": "30:40:30",
+        "clothing": {
+            "high": {
+                "Chief Scribe": {
+                    "clothing": [
+                        "Chief Scribe's Robe",
+                        "Elegant Scribe's Mantle"
+                    ],
+                    "accessories": [
+                        "Gold-edged Quill",
+                        "Chief's Ring"
+                    ],
+                    "footwear": [
+                        "Fine Leather Shoes"
+                    ]
+                }
+            },
+            "mid": {
+                "Scribe": {
+                    "clothing": [
+                        "Scribe's Tunic",
+                        "Functional Vest"
+                    ],
+                    "accessories": [
+                        "Silver Quill",
+                        "Scribe's Belt"
+                    ],
+                    "footwear": [
+                        "Sturdy Leather Shoes"
+                    ]
+                },
+                "Copyist": {
+                    "clothing": [
+                        "Copyist's Garb",
+                        "Practical Apron"
+                    ],
+                    "accessories": [
+                        "Quill Holder",
+                        "Copyist's Satchel"
+                    ],
+                    "footwear": [
+                        "Comfortable Boots"
+                    ]
+                }
+            },
+            "low": {
+                "Illuminator": {
+                    "clothing": [
+                        "Illuminator's Robe",
+                        "Basic Apron"
+                    ],
+                    "accessories": [
+                        "Illuminator's Brushes",
+                        "Basic Satchel"
+                    ],
+                    "footwear": [
+                        "Simple Sandals"
+                    ]
+                },
+                "Parchment Keeper": {
+                    "clothing": [
+                        "Parchment Keeper's Tunic",
+                        "Protective Apron"
+                    ],
+                    "accessories": [
+                        "Parchment Roll Holder",
+                        "Basic Tools"
+                    ],
+                    "footwear": [
+                        "Rugged Work Shoes"
+                    ]
+                }
+            }
+        }
+    },
+    "Divine Protectors": {
+        "name": "Divine Protectors",
+        "roles": {
+            "high": [
+                "High Protector"
+            ],
+            "mid": [
+                "Protector",
+                "Defender"
+            ],
+            "low": [
+                "Guard",
+                "Sentinel"
+            ]
+        },
+        "gender": [
+            "Male",
+            "Female",
+            "nonBinary"
+        ],
+        "hierarchyPositionRatios": "35:35:30",
+        "clothing": {
+            "high": {
+                "High Protector": {
+                    "clothing": [
+                        "High Protector's Armor",
+                        "Regal Cloak"
+                    ],
+                    "accessories": [
+                        "Enchanted Amulet",
+                        "High Protector's Gauntlets"
+                    ],
+                    "footwear": [
+                        "Elegant Plate Boots"
+                    ]
+                }
+            },
+            "mid": {
+                "Protector": {
+                    "clothing": [
+                        "Protector's Armor",
+                        "Standard Cloak"
+                    ],
+                    "accessories": [
+                        "Protective Medallion",
+                        "Steel Gauntlets"
+                    ],
+                    "footwear": [
+                        "Reinforced Boots"
+                    ]
+                },
+                "Defender": {
+                    "clothing": [
+                        "Defender's Tunic",
+                        "Basic Cloak"
+                    ],
+                    "accessories": [
+                        "Defender's Shield",
+                        "Defender's Belt"
+                    ],
+                    "footwear": [
+                        "Sturdy Boots"
+                    ]
+                }
+            },
+            "low": {
+                "Guard": {
+                    "clothing": [
+                        "Guard's Uniform",
+                        "Simple Cloak"
+                    ],
+                    "accessories": [
+                        "Guard's Badge",
+                        "Basic Shield"
+                    ],
+                    "footwear": [
+                        "Practical Shoes"
+                    ]
+                },
+                "Sentinel": {
+                    "clothing": [
+                        "Sentinel's Garb",
+                        "Weathered Cloak"
+                    ],
+                    "accessories": [
+                        "Sentinel's Helm",
+                        "Utility Belt"
+                    ],
+                    "footwear": [
+                        "Durable Sandals"
+                    ]
+                }
+            }
+        }
+    },
+    "Prestigious Orators": {
+        "name": "Priestly Orators",
+        "roles": {
+            "high": [
+                "Chief Orator"
+            ],
+            "mid": [
+                "Orator",
+                "Preacher"
+            ],
+            "low": [
+                "Sermon Leader",
+                "Novice Speaker"
+            ]
+        },
+        "gender": [
+            "Male",
+            "Female",
+            "nonBinary"
+        ],
+        "hierarchyPositionRatios": "30:40:30",
+        "clothing": {
+            "high": {
+                "Chief Orator": {
+                    "clothing": [
+                        "Chief Orator's Robe",
+                        "Elegant Stole"
+                    ],
+                    "accessories": [
+                        "Golden Orator's Staff",
+                        "Ceremonial Ring"
+                    ],
+                    "footwear": [
+                        "Luxurious Sandals"
+                    ]
+                }
+            },
+            "mid": {
+                "Orator": {
+                    "clothing": [
+                        "Orator's Robe",
+                        "Simple Stole"
+                    ],
+                    "accessories": [
+                        "Orator's Staff",
+                        "Symbolic Amulet"
+                    ],
+                    "footwear": [
+                        "Comfortable Sandals"
+                    ]
+                },
+                "Preacher": {
+                    "clothing": [
+                        "Preacher's Tunic",
+                        "Decorative Cloak"
+                    ],
+                    "accessories": [
+                        "Preacher's Wand",
+                        "Decorative Pendant"
+                    ],
+                    "footwear": [
+                        "Sturdy Boots"
+                    ]
+                }
+            },
+            "low": {
+                "Sermon Leader": {
+                    "clothing": [
+                        "Sermon Leader's Robe",
+                        "Plain Cloak"
+                    ],
+                    "accessories": [
+                        "Sermon Leader's Staff",
+                        "Simple Necklace"
+                    ],
+                    "footwear": [
+                        "Basic Sandals"
+                    ]
+                },
+                "Novice Speaker": {
+                    "clothing": [
+                        "Novice Speaker's Garb",
+                        "Basic Stole"
+                    ],
+                    "accessories": [
+                        "Novice's Token",
+                        "Simple Bracelet"
+                    ],
+                    "footwear": [
+                        "Basic Sandals"
+                    ]
+                }
+            }
+        }
+    },
+    "Sacred Sentinels": {
+        "name": "Sacred Sentinels",
+        "roles": {
+            "high": [
+                "Sentinel Captain"
+            ],
+            "mid": [
+                "Sentinel",
+                "Guard"
+            ],
+            "low": [
+                "Watcher",
+                "Recruit"
+            ]
+        },
+        "gender": [
+            "Male",
+            "Female",
+            "nonBinary"
+        ],
+        "hierarchyPositionRatios": "35:35:30",
+        "clothing": {
+            "high": {
+                "Sentinel Captain": {
+                    "clothing": [
+                        "Captain's Armor",
+                        "Ceremonial Cape"
+                    ],
+                    "accessories": [
+                        "Commander's Insignia",
+                        "Honor Medal"
+                    ],
+                    "footwear": [
+                        "Sturdy Boots"
+                    ]
+                }
+            },
+            "mid": {
+                "Sentinel": {
+                    "clothing": [
+                        "Sentinel Armor",
+                        "Protective Tunic"
+                    ],
+                    "accessories": [
+                        "Sentinel's Badge",
+                        "Utility Belt"
+                    ],
+                    "footwear": [
+                        "Combat Boots"
+                    ]
+                },
+                "Guard": {
+                    "clothing": [
+                        "Guard's Uniform",
+                        "Reinforced Vest"
+                    ],
+                    "accessories": [
+                        "Guard's Shield",
+                        "Equipment Pouch"
+                    ],
+                    "footwear": [
+                        "Durable Shoes"
+                    ]
+                }
+            },
+            "low": {
+                "Watcher": {
+                    "clothing": [
+                        "Watcher's Garb",
+                        "Basic Tunic"
+                    ],
+                    "accessories": [
+                        "Watcher’s Binoculars",
+                        "Simple Belt"
+                    ],
+                    "footwear": [
+                        "Basic Boots"
+                    ]
+                },
+                "Recruit": {
+                    "clothing": [
+                        "Recruit's Outfit",
+                        "Training Gear"
+                    ],
+                    "accessories": [
+                        "Recruit's Badge",
+                        "Training Satchel"
+                    ],
+                    "footwear": [
+                        "Training Shoes"
+                    ]
+                }
+            }
+        }
+    },
+    "Divine Enforcers": {
+        "name": "Divine Enforcers",
+        "roles": {
+            "high": [
+                "Grand Enforcer",
+                "Grand Administrator"
+            ],
+            "mid": [
+                "Enforcer",
+                "Sentinel",
+                "Administrator",
+                "Clerk"
+            ],
+            "low": [
+                "Watcher",
+                "Guard",
+                "Record Keeper",
+                "Assistant"
+            ]
+        },
+        "gender": [
+            "Male",
+            "Female",
+            "nonBinary"
+        ],
+        "hierarchyPositionRatios": "35:35:30",
+        "clothing": {
+            "high": {
+                "Grand Enforcer": {
+                    "clothing": [
+                        "Grand Enforcer's Robes",
+                        "High-ranking Armor"
+                    ],
+                    "accessories": [
+                        "Grand Enforcer's Insignia",
+                        "Ceremonial Sash"
+                    ],
+                    "footwear": [
+                        "Ornate Boots"
+                    ]
+                },
+                "Grand Administrator": {
+                    "clothing": [
+                        "Grand Administrator's Robes",
+                        "Decorative Cloak"
+                    ],
+                    "accessories": [
+                        "Administrator's Seal",
+                        "Golden Chain"
+                    ],
+                    "footwear": [
+                        "Elegant Sandals"
+                    ]
+                }
+            },
+            "mid": {
+                "Enforcer": {
+                    "clothing": [
+                        "Enforcer's Armor",
+                        "Utility Tunic"
+                    ],
+                    "accessories": [
+                        "Enforcer's Badge",
+                        "Utility Belt"
+                    ],
+                    "footwear": [
+                        "Reinforced Boots"
+                    ]
+                },
+                "Sentinel": {
+                    "clothing": [
+                        "Sentinel's Uniform",
+                        "Protective Vest"
+                    ],
+                    "accessories": [
+                        "Sentinel's Shield",
+                        "Combat Belt"
+                    ],
+                    "footwear": [
+                        "Combat Boots"
+                    ]
+                },
+                "Administrator": {
+                    "clothing": [
+                        "Administrator's Attire",
+                        "Formal Vest"
+                    ],
+                    "accessories": [
+                        "Administrator's Badge",
+                        "Office Satchel"
+                    ],
+                    "footwear": [
+                        "Comfortable Shoes"
+                    ]
+                },
+                "Clerk": {
+                    "clothing": [
+                        "Clerk's Uniform",
+                        "Office Attire"
+                    ],
+                    "accessories": [
+                        "Clerk's Badge",
+                        "Notebook"
+                    ],
+                    "footwear": [
+                        "Practical Shoes"
+                    ]
+                }
+            },
+            "low": {
+                "Watcher": {
+                    "clothing": [
+                        "Watcher's Garb",
+                        "Basic Uniform"
+                    ],
+                    "accessories": [
+                        "Watcher's Badge",
+                        "Simple Belt"
+                    ],
+                    "footwear": [
+                        "Basic Boots"
+                    ]
+                },
+                "Guard": {
+                    "clothing": [
+                        "Guard's Uniform",
+                        "Reinforced Gear"
+                    ],
+                    "accessories": [
+                        "Guard's Shield",
+                        "Guard's Belt"
+                    ],
+                    "footwear": [
+                        "Durable Boots"
+                    ]
+                },
+                "Record Keeper": {
+                    "clothing": [
+                        "Record Keeper's Attire",
+                        "Simple Vest"
+                    ],
+                    "accessories": [
+                        "Record Keeper's Pen",
+                        "Document Satchel"
+                    ],
+                    "footwear": [
+                        "Comfortable Shoes"
+                    ]
+                },
+                "Assistant": {
+                    "clothing": [
+                        "Assistant's Uniform",
+                        "Basic Attire"
+                    ],
+                    "accessories": [
+                        "Assistant's Badge",
+                        "Tool Belt"
+                    ],
+                    "footwear": [
+                        "Practical Shoes"
+                    ]
+                }
+            }
+        }
+    },
+    "Religious Cultists": {
+        "name": "Religious Cultists",
+        "roles": {
+            "high": [
+                "Cult Leader"
+            ],
+            "mid": [
+                "Cultist"
+            ],
+            "low": [
+                "Acolyte",
+                "Initiate"
+            ]
+        },
+        "gender": [
+            "Male",
+            "Female",
+            "nonBinary"
+        ],
+        "hierarchyPositionRatios": "40:40:20",
+        "clothing": {
+            "high": {
+                "Cult Leader": {
+                    "clothing": [
+                        "Cult Leader's Robes",
+                        "Ritual Cloak"
+                    ],
+                    "accessories": [
+                        "Cult Leader's Amulet",
+                        "Ceremonial Staff"
+                    ],
+                    "footwear": [
+                        "Ornate Sandals"
+                    ]
+                }
+            },
+            "mid": {
+                "Cultist": {
+                    "clothing": [
+                        "Cultist's Tunic",
+                        "Ritual Garments"
+                    ],
+                    "accessories": [
+                        "Cultist's Pendant",
+                        "Ritual Dagger"
+                    ],
+                    "footwear": [
+                        "Simple Sandals"
+                    ]
+                }
+            },
+            "low": {
+                "Acolyte": {
+                    "clothing": [
+                        "Acolyte's Robe",
+                        "Simple Attire"
+                    ],
+                    "accessories": [
+                        "Acolyte's Token",
+                        "Ceremonial Staff"
+                    ],
+                    "footwear": [
+                        "Basic Shoes"
+                    ]
+                },
+                "Initiate": {
+                    "clothing": [
+                        "Initiate's Garb",
+                        "Training Tunic"
+                    ],
+                    "accessories": [
+                        "Initiate's Token",
+                        "Initiate's Dagger"
+                    ],
+                    "footwear": [
+                        "Practical Sandals"
+                    ]
+                }
+            }
+        }
+    },
+    "Divine Mystics": {
+        "name": "Divine Mystics",
+        "roles": {
+            "high": [
+                "Mystic Lord"
+            ],
+            "mid": [
+                "Mystic",
+                "Seer"
+            ],
+            "low": [
+                "Novice",
+                "Acolyte"
+            ]
+        },
+        "gender": [
+            "nonBinary"
+        ],
+        "hierarchyPositionRatios": "30:40:30",
+        "clothing": {
+            "high": {
+                "Mystic Lord": {
+                    "clothing": [
+                        "Mystic Lord's Robe",
+                        "Enchanted Cloak"
+                    ],
+                    "accessories": [
+                        "Mystic Lord's Staff",
+                        "Mystic Amulet"
+                    ],
+                    "footwear": [
+                        "Mystic Sandals"
+                    ]
+                }
+            },
+            "mid": {
+                "Mystic": {
+                    "clothing": [
+                        "Mystic Tunic",
+                        "Ritual Shawl"
+                    ],
+                    "accessories": [
+                        "Mystic Pendant",
+                        "Magic Wand"
+                    ],
+                    "footwear": [
+                        "Comfortable Sandals"
+                    ]
+                },
+                "Seer": {
+                    "clothing": [
+                        "Seer's Robe",
+                        "Vision Cloak"
+                    ],
+                    "accessories": [
+                        "Seer's Orb",
+                        "Crystal Pendant"
+                    ],
+                    "footwear": [
+                        "Simple Sandals"
+                    ]
+                }
+            },
+            "low": {
+                "Novice": {
+                    "clothing": [
+                        "Novice's Tunic",
+                        "Training Garb"
+                    ],
+                    "accessories": [
+                        "Novice's Token",
+                        "Basic Wand"
+                    ],
+                    "footwear": [
+                        "Plain Sandals"
+                    ]
+                },
+                "Acolyte": {
+                    "clothing": [
+                        "Acolyte's Robe",
+                        "Ceremonial Attire"
+                    ],
+                    "accessories": [
+                        "Acolyte's Token",
+                        "Simple Staff"
+                    ],
+                    "footwear": [
+                        "Basic Shoes"
+                    ]
+                }
+            }
+        }
+    }
+}
