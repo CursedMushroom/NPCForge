@@ -515,6 +515,40 @@ option {
     color: var(--lightpurple);
 }
 
+
+
+.breakdown-card{
+    background-color: var(--darkgrey);
+}
+.breakdown-card #character-name b{
+    color: var(--grey);
+}
+
+.breakdown-card .title{
+    color: var(--grey);
+}
+.breakdown-card .card-info p{
+    color: var(--anothergrey);
+}
+.color-box{
+   
+    width: 100%;
+    height: 60px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 5%;
+    margin-right: 5px;
+    margin-bottom:10px;
+}
+.color-info{
+   justify-content: center;
+   text-align: center;
+
+}
+.colors-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+}
 /* MEDIA QUERY */
 @media all and (max-width: 968px) {
     .results {
