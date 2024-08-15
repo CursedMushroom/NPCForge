@@ -1,9 +1,46 @@
 {
     "High Priest & Council": {
         "name": "High Priest & Council",
-        "prompts":[],
-        "symbols":[],
-        "alignment":[],
+        "prompts": [
+            "The council is rumored to be divided on a critical issue that could split the church.",
+            "The High Priest has gone missing under mysterious circumstances, and a power struggle is underway.",
+            "A controversial new doctrine is being pushed by a faction within the council.",
+            "A powerful relic is said to be hidden within the temple, and multiple factions seek to control it.",
+            "A prophecy claims that one of the council members will betray the church.",
+            "A series of unexplained miracles are being attributed to a new, secretive member of the council.",
+            "Rumors suggest that the High Priest has been corrupted by dark forces.",
+            "A rival religious group is attempting to undermine the council’s authority.",
+            "The council is preparing for a major pilgrimage that will test their unity.",
+            "A long-standing feud between the High Priest and an influential council member threatens the church’s stability.",
+            "The council is secretly investigating the existence of a hidden enemy within the church.",
+            "A major festival is being planned, but the High Priest's absence has left the event in disarray.",
+            "The council has received warnings of a coming catastrophe that only they can prevent.",
+            "A high-ranking member of the council has been accused of heresy.",
+            "The High Priest is rumored to be involved in a secret pact with a powerful entity."
+        ],
+        "symbols": [
+            "Golden Chalice",
+            "Sacred Flame",
+            "Holy Book",
+            "Celestial Eye",
+            "Silver Cross",
+            "Divine Staff",
+            "Blessed Amulet",
+            "Sanctified Sword",
+            "Holy Grail",
+            "Eagle Wings",
+            "Celestial Halo",
+            "Divine Scales",
+            "Enchanted Book",
+            "Purity Symbol",
+            "Radiant Star"
+        ],
+        "alignment": [
+            "Lawful Good",
+            "Neutral Good",
+            "Lawful Neutral",
+            "Neutral"
+        ],
         "roles": {
             "high": [
                 "High Priest",
@@ -99,6 +136,44 @@
     },
     "Monastic Order": {
         "name": "Monastic Order",
+        "prompts": [
+            "A once-revered Grandmaster has gone rogue, spreading chaos and dissent.",
+            "The monastery is facing a severe shortage of resources and must find new ways to survive.",
+            "A mysterious artifact discovered in the monastery is said to hold great power.",
+            "The order is torn between following the teachings of an ancient prophecy or adapting to modern needs.",
+            "A rival monastic order is attempting to steal secrets from the monastery.",
+            "The monastery’s sacred grounds are being desecrated by unknown forces.",
+            "An internal conflict between the Master and the Novice threatens the order’s unity.",
+            "A new, controversial doctrine is being introduced by a radical faction within the order.",
+            "The monastery is preparing for a significant trial that will test its members’ faith and skills.",
+            "Rumors suggest that a hidden, ancient rival sect is plotting against the order.",
+            "The Grandmaster has mysteriously disappeared, leaving the monastery in turmoil.",
+            "A powerful enemy is seeking to undermine the order’s influence in the region.",
+            "A prophecy claims that the next Master will be a betrayer or a savior.",
+            "The order’s ancient traditions are being questioned by younger members.",
+            "An old enemy of the monastery has returned, seeking vengeance."
+        ],
+        "symbols": [
+            "Enlightened Lotus",
+            "Serene Dragon",
+            "Monk’s Staff",
+            "Meditation Bell",
+            "Sacred Scroll",
+            "Tranquil Cloud",
+            "Mystic Flame",
+            "Ancient Pagoda",
+            "Celestial Crane",
+            "Sacred Symbol",
+            "Dragon’s Claw",
+            "Calm Wave",
+            "Spiritual Key"
+        ],
+        "alignment": [
+            "Lawful Neutral",
+            "Neutral Good",
+            "Chaotic Good",
+            "Lawful Good"
+        ],
         "roles": {
             "high": [
                 "Grandmaster",
@@ -191,6 +266,46 @@
     },
     "Holy Order of Warriors": {
         "name": "Holy Order of Warriors",
+        "prompts": [
+            "The Grand Knight is accused of leading the order into unnecessary conflicts.",
+            "An ancient enemy has returned, threatening the order’s sacred grounds.",
+            "The order is split over a controversial new strategy for defending the realm.",
+            "A secret alliance is rumored to be forming between some of the order’s members and outside forces.",
+            "The order’s ancient relics are being stolen or corrupted by dark forces.",
+            "A prophecy suggests that the next Knight Commander will face a great betrayal.",
+            "The order is preparing for a major battle, but internal dissent is causing disruptions.",
+            "A rival warrior faction seeks to challenge the order’s authority.",
+            "The Grand Knight is mysteriously absent, and rumors of treachery are spreading.",
+            "A long-standing feud between the order’s leaders is threatening their effectiveness in combat.",
+            "An ancient order of rival knights has reemerged, seeking to challenge the Holy Order’s supremacy.",
+            "A sacred artifact is lost, and the order must recover it to restore its honor.",
+            "The order is on a quest to find a legendary weapon of immense power.",
+            "A secretive enemy is infiltrating the ranks of the order.",
+            "A series of mysterious deaths among high-ranking members raises suspicion of foul play."
+        ],
+        "symbols": [
+            "Holy Sword",
+            "Shield of Valor",
+            "Knight’s Crest",
+            "Sacred Armor",
+            "Celestial Helm",
+            "Warrior’s Cross",
+            "Battle Standard",
+            "Divine Lance",
+            "Crusader’s Emblem",
+            "Sacred Banner",
+            "Warrior’s Gauntlet",
+            "Hero’s Star",
+            "Knight’s Badge",
+            "Honor’s Shield",
+            "Celestial Blade"
+        ],
+        "alignment": [
+            "Lawful Good",
+            "Neutral Good",
+            "Lawful Neutral",
+            "Chaotic Good"
+        ],
         "roles": {
             "high": [
                 "Grand Knight",
@@ -284,6 +399,46 @@
     },
     "Mystic Circle": {
         "name": "Mystic Circle",
+        "prompts": [
+            "The Archmage is rumored to be secretly conducting forbidden rituals.",
+            "A prophecy foretells the rise of a new Mystic who will alter the course of history.",
+            "A rival magical faction is trying to undermine the Circle’s influence.",
+            "The Circle’s members are experiencing disturbing visions that could be prophetic or delusional.",
+            "An ancient magical tome has gone missing, and its loss could have catastrophic consequences.",
+            "A mysterious new member of the Circle claims to have uncovered a hidden truth.",
+            "The Circle is preparing for a grand ritual that could either save or doom their world.",
+            "A magical artifact of great power has been stolen from the Circle’s vault.",
+            "The High Seer is said to be losing their powers, and the Circle must find a way to restore them.",
+            "An internal conflict between members is threatening to fracture the Circle.",
+            "A forbidden magical practice is being revived by a rogue faction within the Circle.",
+            "The Circle is facing a crisis of faith due to a recent, unexplained event.",
+            "A rival mystical order is attempting to expose the Circle’s secrets.",
+            "The High Seer has mysteriously vanished, and the Circle must find them before it’s too late.",
+            "A long-forgotten prophecy is being uncovered, revealing the Circle’s dark past."
+        ],
+        "symbols": [
+            "Arcane Eye",
+            "Mystic Sigil",
+            "Enchanted Orb",
+            "Wizard’s Staff",
+            "Celestial Glyph",
+            "Mystic Rune",
+            "Ancient Tome",
+            "Crystal Sphere",
+            "Divine Pentagram",
+            "Sorcerer’s Rod",
+            "Ethereal Crescent",
+            "Mystic Star",
+            "Enigmatic Glyph",
+            "Wizard’s Hat",
+            "Astral Sphere"
+        ],
+        "alignment": [
+            "Neutral Good",
+            "Lawful Neutral",
+            "Chaotic Neutral",
+            "True Neutral"
+        ],
         "roles": {
             "high": [
                 "Archmage",
@@ -379,6 +534,46 @@
     },
     "Temple Guardians": {
         "name": "Temple Guardians",
+        "prompts": [
+            "A powerful artifact has been stolen from the temple, and the Guardians must recover it.",
+            "The temple is being besieged by dark forces, and the Guardians are on high alert.",
+            "A traitor within the Guardians is sabotaging their efforts.",
+            "A prophecy claims that the next Guardian will bring either salvation or doom.",
+            "The Guardians are investigating a series of mysterious disappearances in the temple.",
+            "A rival faction is challenging the Guardians' control over the temple’s sacred sites.",
+            "The temple’s defenses are failing, and the Guardians must find a way to restore them.",
+            "A long-forgotten enemy is stirring, and the Guardians must prepare for an impending threat.",
+            "The Temple Guardian is rumored to be engaged in secret negotiations with dark entities.",
+            "A mysterious new Guardian is causing unrest among the ranks.",
+            "The Guardians are preparing for a major pilgrimage that will test their resolve.",
+            "An internal conflict among the Guardians threatens to undermine their effectiveness.",
+            "A secret chamber within the temple holds a powerful secret, and only the Guardians know its location.",
+            "The temple’s sacred relics are being corrupted, and the Guardians must purify them.",
+            "The Guardians must uncover the truth behind a recent series of unnatural occurrences within the temple."
+        ],
+        "symbols": [
+            "Guardian’s Shield",
+            "Sacred Sword",
+            "Temple Emblem",
+            "Divine Armor",
+            "Celestial Key",
+            "Guardian’s Staff",
+            "Holy Banner",
+            "Sacred Sigil",
+            "Guardian’s Helm",
+            "Temple Seal",
+            "Divine Cross",
+            "Sacred Relic",
+            "Guardian’s Cloak",
+            "Celestial Rune",
+            "Divine Amulet"
+        ],
+        "alignment": [
+            "Lawful Good",
+            "Neutral Good",
+            "Lawful Neutral",
+            "Neutral"
+        ],
         "roles": {
             "high": [
                 "Temple Guardian"
@@ -471,6 +666,46 @@
     },
     "Divine Scholars": {
         "name": "Divine Scholars",
+        "prompts": [
+            "A forbidden manuscript has been discovered, and the Scholars must decide what to do with it.",
+            "A rival group is attempting to discredit the Divine Scholars’ research.",
+            "The Chief Scholar has gone missing, and the research projects are at risk.",
+            "An ancient prophecy is being decoded by the Scholars, revealing troubling truths.",
+            "The Scholars are working on a project that could change the course of history.",
+            "A powerful artifact related to the Scholars' studies has gone missing.",
+            "The Scholars are preparing for a grand symposium that could cement their place in history.",
+            "Internal disputes among the Scholars are threatening the progress of their research.",
+            "A secretive organization is trying to steal or sabotage the Scholars' work.",
+            "The Divine Scholars are investigating a series of mysterious events connected to their research.",
+            "An unknown enemy is targeting the Scholars to disrupt their studies.",
+            "A new member of the Scholars claims to have uncovered a dangerous secret.",
+            "The Scholars are facing a moral dilemma about the use of their knowledge.",
+            "The Chief Scholar is rumored to be involved in a dangerous experiment.",
+            "The Divine Scholars must solve a mystery involving ancient texts and lost knowledge."
+        ],
+        "symbols": [
+            "Scholars' Quill",
+            "Ancient Tome",
+            "Knowledge Scroll",
+            "Divine Parchment",
+            "Sacred Ink",
+            "Wisdom Glyph",
+            "Illuminated Manuscript",
+            "Scholar’s Book",
+            "Arcane Symbols",
+            "Enchanted Inkpot",
+            "Wisdom Pendant",
+            "Researcher's Rod",
+            "Divine Seal",
+            "Illuminator’s Light",
+            "Sacred Book"
+        ],
+        "alignment": [
+            "Lawful Good",
+            "Neutral Good",
+            "Neutral",
+            "Lawful Neutral"
+        ],
         "roles": {
             "high": [
                 "Chief Scholar",
@@ -567,6 +802,46 @@
     },
     "Sacred Healers": {
         "name": "Sacred Healers",
+        "prompts": [
+            "A new, highly contagious illness is spreading, and the Healers must find a cure.",
+            "The High Healer is accused of using forbidden methods to heal.",
+            "A prophecy claims that the next High Healer will be a savior or destroyer.",
+            "The Sacred Healers are facing a shortage of medicinal supplies.",
+            "A rival healer group is challenging the Sacred Healers’ authority.",
+            "A secretive cult is trying to steal sacred healing artifacts.",
+            "The Healers are investigating a series of strange, unexplained ailments.",
+            "A powerful enemy is targeting the Healers with dark magic.",
+            "The High Healer has mysteriously disappeared, and the order is in disarray.",
+            "An internal conflict within the order is threatening their ability to provide care.",
+            "A new healing technique is being introduced that could revolutionize their practices.",
+            "The Sacred Healers must prepare for a grand ritual to protect their sacred ground.",
+            "A member of the order is accused of malpractice or negligence.",
+            "The Healers are on a quest to find a legendary herb that could cure all diseases.",
+            "A long-standing tradition is being questioned by a younger member of the order."
+        ],
+        "symbols": [
+            "Healing Staff",
+            "Sacred Bandage",
+            "Divine Medicine",
+            "Healer’s Rod",
+            "Celestial Herb",
+            "Purity Chalice",
+            "Healing Amulet",
+            "Sanctified Pouch",
+            "Sacred Potion",
+            "Divine Salve",
+            "Healing Rune",
+            "Adept’s Cloak",
+            "Blessed Band",
+            "Serenity Bowl",
+            "Holy Tincture"
+        ],
+        "alignment": [
+            "Lawful Good",
+            "Neutral Good",
+            "Lawful Neutral",
+            "Neutral"
+        ],
         "roles": {
             "high": [
                 "High Healer"
@@ -663,6 +938,46 @@
     },
     "Celestial Envoys": {
         "name": "Celestial Envoys",
+        "prompts": [
+            "A powerful message is intercepted by a rival faction, and the Envoys must retrieve it.",
+            "The Celestial Envoys are investigating a series of disappearances among their ranks.",
+            "An ancient prophecy claims that a Celestial Envoy will bring about a major change.",
+            "The Envoys are preparing for a significant diplomatic mission that could alter their alliances.",
+            "A rival envoy faction is attempting to undermine the Celestial Envoys' efforts.",
+            "The Envoys have received a cryptic message that hints at a hidden threat.",
+            "The Celestial Envoys are involved in a covert operation to protect a high-profile figure.",
+            "A mysterious new Envoy has joined the ranks, and their true intentions are unknown.",
+            "The Envoys must navigate a complex web of political intrigue in a foreign land.",
+            "The Celestial Envoys are facing a major crisis that could impact their diplomatic efforts.",
+            "A sacred artifact related to the Envoys' mission has gone missing.",
+            "An internal power struggle is threatening the Envoys' ability to carry out their duties.",
+            "The Celestial Envoys are on a quest to find a lost city of great importance.",
+            "The Envoys are investigating a series of unexplained phenomena that could be tied to their mission.",
+            "A prophecy claims that the next Envoy will either secure or doom their diplomatic efforts."
+        ],
+        "symbols": [
+            "Celestial Seal",
+            "Envoy’s Crest",
+            "Diplomatic Token",
+            "Sacred Scroll",
+            "Celestial Star",
+            "Divine Banner",
+            "Envoy’s Ring",
+            "Holy Emblem",
+            "Messenger’s Rod",
+            "Diplomatic Satchel",
+            "Celestial Pendant",
+            "Envoy’s Badge",
+            "Sacred Token",
+            "Divine Insignia",
+            "Celestial Staff"
+        ],
+        "alignment": [
+            "Lawful Good",
+            "Neutral Good",
+            "Lawful Neutral",
+            "Chaotic Good"
+        ],
         "roles": {
             "high": [
                 "Starseer",
@@ -829,6 +1144,46 @@
     },
     "Cult of the Hidden": {
         "name": "Cult of the Hidden",
+        "prompts": [
+            "A dark secret about the Cult Leader is threatening to be exposed.",
+            "The Cult is planning a grand ritual that could have disastrous consequences.",
+            "A powerful artifact is stolen from the Cult, and its recovery is paramount.",
+            "An internal power struggle is brewing among the Cultists.",
+            "A rival cult is attempting to sabotage the Cult of the Hidden’s plans.",
+            "The Cult Leader is rumored to be negotiating with a dark entity.",
+            "A mysterious figure has joined the cult, and their true motives are unknown.",
+            "The Cult is preparing for an event that could alter their standing in the world.",
+            "A prophecy suggests that the next Cult Leader will either lead them to greatness or ruin.",
+            "The Cult is facing a crisis of faith, with some members questioning their purpose.",
+            "A hidden agenda within the Cult is threatening its unity and effectiveness.",
+            "A series of unexplained occurrences are being attributed to the Cult’s dark rituals.",
+            "The Cult must deal with the aftermath of a failed ritual that had unintended consequences.",
+            "A former member of the Cult is seeking revenge and disrupting their activities.",
+            "The Cult of the Hidden is on the brink of a major revelation or catastrophe."
+        ],
+        "symbols": [
+            "Dark Sigil",
+            "Cultist’s Emblem",
+            "Hidden Symbol",
+            "Sacred Mask",
+            "Occult Pendant",
+            "Mystic Dagger",
+            "Ritual Chalice",
+            "Secret Tome",
+            "Cult Banner",
+            "Forbidden Amulet",
+            "Enigmatic Rune",
+            "Shadow’s Mark",
+            "Cultist’s Cloak",
+            "Dark Orb",
+            "Hidden Key"
+        ],
+        "alignment": [
+            "Chaotic Evil",
+            "Neutral Evil",
+            "Lawful Evil",
+            "Chaotic Neutral"
+        ],
         "roles": {
             "high": [
                 "Cult Leader",
@@ -844,7 +1199,8 @@
         },
         "gender": [
             "Male",
-            "Female"
+            "Female",
+            "nonBinary"
         ],
         "hierarchyPositionRatios": "40:40:20",
         "clothing": {
@@ -925,6 +1281,46 @@
     },
     "Religious Inquisition": {
         "name": "Religious Inquisition",
+        "prompts": [
+            "The Grand Inquisitor is rumored to be conducting secret trials for heresy.",
+            "A powerful noble is accused of heresy, and the Inquisition must investigate.",
+            "The Inquisition is preparing for a major purge to root out corruption within the church.",
+            "A secret document revealing the Inquisition’s hidden agenda is discovered.",
+            "A rival faction is attempting to undermine the Inquisition’s authority.",
+            "The Inquisitors are facing a crisis as allegations of abuse and corruption surface.",
+            "An internal investigation reveals disturbing secrets about the Grand Inquisitor’s past.",
+            "The Inquisition is dealing with a series of mysterious deaths among its ranks.",
+            "A rogue Inquisitor is spreading dissent and challenging the established order.",
+            "The Grand Inquisitor is rumored to be involved in dark rituals or forbidden practices.",
+            "A prophecy claims that the next Grand Inquisitor will either redeem or destroy the church.",
+            "The Inquisition is facing a rebellion from within its own ranks.",
+            "A rival religious group is seeking to expose the Inquisition’s dark secrets.",
+            "The Inquisition must investigate a series of unnatural events linked to their operations.",
+            "The Grand Inquisitor’s recent actions are causing unrest among the faithful."
+        ],
+        "symbols": [
+            "Inquisition’s Crest",
+            "Holy Scales",
+            "Sacred Whip",
+            "Divine Cross",
+            "Inquisitor’s Mask",
+            "Purity Seal",
+            "Judgment Sword",
+            "Penance Chain",
+            "Inquisition’s Emblem",
+            "Sacred Book",
+            "Executioner’s Blade",
+            "Divine Sigil",
+            "Inquisition’s Rod",
+            "Holy Talisman",
+            "Truth’s Eye"
+        ],
+        "alignment": [
+            "Lawful Evil",
+            "Lawful Neutral",
+            "Neutral Evil",
+            "Chaotic Neutral"
+        ],
         "roles": {
             "high": [
                 "Grand Inquisitor"
@@ -1021,6 +1417,46 @@
     },
     "Temple Artisans": {
         "name": "Temple Artisans",
+        "prompts": [
+            "The Master Artisan is accused of using forbidden materials in their work.",
+            "A rival group is attempting to steal the Temple Artisans' secrets and techniques.",
+            "A major project is underway, but the artisans are facing severe shortages of resources.",
+            "An ancient design is discovered, leading to a conflict over its rightful owner.",
+            "A prophecy claims that the next Master Artisan will either bring prosperity or ruin.",
+            "The Temple Artisans are dealing with a series of mysterious accidents in their workshops.",
+            "An internal dispute among the artisans is threatening to halt important projects.",
+            "The Temple Artisans are preparing for a grand exhibition that could elevate their status.",
+            "A sacred artifact is damaged during repairs, and the artisans must restore it.",
+            "A new Artisan claims to have discovered a revolutionary technique that could change everything.",
+            "The Artisans are facing sabotage from an unknown source seeking to disrupt their work.",
+            "An ancient artifact created by the artisans has been stolen or corrupted.",
+            "A secret workshop is rumored to be producing forbidden or dangerous items.",
+            "The Master Artisan is mysteriously absent, leaving the temple's projects in disarray.",
+            "The Artisans must solve a mystery involving an old, forgotten design that holds great power."
+        ],
+        "symbols": [
+            "Artisan’s Hammer",
+            "Sacred Chisel",
+            "Temple Pendant",
+            "Craftsman’s Mark",
+            "Divine Tapestry",
+            "Artisan’s Seal",
+            "Sacred Blueprint",
+            "Holy Tool",
+            "Masterpiece Token",
+            "Craftsman’s Crest",
+            "Artisan’s Apron",
+            "Sacred Carving",
+            "Divine Mosaic",
+            "Artisan’s Anvil",
+            "Craftsman’s Lantern"
+        ],
+        "alignment": [
+            "Neutral Good",
+            "Lawful Neutral",
+            "Neutral",
+            "Lawful Good"
+        ],
         "roles": {
             "high": [
                 "Master Artisan"
@@ -1116,6 +1552,46 @@
     },
     "Sacred Scribes": {
         "name": "Sacred Scribes",
+        "prompts": [
+            "A forbidden manuscript has gone missing from the scriptorium.",
+            "The Chief Scribe is accused of altering sacred texts for personal gain.",
+            "The Scribes are dealing with a series of disturbing forgeries among their documents.",
+            "A new scribe claims to have discovered a hidden truth that could change everything.",
+            "A prophecy suggests that the next Chief Scribe will uncover a major secret.",
+            "The Sacred Scribes are facing a crisis as their precious records are being tampered with.",
+            "An internal dispute is threatening the efficiency and accuracy of the scriptorium.",
+            "A rival group is attempting to discredit the Scribes’ work and knowledge.",
+            "The Scribes are investigating a series of mysterious incidents involving their texts.",
+            "The Chief Scribe is rumored to be involved in dark magic to protect their secrets.",
+            "An ancient prophecy hidden within the texts is being revealed, with uncertain implications.",
+            "A critical document has been stolen, and its recovery is essential to the Scribes’ mission.",
+            "The Scribes are preparing for a grand ceremony to unveil a major new discovery.",
+            "A long-forgotten text is discovered, and its contents are causing controversy.",
+            "The Scribes must deal with the fallout from a failed attempt to preserve a vital record."
+        ],
+        "symbols": [
+            "Sacred Quill",
+            "Ancient Scroll",
+            "Divine Inkpot",
+            "Scripture Seal",
+            "Holy Parchment",
+            "Scribe’s Badge",
+            "Illuminated Manuscript",
+            "Celestial Glyph",
+            "Divine Codex",
+            "Scribe’s Rod",
+            "Sacred Book",
+            "Enchanted Scroll",
+            "Ink and Feather",
+            "Scribe’s Emblem",
+            "Holy Ink"
+        ],
+        "alignment": [
+            "Lawful Good",
+            "Neutral Good",
+            "Lawful Neutral",
+            "Neutral"
+        ],
         "roles": {
             "high": [
                 "Chief Scribe"
@@ -1211,6 +1687,46 @@
     },
     "Divine Protectors": {
         "name": "Divine Protectors",
+        "prompts": [
+            "A powerful enemy is threatening the sacred grounds, and the Protectors must defend it.",
+            "The High Protector is accused of neglecting their duties or making a grave mistake.",
+            "A prophecy claims that the next High Protector will either save or doom the sacred site.",
+            "The Protectors are dealing with a series of internal conflicts that are weakening their defenses.",
+            "A rival faction is trying to undermine the Protectors’ authority and control over sacred sites.",
+            "A powerful artifact is stolen, and its recovery is essential to maintaining the Protectors’ strength.",
+            "The Protectors are preparing for a grand battle against an emerging threat.",
+            "An internal betrayal is discovered, and the Protectors must find the traitor before it’s too late.",
+            "A secretive group is attempting to infiltrate and corrupt the Protectors from within.",
+            "The High Protector is mysteriously absent, and the order is in turmoil.",
+            "The Protectors are on a quest to recover a lost relic of immense power.",
+            "A prophecy suggests that the next High Protector will face a great trial that will determine their fate.",
+            "The Protectors are facing a crisis as their sacred grounds are being desecrated.",
+            "A major diplomatic mission is planned to strengthen alliances and protect their domain.",
+            "The Protectors must solve the mystery of a series of unnatural occurrences affecting their order."
+        ],
+        "symbols": [
+            "Protector’s Shield",
+            "Divine Sword",
+            "Sacred Banner",
+            "Celestial Helm",
+            "Protective Amulet",
+            "Holy Armor",
+            "Guardian’s Crest",
+            "Divine Lance",
+            "Sacred Emblem",
+            "Protector’s Cloak",
+            "Divine Seal",
+            "Sacred Sword",
+            "Protector’s Badge",
+            "Celestial Star",
+            "Guardian’s Badge"
+        ],
+        "alignment": [
+            "Lawful Good",
+            "Neutral Good",
+            "Lawful Neutral",
+            "Neutral"
+        ],
         "roles": {
             "high": [
                 "High Protector"
@@ -1306,6 +1822,46 @@
     },
     "Prestigious Orators": {
         "name": "Priestly Orators",
+        "prompts": [
+            "The Chief Orator is accused of preaching controversial or heretical ideas.",
+            "A new doctrine is being introduced, causing a schism among the Priestly Orators.",
+            "The Orators are preparing for a grand sermon that could elevate or ruin their influence.",
+            "A powerful rival is challenging the Orators’ authority and teachings.",
+            "An ancient prophecy is revealed during a sermon, causing a major upheaval.",
+            "The Chief Orator is mysteriously absent, leaving the group without guidance.",
+            "The Orators are dealing with a series of unexpected disruptions during their speeches.",
+            "A sacred text is misinterpreted or altered, leading to controversy and conflict.",
+            "The Orators must navigate a complex political situation that could impact their mission.",
+            "An internal faction is challenging the Orators’ traditional teachings and practices.",
+            "The Orators are facing accusations of corruption or misuse of their influence.",
+            "A rival group is attempting to discredit the Orators through false accusations.",
+            "The Orators are investigating a series of mysterious events linked to their teachings.",
+            "A prophecy claims that the next Orator will either unite or divide the faithful.",
+            "The Orators must solve a mystery involving an ancient and controversial doctrine."
+        ],
+        "symbols": [
+            "Orator’s Staff",
+            "Sacred Tome",
+            "Divine Banner",
+            "Preacher’s Ring",
+            "Holy Seal",
+            "Orator’s Crest",
+            "Sacred Manuscript",
+            "Divine Cross",
+            "Orator’s Cloak",
+            "Holy Scepter",
+            "Sacred Parchment",
+            "Preacher’s Badge",
+            "Divine Ink",
+            "Orator’s Mask",
+            "Holy Relic"
+        ],
+        "alignment": [
+            "Lawful Good",
+            "Neutral Good",
+            "Neutral",
+            "Chaotic Good"
+        ],
         "roles": {
             "high": [
                 "Chief Orator"
@@ -1401,6 +1957,46 @@
     },
     "Sacred Sentinels": {
         "name": "Sacred Sentinels",
+        "prompts": [
+            "The Sentinel Captain is accused of failing in their duty during a recent attack.",
+            "A rival faction is attempting to undermine the Sentinels’ authority over their domain.",
+            "A sacred site is in danger of being overrun, and the Sentinels must defend it.",
+            "A prophecy suggests that the next Sentinel Captain will face a great trial.",
+            "Internal conflicts among the Sentinels are causing a crisis in their ranks.",
+            "A powerful artifact that the Sentinels guard has been stolen or lost.",
+            "An insider is suspected of leaking sensitive information to enemies of the Sentinels.",
+            "The Sentinels must deal with a series of unexplained disappearances among their ranks.",
+            "The Sentinel Captain is mysteriously absent, leaving the Sentinels in disarray.",
+            "A grand celebration is planned, but rumors of sabotage threaten its success.",
+            "The Sentinels are investigating a series of threats against their order.",
+            "A new enemy emerges, posing a significant challenge to the Sentinels’ defenses.",
+            "The Sentinels are dealing with a faction within their own ranks that seeks to seize power.",
+            "A prophecy reveals that the next Sentinel Leader will either bring great victory or disaster.",
+            "The Sentinels must uncover the truth behind a series of attacks on their stronghold."
+        ],
+        "symbols": [
+            "Sentinel’s Shield",
+            "Divine Sword",
+            "Sacred Emblem",
+            "Guardian’s Crest",
+            "Sentinel’s Badge",
+            "Holy Armor",
+            "Sacred Helm",
+            "Divine Banner",
+            "Protector’s Token",
+            "Sentinel’s Cloak",
+            "Holy Relic",
+            "Guardian’s Staff",
+            "Sacred Amulet",
+            "Divine Sigil",
+            "Sentinel’s Pendant"
+        ],
+        "alignment": [
+            "Lawful Good",
+            "Neutral Good",
+            "Lawful Neutral",
+            "Neutral"
+        ],
         "roles": {
             "high": [
                 "Sentinel Captain"
@@ -1496,6 +2092,46 @@
     },
     "Divine Enforcers": {
         "name": "Divine Enforcers",
+        "prompts": [
+            "The Grand Enforcer is accused of abusing their power or failing in their duties.",
+            "A rival group seeks to expose corruption within the Enforcers’ ranks.",
+            "The Enforcers are investigating a series of strange occurrences linked to their operations.",
+            "A powerful artifact under the Enforcers’ protection has been stolen or damaged.",
+            "The Grand Enforcer’s recent decisions are causing unrest among the Enforcers and their allies.",
+            "An internal power struggle threatens to divide the Enforcers.",
+            "A new faction claims to hold the true power and challenges the Enforcers’ authority.",
+            "The Enforcers are facing a crisis as their sacred laws are being questioned.",
+            "A prophecy suggests that the next Grand Enforcer will face a pivotal moment that will define their legacy.",
+            "The Enforcers must deal with a series of mysterious and unsettling visions among their members.",
+            "A major scandal threatens to undermine the Enforcers’ influence and reputation.",
+            "The Enforcers are investigating a breach in their security that compromises their sacred duties.",
+            "The Grand Enforcer is rumored to be involved in dark dealings to maintain control.",
+            "An external threat is looming, and the Enforcers must rally their forces to face it.",
+            "The Enforcers must solve a mystery involving a hidden enemy within their ranks."
+        ],
+        "symbols": [
+            "Enforcer’s Hammer",
+            "Sacred Seal",
+            "Divine Badge",
+            "Enforcer’s Cloak",
+            "Holy Talisman",
+            "Divine Sword",
+            "Enforcer’s Crest",
+            "Sacred Rod",
+            "Divine Token",
+            "Enforcer’s Amulet",
+            "Holy Cross",
+            "Sacred Staff",
+            "Enforcer’s Ring",
+            "Divine Emblem",
+            "Holy Banner"
+        ],
+        "alignment": [
+            "Lawful Good",
+            "Lawful Neutral",
+            "Neutral Evil",
+            "Lawful Evil"
+        ],
         "roles": {
             "high": [
                 "Grand Enforcer",
@@ -1661,6 +2297,46 @@
     },
     "Religious Cultists": {
         "name": "Religious Cultists",
+        "prompts": [
+            "The Cult Leader has disappeared under mysterious circumstances, and a power struggle ensues.",
+            "A rival cult is attempting to undermine or discredit the current Cult Leader.",
+            "The cult is accused of conducting forbidden rites or practices, causing internal strife.",
+            "A prophecy reveals that the next leader will bring about either great salvation or ruin.",
+            "The cult is dealing with a series of disappearances among its members.",
+            "An ancient relic of great power has been stolen or corrupted, and the cult must recover it.",
+            "The cult is preparing for a grand ritual that could alter the fate of their order.",
+            "A hidden enemy is attempting to infiltrate and sabotage the cult from within.",
+            "The cult must face the consequences of a recent controversial action or decision.",
+            "A new member claims to have a special connection to the cult’s divine patron.",
+            "The cult is facing accusations from outsiders who claim their practices are harmful or dangerous.",
+            "An internal faction seeks to challenge the current leadership and take control of the cult.",
+            "A series of omens and visions are causing panic among the cultists, revealing hidden truths.",
+            "The cult’s sacred texts are being tampered with, leading to conflict and confusion.",
+            "The cult is preparing for a major event that could either solidify their power or lead to their downfall."
+        ],
+        "symbols": [
+            "Cult’s Sigil",
+            "Dark Relic",
+            "Forbidden Tome",
+            "Cultist’s Cloak",
+            "Sacred Dagger",
+            "Occult Amulet",
+            "Ritual Mask",
+            "Divine Symbol",
+            "Cult Banner",
+            "Mystic Pendant",
+            "Sacred Rune",
+            "Cultist’s Ring",
+            "Dark Cross",
+            "Enchanted Relic",
+            "Cultist’s Rod"
+        ],
+        "alignment": [
+            "Chaotic Evil",
+            "Neutral Evil",
+            "Lawful Evil",
+            "Chaotic Neutral"
+        ],
         "roles": {
             "high": [
                 "Cult Leader"
@@ -1742,6 +2418,46 @@
     },
     "Divine Mystics": {
         "name": "Divine Mystics",
+        "prompts": [
+            "The Mystic Lord is accused of delving into forbidden or dangerous knowledge.",
+            "A rival mystic faction challenges the authority and teachings of the Divine Mystics.",
+            "A prophecy reveals that the next Mystic will either save or doom their order.",
+            "The Mystics are dealing with a series of unsettling visions and omens.",
+            "A powerful artifact of immense power has gone missing or been stolen.",
+            "The Divine Mystics are preparing for a grand ritual that will reveal hidden truths.",
+            "An internal conflict threatens to divide the order and disrupt their practices.",
+            "A new Mystic claims to have uncovered a hidden truth that could change everything.",
+            "The Mystics are facing accusations of manipulating or deceiving others for their gain.",
+            "The order must investigate a series of mysterious disturbances linked to their practices.",
+            "A major event is on the horizon, and the Mystics must navigate through uncertainty and danger.",
+            "The Divine Mystics are dealing with an outsider claiming to possess divine insight.",
+            "An ancient prophecy is revealed, causing unrest and fear among the Mystics.",
+            "The order’s sacred texts are being tampered with, leading to confusion and conflict.",
+            "The Mystics must uncover the truth behind a series of strange and unexplained phenomena."
+        ],
+        "symbols": [
+            "Mystic’s Crystal",
+            "Divine Glyph",
+            "Sacred Tome",
+            "Mystic Pendant",
+            "Enchanted Amulet",
+            "Sacred Rune",
+            "Divine Staff",
+            "Mystic Seal",
+            "Celestial Eye",
+            "Divine Lantern",
+            "Holy Relic",
+            "Mystic Rod",
+            "Sacred Star",
+            "Divine Book",
+            "Mystic Cloak"
+        ],
+        "alignment": [
+            "Lawful Neutral",
+            "Neutral Good",
+            "Chaotic Good",
+            "Neutral"
+        ],
         "roles": {
             "high": [
                 "Mystic Lord"
