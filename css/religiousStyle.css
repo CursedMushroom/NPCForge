@@ -549,6 +549,8 @@ option {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 5px;
 }
+
+
 /* MEDIA QUERY */
 @media all and (max-width: 968px) {
     .results {
@@ -559,13 +561,39 @@ option {
         width: auto;
     }
 
-
-
     #search-Row {
         flex-direction: column;
     }
 
     .btn-group-btn {
         width: 100%;
+    }
+
+    .searchInputs {
+        display: block; 
+    }
+    
+    .searchInputs > div,
+    .searchInputs .custom-select,
+    .searchInputs .button-group {
+        width: 100%; 
+        margin-bottom: 16px; 
+    }
+    
+    .searchInputs .button-group {
+        display: flex;
+        justify-content: space-between; 
+    }
+
+   
+    .select-box,
+    .checkboxes,
+    .custom-select select {
+        width: 100%;
+    }
+    #breakdown-check {
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px; 
     }
 }

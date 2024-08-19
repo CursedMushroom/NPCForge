@@ -73,7 +73,8 @@
 
 
 
-                    <p><span class="title">Breakdown Card</span>  (the dark grey card): Provides detailed information about the religion the
+                    <p><span class="title">Breakdown Card</span> (the dark grey card): Provides detailed information
+                        about the religion the
                         generated NPC's follow:</p>
                     <ul>
                         <li><span class="title">Religious Symbol:</span> Provides the emblem or icon associated with the
@@ -82,14 +83,22 @@
                             group,
                             such as Lawful Good, Neutral Evil, etc. Alignment helps to determine their motivations and
                             behavior.</li>
-                            <li><span class="title">Prompt:</span> Offers a potential plot point or story element
-                                related to the religious group. This could include their role in ongoing events, a secret
-                                they guard, or
-                                a quest they are involved in.</li>
+                        <li><span class="title">Hierarchy Position Ratios:</span> Influences the socioeconomic status of
+                            the
+                            generated NPCs, impacting their careers and clothing. The ratios will define how many NPCs
+                            hold
+                            high, mid, or low-ranking positions within their religious or church hierarchy, affecting
+                            their
+                            influence and power within the organization.</li>
+                        <li><span class="title">Prompt:</span> Offers a potential plot point or story element
+                            related to the religious group. This could include their role in ongoing events, a secret
+                            they guard, or
+                            a quest they are involved in.</li>
                         <li><span class="title">Colors:</span> Lists the colors associated with the religious
                             order. These colors often symbolize their faith and can be seen in
                             their clothing, symbols, and other personal items on the NPC's.</li>
-                        
+
+
                     </ul>
 
 
@@ -150,7 +159,9 @@
                         <span id="selected-value">--- Races ---</span>
                         <div class="dropdown-icon"></div>
                     </div>
+    
                     <div id="checkboxes" class="checkboxes">
+    
                         <div class="container">
                             <label id="book-title"><strong>Player's Handbook</strong></label>
                             <label for="PHBAll" class="right-label">
@@ -199,10 +210,415 @@
                                 <input type="checkbox" id="tiefling" name="race" value="tiefling"
                                     onclick="updateSelectedValue(event)" /> Tiefling
                             </label>
+    
+    
                         </div>
-
+                        <div class="container">
+                            <label id="book-title"><strong>Volo's Guide to Monsters</strong></label>
+                            <label for="voloAll" class="right-label">
+                                All <input type="checkbox" id="voloAll" name="race"
+                                    onclick="toggleAll(event, 'volo-section')" />
+                            </label>
+                        </div>
+                        <div class="race-section" id="volo-section">
+                            <label for="aasimar">
+                                <input type="checkbox" id="aasimar" name="race" value="aasimar"
+                                    onclick="updateSelectedValue(event)" /> Aasimar
+                            </label>
+                            <label for="firbolg">
+                                <input type="checkbox" id="firbolg" name="race" value="firbolg"
+                                    onclick="updateSelectedValue(event)" /> Firbolg
+                            </label>
+                            <label for="goliath">
+                                <input type="checkbox" id="goliath" name="race" value="goliath"
+                                    onclick="updateSelectedValue(event)" /> Goliath
+                            </label>
+                            <label for="kenku">
+                                <input type="checkbox" id="kenku" name="race" value="kenku"
+                                    onclick="updateSelectedValue(event)" /> Kenku
+                            </label>
+                            <label for="lizardfolk">
+                                <input type="checkbox" id="lizardfolk" name="race" value="lizardfolk"
+                                    onclick="updateSelectedValue(event)" /> Lizardfolk
+                            </label>
+                            <label for="tabaxi">
+                                <input type="checkbox" id="tabaxi" name="race" value="tabaxi"
+                                    onclick="updateSelectedValue(event)" /> Tabaxi
+                            </label>
+                            <label for="triton">
+                                <input type="checkbox" id="triton" name="race" value="triton"
+                                    onclick="updateSelectedValue(event)" /> Triton
+                            </label>
+                            <label for="bugbear">
+                                <input type="checkbox" id="bugbear" name="race" value="bugbear"
+                                    onclick="updateSelectedValue(event)" /> Bugbear
+                            </label>
+                            <label for="goblin">
+                                <input type="checkbox" id="goblin" name="race" value="goblin"
+                                    onclick="updateSelectedValue(event)" /> Goblin
+                            </label>
+                            <label for="hobgoblin">
+                                <input type="checkbox" id="hobgoblin" name="race" value="hobgoblin"
+                                    onclick="updateSelectedValue(event)" /> Hobgoblin
+                            </label>
+                            <label for="kobold">
+                                <input type="checkbox" id="kobold" name="race" value="kobold"
+                                    onclick="updateSelectedValue(event)" /> Kobold
+                            </label>
+                            <label for="orc">
+                                <input type="checkbox" id="orc" name="race" value="orc"
+                                    onclick="updateSelectedValue(event)" /> Orc
+                            </label>
+                            <label for="yuanTiPure">
+                                <input type="checkbox" id="yuanTiPure" name="race" value="yuanTiPure"
+                                    onclick="updateSelectedValue(event)" /> Yuan-ti Pureblood
+                            </label>
+    
+                        </div>
+                        <div class="container">
+                            <label id="book-title"><strong>Monsters of the Multiverse</strong></label>
+                            <label for="motmAll" class="right-label">
+                                All <input type="checkbox" id="motmAll" name="race"
+                                    onclick="toggleAll(event, 'motm-section')" />
+                            </label>
+                        </div>
+                        <div class="race-section" id="motm-section">
+                            <label for="aarackocra">
+                                <input type="checkbox" id="aarackocra" name="race" value="aarackocra"
+                                    onclick="updateSelectedValue(event)" /> Aarackocra
+                            </label>
+                            <label for="aasimar2">
+                                <input type="checkbox" id="aasimar2" name="race" value="aasimar"
+                                    onclick="updateSelectedValue(event)" /> Aasimar
+                            </label>
+                            <label for="bugbear2">
+                                <input type="checkbox" id="bugbear2" name="race" value="bugbear"
+                                    onclick="updateSelectedValue(event)" /> Bugbear
+                            </label>
+                            <label for="centaur">
+                                <input type="checkbox" id="centaur" name="race" value="centaur"
+                                    onclick="updateSelectedValue(event)" /> Centaur
+                            </label>
+                            <label for="changeling">
+                                <input type="checkbox" id="changeling" name="race" value="changeling"
+                                    onclick="updateSelectedValue(event)" /> Changeling
+                            </label>
+                            <label for="deepGnome">
+                                <input type="checkbox" id="deepGnome" name="race" value="deepGnome"
+                                    onclick="updateSelectedValue(event)" /> Deep Gnome
+                            </label>
+                            <label for="duergar">
+                                <input type="checkbox" id="duergar" name="race" value="duergar"
+                                    onclick="updateSelectedValue(event)" /> Duergar
+                            </label>
+                            <label for="eladrin">
+                                <input type="checkbox" id="eladrin" name="race" value="eladrin"
+                                    onclick="updateSelectedValue(event)" /> Eladrin
+                            </label>
+                            <label for="fairy">
+                                <input type="checkbox" id="fairy" name="race" value="fairy"
+                                    onclick="updateSelectedValue(event)" /> Fairy
+                            </label>
+                            <label for="firbolg2">
+                                <input type="checkbox" id="firbolg2" name="race" value="firbolg"
+                                    onclick="updateSelectedValue(event)" /> Firbolg
+                            </label>
+                            <label for="airGenasi">
+                                <input type="checkbox" id="airGenasi" name="race" value="airGenasi"
+                                    onclick="updateSelectedValue(event)" /> Air Genasi
+                            </label>
+                            <label for="earthGenasi">
+                                <input type="checkbox" id="earthGenasi" name="race" value="earthGenasi"
+                                    onclick="updateSelectedValue(event)" /> Earth Genasi
+                            </label>
+                            <label for="fireGenasi">
+                                <input type="checkbox" id="fireGenasi" name="race" value="fireGenasi"
+                                    onclick="updateSelectedValue(event)" /> Fire Genasi
+                            </label>
+                            <label for="waterGenasi">
+                                <input type="checkbox" id="waterGenasi" name="race" value="waterGenasi"
+                                    onclick="updateSelectedValue(event)" /> Water Genasi
+                            </label>
+                            <label for="githyanki">
+                                <input type="checkbox" id="githyanki" name="race" value="githyanki"
+                                    onclick="updateSelectedValue(event)" /> Githyanki
+                            </label>
+                            <label for="githzerai">
+                                <input type="checkbox" id="githzerai" name="race" value="githzerai"
+                                    onclick="updateSelectedValue(event)" /> Githzerai
+                            </label>
+                            <label for="goblin2">
+                                <input type="checkbox" id="goblin2" name="race" value="goblin"
+                                    onclick="updateSelectedValue(event)" /> Goblin
+                            </label>
+                            <label for="goliath2">
+                                <input type="checkbox" id="goliath2" name="race" value="goliath"
+                                    onclick="updateSelectedValue(event)" /> Goliath
+                            </label>
+                            <label for="harengon">
+                                <input type="checkbox" id="harengon" name="race" value="harengon"
+                                    onclick="updateSelectedValue(event)" /> Harengon
+                            </label>
+                            <label for="hobgoblin2">
+                                <input type="checkbox" id="hobgoblin2" name="race" value="hobgoblin"
+                                    onclick="updateSelectedValue(event)" /> Hobgoblin
+                            </label>
+                            <label for="kenku2">
+                                <input type="checkbox" id="kenku2" name="race" value="kenku"
+                                    onclick="updateSelectedValue(event)" /> Kenku
+                            </label>
+                            <label for="kobold2">
+                                <input type="checkbox" id="kobold2" name="race" value="kobold"
+                                    onclick="updateSelectedValue(event)" /> Kobold
+                            </label>
+                            <label for="lizardfolk2">
+                                <input type="checkbox" id="lizardfolk2" name="race" value="lizardfolk"
+                                    onclick="updateSelectedValue(event)" /> Lizardfolk
+                            </label>
+                            <label for="minotaur">
+                                <input type="checkbox" id="minotaur" name="race" value="minotaur"
+                                    onclick="updateSelectedValue(event)" /> Minotaur
+                            </label>
+                            <label for="orc2">
+                                <input type="checkbox" id="orc2" name="race" value="orc"
+                                    onclick="updateSelectedValue(event)" /> Orc
+                            </label>
+                            <label for="satyr">
+                                <input type="checkbox" id="satyr" name="race" value="satyr"
+                                    onclick="updateSelectedValue(event)" /> Satyr
+                            </label>
+                            <label for="seaElf">
+                                <input type="checkbox" id="seaElf" name="race" value="seaElf"
+                                    onclick="updateSelectedValue(event)" /> Sea Elf
+                            </label>
+                            <label for="shadarKai">
+                                <input type="checkbox" id="shadarKai" name="race" value="shadarKai"
+                                    onclick="updateSelectedValue(event)" /> Shadar-Kai
+                            </label>
+                            <label for="shifter">
+                                <input type="checkbox" id="shifter" name="race" value="shifter"
+                                    onclick="updateSelectedValue(event)" /> Shifter
+                            </label>
+                            <label for="tabaxi2">
+                                <input type="checkbox" id="tabaxi2" name="race" value="tabaxi"
+                                    onclick="updateSelectedValue(event)" /> Tabaxi
+                            </label>
+                            <label for="tortle">
+                                <input type="checkbox" id="tortle" name="race" value="tortle"
+                                    onclick="updateSelectedValue(event)" /> Tortle
+                            </label>
+                            <label for="triton2">
+                                <input type="checkbox" id="triton2" name="race" value="triton"
+                                    onclick="updateSelectedValue(event)" /> Triton
+                            </label>
+                            <label for="yuanTiPure2">
+                                <input type="checkbox" id="yuanTiPure2" name="race" value="yuanTiPure"
+                                    onclick="updateSelectedValue(event)" /> Yuan-ti Pureblood
+                            </label>
+    
+    
+                        </div>
+                        <div class="container">
+                            <label id="book-title"><strong>Guide to Ravnica</strong></label>
+                            <label for="ravnicaAll" class="right-label">
+                                All <input type="checkbox" id="ravnicaAll" name="race"
+                                    onclick="toggleAll(event, 'ravnica-section')" />
+                            </label>
+                        </div>
+                        <div class="race-section" id="ravnica-section">
+                            <label for="centaur2">
+                                <input type="checkbox" id="centaur2" name="race" value="centaur"
+                                    onclick="updateSelectedValue(event)" /> Centaur
+                            </label>
+    
+                            <label for="loxodon">
+                                <input type="checkbox" id="loxodon" name="race" value="loxodon"
+                                    onclick="updateSelectedValue(event)" /> Loxodon
+                            </label>
+    
+                            <label for="minotaur2">
+                                <input type="checkbox" id="minotaur2" name="race" value="minotaur"
+                                    onclick="updateSelectedValue(event)" /> Minotaur
+                            </label>
+    
+                            <label for="simicHybrid">
+                                <input type="checkbox" id="simicHybrid" name="race" value="simicHybrid"
+                                    onclick="updateSelectedValue(event)" /> Simic Hybrid
+                            </label>
+    
+                            <label for="vedalken">
+                                <input type="checkbox" id="vedalken" name="race" value="vedalken"
+                                    onclick="updateSelectedValue(event)" /> Vedalken
+                            </label>
+    
+    
+                        </div>
+                        <div class="container">
+                            <label id="book-title"><strong>Eberron: RLW</strong></label>
+                            <label for="eberronAll" class="right-label">
+                                All <input type="checkbox" id="eberronAll" name="race"
+                                    onclick="toggleAll(event, 'eberron-section')" />
+                            </label>
+                        </div>
+                        <div class="race-section" id="eberron-section">
+                            <label for="changeling2">
+                                <input type="checkbox" id="changeling2" name="race" value="changeling"
+                                    onclick="updateSelectedValue(event)" /> Changeling
+                            </label>
+                            <label for="kalashtar">
+                                <input type="checkbox" id="kalashtar" name="race" value="kalashtar"
+                                    onclick="updateSelectedValue(event)" /> Kalashtar
+                            </label>
+                            <label for="shifter2">
+                                <input type="checkbox" id="shifter2" name="race" value="shifter"
+                                    onclick="updateSelectedValue(event)" /> Shifter
+                            </label>
+                            <label for="warforged">
+                                <input type="checkbox" id="warforged" name="race" value="warforged"
+                                    onclick="updateSelectedValue(event)" /> Warforged
+                            </label>
+                        </div>
+                        <div class="container">
+                            <label id="book-title"><strong>Mythic Odysseys of Theros</strong></label>
+                            <label for="therosAll" class="right-label">
+                                All <input type="checkbox" id="therosAll" name="race"
+                                    onclick="toggleAll(event, 'theros-section')" />
+                            </label>
+                        </div>
+                        <div class="race-section" id="theros-section">
+                            <label for="leonin">
+                                <input type="checkbox" id="leonin" name="race" value="leonin"
+                                    onclick="updateSelectedValue(event)" /> Leonin
+                            </label>
+                            <label for="satyr2">
+                                <input type="checkbox" id="satyr2" name="race" value="satyr"
+                                    onclick="updateSelectedValue(event)" /> Satyr
+                            </label>
+    
+                        </div>
+                        <div class="container">
+                            <label id="book-title"><strong>Spelljammer</strong></label>
+                            <label for="spellJammerAll" class="right-label">
+                                All <input type="checkbox" id="spellJammerAll" name="race"
+                                    onclick="toggleAll(event, 'spellJammer-section')" />
+                            </label>
+                        </div>
+                        <div class="race-section" id="spellJammer-section">
+                            <label for="astralElf">
+                                <input type="checkbox" id="astralElf" name="race" value="astralElf"
+                                    onclick="updateSelectedValue(event)" /> Astral Elf
+                            </label>
+                            <label for="autognome">
+                                <input type="checkbox" id="autognome" name="race" value="autognome"
+                                    onclick="updateSelectedValue(event)" /> Autognome
+                            </label>
+                            <label for="construct">
+                                <input type="checkbox" id="construct" name="race" value="construct"
+                                    onclick="updateSelectedValue(event)" /> Construct
+                            </label>
+                            <label for="giff">
+                                <input type="checkbox" id="giff" name="race" value="giff"
+                                    onclick="updateSelectedValue(event)" /> Giff
+                            </label>
+                            <label for="hadozee">
+                                <input type="checkbox" id="hadozee" name="race" value="hadozee"
+                                    onclick="updateSelectedValue(event)" /> Hadozee
+                            </label>
+                            <label for="modron">
+                                <input type="checkbox" id="modron" name="race" value="modron"
+                                    onclick="updateSelectedValue(event)" /> Modron
+                            </label>
+                            <label for="plasmoid">
+                                <input type="checkbox" id="plasmoid" name="race" value="plasmoid"
+                                    onclick="updateSelectedValue(event)" /> Plasmoid
+                            </label>
+                            <label for="thriKreen">
+                                <input type="checkbox" id="thriKreen" name="race" value="thriKreen"
+                                    onclick="updateSelectedValue(event)" /> Thri-Kreen
+                            </label>
+    
+                        </div>
+    
+    
+    
+    
+                        <div class="container">
+                            <label id="book-title"><strong>Grim Hollow</strong></label>
+                            <label for="grimHollowAll" class="right-label">
+                                All <input type="checkbox" id="grimHollowAll" name="race"
+                                    onclick="toggleAll(event, 'grimHollow-section')" />
+                            </label>
+                        </div>
+                        <div class="race-section" id="grimHollow-section">
+                            <label for="disembodied">
+                                <input type="checkbox" id="disembodied" name="race" value="disembodied"
+                                    onclick="updateSelectedValue(event)" /> The Disembodied
+                            </label>
+                            <label for="wechselkind">
+                                <input type="checkbox" id="wechselkind" name="race" value="wechselkind"
+                                    onclick="updateSelectedValue(event)" /> Wechselkind
+                            </label>
+                        </div>
+    
+                        <div class="container">
+                            <label id="book-title"><strong>Guide to Ravenloft</strong></label>
+                            <label for="ravenloftAll" class="right-label">
+                                All <input type="checkbox" id="ravenloftAll" name="race"
+                                    onclick="toggleAll(event, 'ravenloft-section')" />
+                            </label>
+                        </div>
+                        <div class="race-section" id="ravenloft-section">
+                            <label for="dhampir">
+                                <input type="checkbox" id="dhampir" name="race" value="dhampir"
+                                    onclick="updateSelectedValue(event)" /> Dhampir
+                            </label>
+                            <label for="hexblood">
+                                <input type="checkbox" id="hexblood" name="race" value="hexblood"
+                                    onclick="updateSelectedValue(event)" /> Hexblood
+                            </label>
+                            <label for="reborn">
+                                <input type="checkbox" id="reborn" name="race" value="reborn"
+                                    onclick="updateSelectedValue(event)" /> Reborn
+                            </label>
+                        </div>
+    
+    
+    
+                        <div class="container">
+                            <label id="book-title"><strong>Other</strong></label>
+                            <label for="otherAll" class="right-label">
+                                All <input type="checkbox" id="otherAll" name="race"
+                                    onclick="toggleAll(event, 'other-section')" />
+                            </label>
+                        </div>
+                        <div class="race-section" id="other-section">
+                            <label for="kender">
+                                <input type="checkbox" id="kender" name="race" value="kender"
+                                    onclick="updateSelectedValue(event)" /> Kender
+                            </label>
+                            <label for="owlin">
+                                <input type="checkbox" id="owlin" name="race" value="owlin"
+                                    onclick="updateSelectedValue(event)" /> Owlin
+                            </label>
+                            <label for="verdan">
+                                <input type="checkbox" id="verdan" name="race" value="verdan"
+                                    onclick="updateSelectedValue(event)" /> Verdan
+                            </label>
+                            <label for="grung">
+                                <input type="checkbox" id="grung" name="race" value="grung"
+                                    onclick="updateSelectedValue(event)" /> Grung
+                            </label>
+                            <label for="locathah">
+                                <input type="checkbox" id="locathah" name="race" value="locathah"
+                                    onclick="updateSelectedValue(event)" /> Locathah
+                            </label>
+                        </div>
+    
+    
                     </div>
                 </div>
+
+                
                 <div class="custom-select">
                     <select id="presetSelect">
                         <option value="none" disabled selected hidden>--- Presets ---</option>
@@ -281,7 +697,7 @@
 
     <div class="results">
         <p id="characterDescription"> No NPC's have been Generated</p>
-        
+
 
     </div>
 

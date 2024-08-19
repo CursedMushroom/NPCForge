@@ -1,3 +1,10 @@
+let racePool = [];
+let lockedCards = [];
+
+
+
+
+
 function getPresetData() {
     const presetSelect = document.getElementById('presetSelect');
     const selectedPreset = presetSelect.value;
@@ -105,6 +112,26 @@ function generateBreakdownCard(cardData) {
 };
 
 
+//card scripts
+function deleteCard(event) {
+    const card = event.target.closest('.card');
+    card.remove();
+    lockedCards = lockedCards.filter(lockedCard => lockedCard !== card);
+};
+function toggleLock(event) {
+    const card = event.target.closest('.card');
+    const lockIcon = card.querySelector('.lock i');
+
+    if (lockIcon.classList.contains('fa-unlock')) {
+        lockIcon.classList.remove('fa-unlock');
+        lockIcon.classList.add('fa-lock');
+        lockedCards.push(card);
+    } else {
+        lockIcon.classList.remove('fa-lock');
+        lockIcon.classList.add('fa-unlock');
+        lockedCards = lockedCards.filter(lockedCard => lockedCard !== card);
+    }
+}
 
 document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('reset').addEventListener('click', function () {
