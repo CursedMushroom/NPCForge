@@ -23,8 +23,8 @@ function getPresetData() {
                     .then(colorJsonData => {
                         const colorData = colorJsonData;
                         console.log('Color data loaded');
-                        let colors=[];
-                        for(let i=0; i<3; i++){
+                        let colors = [];
+                        for (let i = 0; i < 3; i++) {
                             colors.push(colorData.colors[Math.floor(Math.random() * colorData.colors.length)]);
                         }
 
@@ -37,8 +37,8 @@ function getPresetData() {
                             colors: colors
                         }
                         generateBreakdownCard(card);
-                     })
-               
+                    })
+
 
             } else {
                 console.log('Preset not found or not selected:', selectedPreset);
@@ -47,7 +47,55 @@ function getPresetData() {
         })
         .catch(error => console.error('Error fetching preset data:', error));
 }
+function generateBreakdownData() {
 
+    fetch('json/religion.json')
+        .then(response => response.json())
+        .then(data => {
+            let name, hierarchy;
+            const breakdownData = data;
+
+            if (Math.random() < 0.5) {
+                // console.log("single name");
+                name = getRandomElement(breakdownData.singluarNames);
+            } else {
+                // console.log("combo name");
+                name = `${getRandomElement(breakdownData.nameSet1)} ${getRandomElement(breakdownData.connector)} ${getRandomElement(breakdownData.nameSet2)}`;
+            }
+
+
+            const selectElement = document.getElementById("hierarchyAmount");
+            const selectedValue = selectElement.value;
+            if (selectedValue !== "none") {
+                hierarchy = selectedValue;
+                fetch('json/colors.json')
+                .then(response => response.json())
+                .then(colorJsonData => {
+                    const colorData = colorJsonData;
+                    console.log('Color data loaded');
+                    let colors=[];
+                    for(let i=0; i<3; i++){
+                        colors.push(colorData.colors[Math.floor(Math.random() * colorData.colors.length)]);
+                    }
+
+                    let card = {
+                        name: name,
+                        alignment: getRandomElement(breakdownData.alignment),
+                        symbol: getRandomElement(breakdownData.symbols),
+                        hierarchy: hierarchy,
+                        prompt: getRandomElement(breakdownData.prompts),
+                        colors: colors
+                    }
+                    generateBreakdownCard(card);
+                 })
+            } else {
+                alert('Please select a hierarchy');
+            }
+
+        })
+        .catch(error => console.error('Error fetching breakdown data:', error));
+
+}
 
 
 function generateBreakdownCard(cardData) {
@@ -107,10 +155,15 @@ function generateBreakdownCard(cardData) {
     `;
 
     const results = document.querySelector('.results');
+    results.innerHTML = ''
     results.appendChild(card);
 
 };
 
+
+function getRandomElement(arr) {
+    return arr[Math.floor(Math.random() * arr.length)];
+}
 
 //card scripts
 function deleteCard(event) {
@@ -135,17 +188,21 @@ function toggleLock(event) {
 
 document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('reset').addEventListener('click', function () {
-        const presetSelect = document.getElementById('presetSelect');
-        const selectedPreset = presetSelect.value;
-        if (selectedPreset !== "None") {
-            getPresetData();
-        } else {
-            console.log('No preset selected');
-        }
+        
     }
 
     )
     document.getElementById('generateBtn').addEventListener('click', function () {
+        const presetSelect = document.getElementById('presetSelect');
+        const breakdowncardCheck= document.querySelector('#breakdown').checked;
+        const selectedPreset = presetSelect.value;
+        if (selectedPreset !== "none") {
+            getPresetData();
+        } else {
+            if(breakdowncardCheck==true){
+                generateBreakdownData();
+            }
+        }
 
 
 
