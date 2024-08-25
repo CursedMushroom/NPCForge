@@ -1,7 +1,7 @@
 let racePool = [];
 let lockedCards = [];
-
-
+let genders;
+let hierarchy;
 
 
 
@@ -47,6 +47,8 @@ function getPresetData() {
         })
         .catch(error => console.error('Error fetching preset data:', error));
 }
+
+//breakdown card
 function generateBreakdownData() {
 
     fetch('json/religion.json')
@@ -159,6 +161,18 @@ function generateBreakdownCard(cardData) {
     results.appendChild(card);
 
 };
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 function getRandomElement(arr) {

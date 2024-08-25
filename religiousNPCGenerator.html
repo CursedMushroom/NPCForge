@@ -159,9 +159,9 @@
                         <span id="selected-value">--- Races ---</span>
                         <div class="dropdown-icon"></div>
                     </div>
-    
+
                     <div id="checkboxes" class="checkboxes">
-    
+
                         <div class="container">
                             <label id="book-title"><strong>Player's Handbook</strong></label>
                             <label for="PHBAll" class="right-label">
@@ -210,8 +210,8 @@
                                 <input type="checkbox" id="tiefling" name="race" value="tiefling"
                                     onclick="updateSelectedValue(event)" /> Tiefling
                             </label>
-    
-    
+
+
                         </div>
                         <div class="container">
                             <label id="book-title"><strong>Volo's Guide to Monsters</strong></label>
@@ -273,7 +273,7 @@
                                 <input type="checkbox" id="yuanTiPure" name="race" value="yuanTiPure"
                                     onclick="updateSelectedValue(event)" /> Yuan-ti Pureblood
                             </label>
-    
+
                         </div>
                         <div class="container">
                             <label id="book-title"><strong>Monsters of the Multiverse</strong></label>
@@ -415,8 +415,8 @@
                                 <input type="checkbox" id="yuanTiPure2" name="race" value="yuanTiPure"
                                     onclick="updateSelectedValue(event)" /> Yuan-ti Pureblood
                             </label>
-    
-    
+
+
                         </div>
                         <div class="container">
                             <label id="book-title"><strong>Guide to Ravnica</strong></label>
@@ -430,28 +430,28 @@
                                 <input type="checkbox" id="centaur2" name="race" value="centaur"
                                     onclick="updateSelectedValue(event)" /> Centaur
                             </label>
-    
+
                             <label for="loxodon">
                                 <input type="checkbox" id="loxodon" name="race" value="loxodon"
                                     onclick="updateSelectedValue(event)" /> Loxodon
                             </label>
-    
+
                             <label for="minotaur2">
                                 <input type="checkbox" id="minotaur2" name="race" value="minotaur"
                                     onclick="updateSelectedValue(event)" /> Minotaur
                             </label>
-    
+
                             <label for="simicHybrid">
                                 <input type="checkbox" id="simicHybrid" name="race" value="simicHybrid"
                                     onclick="updateSelectedValue(event)" /> Simic Hybrid
                             </label>
-    
+
                             <label for="vedalken">
                                 <input type="checkbox" id="vedalken" name="race" value="vedalken"
                                     onclick="updateSelectedValue(event)" /> Vedalken
                             </label>
-    
-    
+
+
                         </div>
                         <div class="container">
                             <label id="book-title"><strong>Eberron: RLW</strong></label>
@@ -494,7 +494,7 @@
                                 <input type="checkbox" id="satyr2" name="race" value="satyr"
                                     onclick="updateSelectedValue(event)" /> Satyr
                             </label>
-    
+
                         </div>
                         <div class="container">
                             <label id="book-title"><strong>Spelljammer</strong></label>
@@ -536,12 +536,12 @@
                                 <input type="checkbox" id="thriKreen" name="race" value="thriKreen"
                                     onclick="updateSelectedValue(event)" /> Thri-Kreen
                             </label>
-    
+
                         </div>
-    
-    
-    
-    
+
+
+
+
                         <div class="container">
                             <label id="book-title"><strong>Grim Hollow</strong></label>
                             <label for="grimHollowAll" class="right-label">
@@ -559,7 +559,7 @@
                                     onclick="updateSelectedValue(event)" /> Wechselkind
                             </label>
                         </div>
-    
+
                         <div class="container">
                             <label id="book-title"><strong>Guide to Ravenloft</strong></label>
                             <label for="ravenloftAll" class="right-label">
@@ -581,9 +581,9 @@
                                     onclick="updateSelectedValue(event)" /> Reborn
                             </label>
                         </div>
-    
-    
-    
+
+
+
                         <div class="container">
                             <label id="book-title"><strong>Other</strong></label>
                             <label for="otherAll" class="right-label">
@@ -613,14 +613,14 @@
                                     onclick="updateSelectedValue(event)" /> Locathah
                             </label>
                         </div>
-    
-    
+
+
                     </div>
                 </div>
 
-                
+
                 <div class="custom-select">
-                    <select id="presetSelect">
+                    <select id="presetSelect" onchange="handlePresetChange()">
                         <option value="none" disabled selected hidden>--- Presets ---</option>
                         <option value="none">None</option>
                         <option value="High Priest & Council">High Priest & Council</option>
@@ -658,16 +658,16 @@
                     <div id="gender-checkboxes" class="checkboxes">
 
                         <div class="gender-section" id="gender-section">
-                            <label for="female">
+                            <label for="Female">
                                 <input type="checkbox" id="female" name="gender" value="Female"
                                     onclick="updateGenderValue(event)" /> Female
                             </label>
-                            <label for="male">
+                            <label for="Male">
                                 <input type="checkbox" id="male" name="gender" value="Male"
                                     onclick="updateGenderValue(event)" /> Male
                             </label>
                             <label for="nonBinary">
-                                <input type="checkbox" id="nonBinary" name="gender" value="Non-Binary"
+                                <input type="checkbox" id="nonBinary" name="gender" value="nonBinary"
                                     onclick="updateGenderValue(event)" /> Non-Binary / Androgynous
                             </label>
 
@@ -676,8 +676,10 @@
                     </div>
                 </div>
                 <div class="custom-select">
-                    <select id="presetSelect" onchange="handlePresetChange()">
+                    <select id="presetSelect" class="clothselect" onchange="handlePresetChange()">
                         <option value="" disabled selected hidden>--- Clothing ---</option>
+                        <option value="random">Random</option>
+                        <option value="custom" hidden>Custom</option>
                         <option value="luxurious">Luxurious</option>
                         <option value="practical">Practical</option>
                         <option value="simple">Simple</option>
@@ -702,6 +704,7 @@
     </div>
 
     <script src="src/religiousScript.js"></script>
+    <script src="src/presetsScripts/religiousPresets.js"></script>
     <script src="src/genderDropdown.js"></script>
     <script src="src/dropdown.js"></script>
     <script src="src/navbar.js"></script>

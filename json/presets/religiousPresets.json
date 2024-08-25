@@ -59,7 +59,7 @@
             "Female",
             "nonBinary"
         ],
-        "hierarchyPositionRatios": "40:30:30",
+        "hierarchyPositionRatios": "40:40:20",
         "clothing": {
             "high": {
                 "High Priest": {
@@ -322,7 +322,7 @@
         "gender": [
             "Female"
         ],
-        "hierarchyPositionRatios": "35:40:25",
+        "hierarchyPositionRatios": "35:20:45",
         "clothing": {
             "high": {
                 "Grand Knight": {
@@ -590,7 +590,7 @@
         "gender": [
             "nonBinary"
         ],
-        "hierarchyPositionRatios": "35:40:25",
+        "hierarchyPositionRatios": "40:40:20",
         "clothing": {
             "high": {
                 "Temple Guardian": {
@@ -724,7 +724,7 @@
             "Female",
             "nonBinary"
         ],
-        "hierarchyPositionRatios": "25:45:30",
+        "hierarchyPositionRatios": "25:50:25",
         "clothing": {
             "high": {
                 "Chief Scholar": {
@@ -1001,7 +1001,7 @@
             "Female",
             "nonBinary"
         ],
-        "hierarchyPositionRatios": "35:35:30",
+        "hierarchyPositionRatios": "33:33:34",
         "clothing": {
             "high": {
                 "Celestial Envoy": {
@@ -1475,7 +1475,7 @@
             "Female",
             "nonBinary"
         ],
-        "hierarchyPositionRatios": "25:45:30",
+        "hierarchyPositionRatios": "15:70:15",
         "clothing": {
             "high": {
                 "Master Artisan": {
@@ -1745,7 +1745,7 @@
             "Female",
             "nonBinary"
         ],
-        "hierarchyPositionRatios": "35:35:30",
+        "hierarchyPositionRatios": "33:33:34",
         "clothing": {
             "high": {
                 "High Protector": {

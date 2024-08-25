@@ -30,3 +30,12 @@ function updateGenderValue(event) {
         document.getElementById("selected-gender-value").textContent = selectedValue;
     }
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    const allCheckboxes = document.querySelectorAll("#gender-checkboxes input[type='checkbox']");
+    allCheckboxes.forEach(checkbox => checkbox.checked = !checkbox.checked);
+
+    document.getElementById("selected-gender-value").textContent = `Female, Male, Non-Binary / Androgynous`;
+
+
+});
