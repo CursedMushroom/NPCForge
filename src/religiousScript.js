@@ -2,6 +2,7 @@ let racePool = [];
 let lockedCards = [];
 let genders = [];
 let hierarchy;
+let chosenPresetData;
 
 
 
@@ -12,11 +13,12 @@ function getPresetData() {
     fetch('json/presets/religiousPresets.json')
         .then(response => response.json())
         .then(data => {
-            const presetData = data;
+            const presetJsonData = data;
             console.log('Preset data loaded');
 
-            if (selectedPreset && presetData[selectedPreset]) {
-                const preset = presetData[selectedPreset];
+            if (selectedPreset && presetJsonData[selectedPreset]) {
+                const preset = presetJsonData[selectedPreset];
+                chosenPresetData = preset;
 
                 fetch('json/colors.json')
                     .then(response => response.json())
@@ -160,15 +162,15 @@ function generateCharacter(raceData, gender, hierarchy, voiceData, familyData) {
     // console.log(raceData, gender, hierarchy);
 
     let name, age, voice;
-    let pronouns=[];
+    let pronouns = [];
     let spouse;
     let children = [];
-    let job, underClothing, overClothing, accessories, jewelry;
+    let job, clothing, accessory, footware;
     let personality = [];
     let likes = [];
     let dislikes = [];
     let appearanceType, appearanceStyle, appearanceColor, eyes, height, build, skinColor, skinDetail, skinScar, skinBirthmark, skinTattoo, facialHair;
-    const { "fem-names": femNames, "masc-names": mascNames, "androgynous-names": androNames, ratio,ageMin, ageMax, appearance, surnames: surname, race } = raceData;
+    const { "fem-names": femNames, "masc-names": mascNames, "androgynous-names": androNames, ratio, ageMin, ageMax, appearance, surnames: surname, race } = raceData;
     const skin = appearance.skin;
     const totalRatio = ratio.feminine + ratio.masculine + ratio.androgynous;
     const randomGender = gender[Math.floor(Math.random() * gender.length)];
@@ -180,12 +182,12 @@ function generateCharacter(raceData, gender, hierarchy, voiceData, familyData) {
             } else {
                 facialHair = "None";
             }
-            pronouns= ["he", "him", "his"];
+            pronouns = ["he", "him", "his"];
             break;
         case "Female":
             name = getRandomElement(femNames);
             facialHair = "None";
-            pronouns= ["she", "her", "her"];
+            pronouns = ["she", "her", "her"];
             break;
         case "nonBinary":
             name = getRandomElement(androNames);
@@ -194,7 +196,7 @@ function generateCharacter(raceData, gender, hierarchy, voiceData, familyData) {
             } else {
                 facialHair = "None";
             }
-            pronouns= ["they", "them", "their"];
+            pronouns = ["they", "them", "their"];
             break;
 
     }
@@ -233,12 +235,12 @@ function generateCharacter(raceData, gender, hierarchy, voiceData, familyData) {
     skinBirthmark = (skin.birthmark && skin.birthmark.length > 0 && Math.random() < 0.4) ? `${getRandomElement(skin.birthmark)} on the ${getRandomElement(skin.bodyPart)}` : "None";
     skinTattoo = (skin.tattoos && skin.tattoos.length > 0 && Math.random() < 0.4) ? `${getRandomElement(skin.tattoos)} on the ${getRandomElement(skin.bodyPart)}` : "None";
 
- 
 
 
 
 
-       //family info
+
+    //family info
 
     //if married -> generate spouse
     //if children, random number -> generate children
@@ -355,6 +357,39 @@ function generateCharacter(raceData, gender, hierarchy, voiceData, familyData) {
         }
     }
 
+
+    //job
+    let hierarchyRatios = hierarchy.split(":").map(Number);
+    let jobNumber = Math.floor(Math.random() * 100);
+    let highThreshold = hierarchyRatios[0];
+    let midThreshold = hierarchyRatios[0] + hierarchyRatios[1];
+    if (chosenPresetData !== "" || chosenPresetData !== undefined) {
+        if (jobNumber < highThreshold) {
+            job = chosenPresetData.roles.high[Math.floor(Math.random() * chosenPresetData.roles.high.length)];
+
+            clothing=getRandomElement(chosenPresetData.clothing.high[job].clothing);
+            accessory=getRandomElement(chosenPresetData.clothing.high[job].accessories);
+            footware=getRandomElement(chosenPresetData.clothing.high[job].footwear);
+        } else if (jobNumber < midThreshold) {
+            job = chosenPresetData.roles.mid[Math.floor(Math.random() * chosenPresetData.roles.mid.length)];
+
+            clothing=getRandomElement(chosenPresetData.clothing.mid[job].clothing);
+            accessory=getRandomElement(chosenPresetData.clothing.mid[job].accessories);
+            footware=getRandomElement(chosenPresetData.clothing.mid[job].footwear);
+        } else {
+            job = chosenPresetData.roles.low[Math.floor(Math.random() * chosenPresetData.roles.low.length)];
+
+            clothing=getRandomElement(chosenPresetData.clothing.low[job].clothing);
+            accessory=getRandomElement(chosenPresetData.clothing.low[job].accessories);
+            footware=getRandomElement(chosenPresetData.clothing.low[job].footwear);
+        }
+    }
+
+
+
+
+
+
     const character = {
         name: name,
         age: age,
@@ -373,10 +408,10 @@ function generateCharacter(raceData, gender, hierarchy, voiceData, familyData) {
         skinScar: skinScar,
         skinBirthmark: skinBirthmark,
         skinTattoo: skinTattoo,
-        // job: job,
-        // underClothing: underClothing,
-        // overClothing: overClothing,
-        // accessories: accessories,
+        job: job,
+        clothing: clothing,
+        accessory: accessory,
+        footware: footware,
         // jewelry: jewelry,
         // personality: personality,
         // likes: likes,
@@ -385,6 +420,7 @@ function generateCharacter(raceData, gender, hierarchy, voiceData, familyData) {
         children: children
     };
     console.log(character);
+    console.log(chosenPresetData);
 
 
 }
@@ -477,6 +513,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const presetSelect = document.getElementById('presetSelect');
         const breakdowncardCheck = document.querySelector('#breakdown').checked;
         const selectedPreset = presetSelect.value;
+        chosenPresetData = "";
         if (selectedPreset !== "none") {
             getPresetData();
         } else {

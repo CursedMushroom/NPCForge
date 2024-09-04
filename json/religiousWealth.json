@@ -1,14 +1,62 @@
 {
-    "luxurious": {},
-    "practical": {},
-    "simple": {},
-    "mystical": {},
-    "rugged": {},
-    "elegant": {},
-    "ceremonial": {},
-    "militaristic": {},
-    "utilitarian": {},
-    "weathered": {},
-    "scholarly": {},
-    "discreet": {}
+    "luxurious": {
+        "high":[],
+        "mid":[],
+        "low":[]
+    },
+    "practical": {
+        "high":[],
+        "mid":[],
+        "low":[]
+    },
+    "simple": {
+        "high":[],
+        "mid":[],
+        "low":[]
+    },
+    "mystical": {
+        "high":[],
+        "mid":[],
+        "low":[]
+    },
+    "rugged": {
+        "high":[],
+        "mid":[],
+        "low":[]
+    },
+    "elegant": {
+        "high":[],
+        "mid":[],
+        "low":[]
+    },
+    "ceremonial": {
+        "high":[],
+        "mid":[],
+        "low":[]
+    },
+    "militaristic": {
+        "high":[],
+        "mid":[],
+        "low":[]
+    },
+    "utilitarian": {
+        "high":[],
+        "mid":[],
+        "low":[]
+    },
+    "weathered": {
+        "high":[],
+        "mid":[],
+        "low":[]
+    },
+    "scholarly": {
+        "high":[],
+        "mid":[],
+        "low":[]
+    },
+    "discreet": {
+        "high":[],
+        "mid":[],
+        "low":[]
+    }
 }
