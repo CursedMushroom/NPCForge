@@ -1,6 +1,6 @@
 let racePool = [];
 let lockedCards = [];
-let genders;
+let genders = [];
 let hierarchy;
 
 
@@ -71,25 +71,25 @@ function generateBreakdownData() {
             if (selectedValue !== "none") {
                 hierarchy = selectedValue;
                 fetch('json/colors.json')
-                .then(response => response.json())
-                .then(colorJsonData => {
-                    const colorData = colorJsonData;
-                    console.log('Color data loaded');
-                    let colors=[];
-                    for(let i=0; i<3; i++){
-                        colors.push(colorData.colors[Math.floor(Math.random() * colorData.colors.length)]);
-                    }
+                    .then(response => response.json())
+                    .then(colorJsonData => {
+                        const colorData = colorJsonData;
+                        console.log('Color data loaded');
+                        let colors = [];
+                        for (let i = 0; i < 3; i++) {
+                            colors.push(colorData.colors[Math.floor(Math.random() * colorData.colors.length)]);
+                        }
 
-                    let card = {
-                        name: name,
-                        alignment: getRandomElement(breakdownData.alignment),
-                        symbol: getRandomElement(breakdownData.symbols),
-                        hierarchy: hierarchy,
-                        prompt: getRandomElement(breakdownData.prompts),
-                        colors: colors
-                    }
-                    generateBreakdownCard(card);
-                 })
+                        let card = {
+                            name: name,
+                            alignment: getRandomElement(breakdownData.alignment),
+                            symbol: getRandomElement(breakdownData.symbols),
+                            hierarchy: hierarchy,
+                            prompt: getRandomElement(breakdownData.prompts),
+                            colors: colors
+                        }
+                        generateBreakdownCard(card);
+                    })
             } else {
                 alert('Please select a hierarchy');
             }
@@ -144,15 +144,8 @@ function generateBreakdownCard(cardData) {
                 <div class="color-box" style="background-color: #${cardData.colors[2].hex}"></div>
                 <p class="color-name">${cardData.colors[2].name}</p>
             </div>
-            
-            
+
         </div>
-            
-               
-            
-            
-           
-          
         </div>
     `;
 
@@ -163,7 +156,238 @@ function generateBreakdownCard(cardData) {
 };
 
 
+function generateCharacter(raceData, gender, hierarchy, voiceData, familyData) {
+    // console.log(raceData, gender, hierarchy);
 
+    let name, age, voice;
+    let pronouns=[];
+    let spouse;
+    let children = [];
+    let job, underClothing, overClothing, accessories, jewelry;
+    let personality = [];
+    let likes = [];
+    let dislikes = [];
+    let appearanceType, appearanceStyle, appearanceColor, eyes, height, build, skinColor, skinDetail, skinScar, skinBirthmark, skinTattoo, facialHair;
+    const { "fem-names": femNames, "masc-names": mascNames, "androgynous-names": androNames, ratio,ageMin, ageMax, appearance, surnames: surname, race } = raceData;
+    const skin = appearance.skin;
+    const totalRatio = ratio.feminine + ratio.masculine + ratio.androgynous;
+    const randomGender = gender[Math.floor(Math.random() * gender.length)];
+    switch (randomGender) {
+        case "Male":
+            name = getRandomElement(mascNames);
+            if (appearance.facialHair && Math.random() < 0.5) {
+                facialHair = getRandomElement(appearance.facialHair);
+            } else {
+                facialHair = "None";
+            }
+            pronouns= ["he", "him", "his"];
+            break;
+        case "Female":
+            name = getRandomElement(femNames);
+            facialHair = "None";
+            pronouns= ["she", "her", "her"];
+            break;
+        case "nonBinary":
+            name = getRandomElement(androNames);
+            if (appearance.facialHair && Math.random() < 0.4) {
+                facialHair = getRandomElement(appearance.facialHair);
+            } else {
+                facialHair = "None";
+            }
+            pronouns= ["they", "them", "their"];
+            break;
+
+    }
+    let surnameF = getRandomElement(surname);
+    name += ` ${surnameF}`;
+    age = Math.floor(Math.random() * (ageMax - ageMin + 1)) + ageMin;
+    height = getRandomElement(appearance.height);
+    build = getRandomElement(appearance.build);
+    eyes = getRandomElement(appearance.eyes);
+    voice = getRandomElement(voiceData.voiceTypes);
+
+    if (appearance.hair) {
+        appearanceType = getRandomElement(appearance.hair.type);
+        appearanceStyle = appearanceType !== "Bald" ? getRandomElement(appearance.hair.style) : "None";
+        appearanceColor = appearanceType !== "Bald" ? getRandomElement(appearance.hair.color) : "None";
+        skinColor = getRandomElement(skin.color);
+    } else if (appearance.feathers) {
+        appearanceType = getRandomElement(appearance.feathers.type);
+        appearanceStyle = "Feathered";
+        appearanceColor = getRandomElement(appearance.feathers.color);
+        skinColor = getRandomElement(appearanceColor);
+    } else if (appearance.fur) {
+        appearanceType = getRandomElement(appearance.fur.type);
+        appearanceStyle = "Fur";
+        appearanceColor = getRandomElement(appearance.fur.color);
+        skinColor = getRandomElement(appearanceColor);
+    } else if (appearance.scales) {
+        appearanceType = getRandomElement(appearance.scales.type);
+        appearanceStyle = "Scaled";
+        appearanceColor = getRandomElement(appearance.scales.color);
+        skinColor = appearanceColor;
+    }
+
+    skinDetail = (skin.details && skin.details.length > 0 && Math.random() < 0.4) ? getRandomElement(skin.details) : "None";
+    skinScar = (skin.scar && skin.scar.length > 0 && Math.random() < 0.4) ? `${getRandomElement(skin.scar)} on the ${getRandomElement(skin.bodyPart)}` : "None";
+    skinBirthmark = (skin.birthmark && skin.birthmark.length > 0 && Math.random() < 0.4) ? `${getRandomElement(skin.birthmark)} on the ${getRandomElement(skin.bodyPart)}` : "None";
+    skinTattoo = (skin.tattoos && skin.tattoos.length > 0 && Math.random() < 0.4) ? `${getRandomElement(skin.tattoos)} on the ${getRandomElement(skin.bodyPart)}` : "None";
+
+ 
+
+
+
+
+       //family info
+
+    //if married -> generate spouse
+    //if children, random number -> generate children
+
+    if (Math.random() < 0.4) {//40% chance of being married
+        const spouseRandom = Math.random() * totalRatio;
+        let minSpouseAge = Math.max(age - 10, ageMin);
+        let maxSpouseAge = Math.min(age + 10, ageMax);
+
+        if (spouseRandom < ratio.feminine) {
+            spouse = {
+                name: getRandomElement(femNames) + ` ${surnameF}`,
+                age: Math.floor(Math.random() * (maxSpouseAge - minSpouseAge + 1)) + minSpouseAge,
+                pronouns: ["she", "her", "her"],
+                status: getRandomElement(familyData.married)
+            };
+        } else if (spouseRandom < ratio.feminine + ratio.masculine) {
+            spouse = {
+                name: getRandomElement(mascNames) + ` ${surnameF}`,
+                age: Math.floor(Math.random() * (maxSpouseAge - minSpouseAge + 1)) + minSpouseAge,
+                pronouns: ["he", "him", "his"],
+                status: getRandomElement(familyData.married)
+            };
+
+        } else {
+            spouse = {
+                name: getRandomElement(androNames) + ` ${surnameF}`,
+                age: Math.floor(Math.random() * (maxSpouseAge - minSpouseAge + 1)) + minSpouseAge,
+                pronouns: ["they", "them", "their"],
+                status: getRandomElement(familyData.married)
+            };
+        }
+
+        //generate children
+        if (Math.random() < 0.3) {
+            let numChildren = Math.floor(Math.random() * 4) + 1;
+
+            for (let i = 0; i < numChildren; i++) {
+                let childRandom = Math.random() * totalRatio;
+                let childName = "";
+                let childAge = Math.floor(Math.random() * (age - ageMin)) + 1;;
+                if (childRandom < ratio.feminine) {
+                    childName = getRandomElement(femNames) + ` ${surnameF}`;
+                    children.push({
+                        name: childName,
+                        age: childAge,
+                        pronouns: ["she", "her", "her"],
+                        status: getRandomElement(familyData.parentChildRelationship)
+                    });
+                } else if (childRandom < ratio.feminine + ratio.masculine) {
+                    childName = getRandomElement(mascNames) + ` ${surnameF}`;
+                    children.push({
+                        name: childName,
+                        age: childAge,
+                        pronouns: ["he", "him", "his"],
+                        status: getRandomElement(familyData.parentChildRelationship)
+                    });
+                } else {
+                    childName = getRandomElement(androNames) + ` ${surnameF}`;
+                    children.push({
+                        name: childName,
+                        age: childAge,
+                        pronouns: ["they", "them", "their"],
+                        status: getRandomElement(familyData.parentChildRelationship)
+                    });
+                }
+            }
+        } else {
+            children = [];
+        }
+    } else {
+        spouse = {
+            name: "None",
+            age: "None",
+            pronouns: ["None", "None", "None"],
+            status: getRandomElement(familyData.single)
+        };
+
+        if (Math.random() < 0.3) {
+            let numChildren = Math.floor(Math.random() * 4) + 1;
+
+            for (let i = 0; i < numChildren; i++) {
+                let childRandom = Math.random() * totalRatio;
+                let childName = "";
+                let childAge = Math.floor(Math.random() * (age - ageMin)) + 1;;
+                if (childRandom < ratio.feminine) {
+                    childName = getRandomElement(femNames) + ` ${surnameF}`;
+                    children.push({
+                        name: childName,
+                        age: childAge,
+                        pronouns: ["she", "her", "her"],
+                        status: getRandomElement(familyData.parentChildRelationship)
+                    });
+                } else if (childRandom < ratio.feminine + ratio.masculine) {
+                    childName = getRandomElement(mascNames) + ` ${surnameF}`;
+                    children.push({
+                        name: childName,
+                        age: childAge,
+                        pronouns: ["he", "him", "his"],
+                        status: getRandomElement(familyData.parentChildRelationship)
+                    });
+                } else {
+                    childName = getRandomElement(androNames) + ` ${surnameF}`;
+                    children.push({
+                        name: childName,
+                        age: childAge,
+                        pronouns: ["they", "them", "their"],
+                        status: getRandomElement(familyData.parentChildRelationship)
+                    });
+                }
+            }
+        } else {
+            children = [];
+        }
+    }
+
+    const character = {
+        name: name,
+        age: age,
+        eyes: eyes,
+        prounouns: pronouns,
+        race: race,
+        voice: voice,
+        height: height,
+        build: build,
+        skinColor: skinColor,
+        appearanceType: appearanceType,
+        appearanceStyle: appearanceStyle,
+        appearanceColor: appearanceColor,
+        facialHair: facialHair,
+        skinDetail: skinDetail,
+        skinScar: skinScar,
+        skinBirthmark: skinBirthmark,
+        skinTattoo: skinTattoo,
+        // job: job,
+        // underClothing: underClothing,
+        // overClothing: overClothing,
+        // accessories: accessories,
+        // jewelry: jewelry,
+        // personality: personality,
+        // likes: likes,
+        // dislikes: dislikes,
+        spouse: spouse,
+        children: children
+    };
+    console.log(character);
+
+
+}
 
 
 
@@ -200,21 +424,92 @@ function toggleLock(event) {
     }
 }
 
+
+async function fetchJSON(url) {
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error('Network response for provided url was not ok ' + response.statusText);
+        }
+
+        let data = await response.json();
+
+        const voiceResponse = await fetch('json/voice.json');
+        if (!voiceResponse.ok) {
+            throw new Error('Network response for voice was not ok ' + voiceResponse.statusText);
+        }
+        const voiceData = await voiceResponse.json();
+
+        const familyResponse = await fetch('json/family.json');
+        if (!familyResponse.ok) {
+            throw new Error('Network response for family was not ok ' + familyResponse.statusText);
+        }
+        const familyData = await familyResponse.json();
+
+        generateCharacter(data, genders, hierarchy, voiceData, familyData);
+    } catch (error) {
+        console.error('There has been a problem with your fetch operation:', error);
+    }
+}
+
+
+function getCheckedValues(id, checkArray) {
+    const checkboxes = document.querySelectorAll(`input[name="${id}"]:checked`);
+
+    checkArray.splice(0, checkArray.length);
+
+    checkboxes.forEach((checkbox) => {
+        if (!checkbox.id.includes('All')) { // Exclude "All" checkboxes
+            checkArray.push(checkbox.value);
+        }
+    });
+
+    console.log("Checked values: " + checkArray.join(', '));
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('reset').addEventListener('click', function () {
-        
+
     }
 
     )
     document.getElementById('generateBtn').addEventListener('click', function () {
         const presetSelect = document.getElementById('presetSelect');
-        const breakdowncardCheck= document.querySelector('#breakdown').checked;
+        const breakdowncardCheck = document.querySelector('#breakdown').checked;
         const selectedPreset = presetSelect.value;
         if (selectedPreset !== "none") {
             getPresetData();
         } else {
-            if(breakdowncardCheck==true){
+            if (breakdowncardCheck == true) {
                 generateBreakdownData();
+            }
+        }
+
+        getCheckedValues("race", racePool);
+        getCheckedValues("gender", genders);
+
+        hierarchy = document.getElementById('hierarchyAmount').value;
+
+        if (racePool.length === 0) {
+            alert('Please select at least 1 race');
+            return;
+        }
+        if (genders.length === 0) {
+            alert('Please select at least 1 gender');
+            return;
+        }
+
+        else {
+            const results = document.querySelector('.results');
+            results.innerHTML = '';
+            // lockedCards.forEach(card => results.appendChild(card));
+
+
+            const amountSelect = document.getElementById('npcAmount');
+            const amountValue = amountSelect.value;
+            for (let i = 0; i < amountValue; i++) {
+                let choice = getRandomElement(racePool);
+                fetchJSON(`json/races/${choice}.json`);
             }
         }
 
