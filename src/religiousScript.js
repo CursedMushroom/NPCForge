@@ -152,7 +152,6 @@ function generateBreakdownCard(cardData) {
     `;
 
     const results = document.querySelector('.results');
-    results.innerHTML = ''
     results.appendChild(card);
 
 };
@@ -428,32 +427,135 @@ function generateCharacter(raceData, gender, hierarchy, voiceData, familyData, p
         clothing: clothing,
         accessory: accessory,
         footware: footware,
-        // jewelry: jewelry,
         personality: personality,
         likes: likes,
         dislikes: dislikes,
         spouse: spouse,
         children: children
     };
-    console.log(character);
-    console.log(chosenPresetData);
 
+    generateCard(character);
 
 }
-
-
-
-
-
-
-
-
-
 
 
 function getRandomElement(arr) {
     return arr[Math.floor(Math.random() * arr.length)];
 }
+
+
+
+function generateCard(character) {
+    const card = document.createElement('div');
+    card.classList.add('card');
+
+    let hairOrScaleInfo = '';
+    let childrenInfo = '';
+
+
+    if (character.appearanceStyle === "Scaled") {
+        hairOrScaleInfo = `
+            <p class="character-scale-color"><span class="title">Scale Color:</span> ${character.appearanceColor}</p>
+            <p class="character-scale-type"><span class="title">Scale Type:</span> ${character.appearanceType}</p>
+        `;
+    } else if (character.appearanceStyle === "Feathered") {
+        hairOrScaleInfo = `
+            <p class="character-feather-color"><span class="title">Feather Color:</span> ${character.appearanceColor}</p>
+            <p class="character-feather-type"><span class="title">Feather Type:</span> ${character.appearanceType}</p>
+        `;
+    } else if (character.appearanceStyle === "Fur") {
+        hairOrScaleInfo = `
+            <p class="character-fur-color"><span class="title">Fur Color:</span> ${character.appearanceColor}</p>
+            <p class="character-fur-type"><span class="title">Fur Type:</span> ${character.appearanceType}</p>
+        `;
+    } else {
+        hairOrScaleInfo = `
+            <p class="character-hair"><span class="title">Hair Type:</span> ${character.appearanceType}</p>
+            ${character.appearanceType !== "Bald" ? `<p class="character-hair-color"><span class="title">Hair Color:</span> ${character.appearanceColor}</p>` : ""}
+            ${character.appearanceType !== "Bald" ? `<p class="character-hair-style"><span class="title">Hair Style:</span> ${character.appearanceStyle}</p>` : ""}
+        `;
+    }
+
+    if (character.children.length > 0) {
+        for (let i = 0; i < character.children.length; i++) {
+            childrenInfo += `
+            <div class="character-child">
+                <p class="character-child-name"><span class="title">Name:</span> ${character.children[i].name}</p>
+                <p class="character-child-age"><span class="title">Age:</span> ${character.children[i].age}</p>
+                <p class="character-child-pronouns"><span class="title">Pronouns:</span> ${character.children[i].pronouns[0]}/${character.children[i].pronouns[1]}/${character.children[i].pronouns[2]}</p>
+                <p class="character-child-status"><span class="title">Status:</span> ${character.children[i].status}</p></div>
+            `;
+
+        }
+
+    }
+
+    card.innerHTML = `
+        <div class="card-title">
+            <h2 id="character-name"><b>${character.name}</b></h2>
+            <div class="card-buttons">
+                <button class="lock" onclick="toggleLock(event)"><i class="fa-solid fa-unlock"></i></button>
+                <button class="delete" onclick="deleteCard(event)"><i class="fa-solid fa-x"></i></button>
+            </div>
+        </div>
+        <hr id="core-hr">
+        <div class="card-info">
+            <p class="character-pronouns"><span class="title">Pronouns:</span> ${character.prounouns}</p>
+            <p class="character-age"><span class="title">Age:</span> ${character.age}</p>
+            <p class="character-race"><span class="title">Race:</span> ${character.race}</p>
+            <p class="character-job"><span class="title">Job:</span> ${character.job}</p>
+            <div class="appearance-info">
+                <p class="character-height"><span class="title">Height:</span> ${character.height}</p>
+                <p class="character-build"><span class="title">Build:</span> ${character.build}</p>
+                <p class="character-voice"><span class="title">Voice:</span> ${character.voice}</p>
+                ${character.appearanceStyle !== "Feathered" && character.appearanceStyle !== "Scaled" && character.appearanceStyle !== "Fur" ? `<p class="character-skin-color"><span class="title">Skin Color:</span> ${character.skinColor}</p>` : ""}
+                <p class="character-eyes"><span class="title">Eye Color:</span> ${character.eyes}</p>
+                ${hairOrScaleInfo}
+                ${character.facialHair !== "None" ? `<p class="character-facial-hair"><span class="title">Facial Hair:</span> ${character.facialHair}</p>` : ""}
+                ${character.skinDetail !== "None" ? `<p class="character-skin-details"><span class="title">Skin Details:</span> ${character.skinDetail}</p>` : ""}
+                ${character.skinScar !== "None" ? `<p class="character-skin-scar"><span class="title">Skin Scar:</span> ${character.skinScar}</p>` : ""}
+                ${character.skinBirthmark !== "None" ? `<p class="character-skin-birthmark"><span class="title">Skin Birthmark:</span> ${character.skinBirthmark}</p>` : ""}
+                ${character.skinTattoo !== "None" ? `<p class="character-skin-tattoo"><span class="title">Skin Tattoo:</span> ${character.skinTattoo}</p>` : ""}
+            </div>
+            <hr>
+            <div class="card-profession">
+                <p class="character-under-clothing"><span class="title">Clothing:</span> ${character.clothing}</p>
+                <p class="character-over-clothing"><span class="title">Accessory:</span> ${character.accessory}</p>
+                <p class="character-accessories"><span class="title">Footware</span> ${character.footware}</p>
+            </div>
+            <hr>
+            <div class="card-personality">
+            <div class="character-personality"><p id="pos-trait">${character.personality[0]}</p><p>|<p><p id="neg-trait">${character.personality[1]}</p><p>|<p><p id="neu-trait">${character.personality[2]}</p></div>
+            <p class="character-likes"><span class="title">Likes:</span> ${character.likes.join(', ')}</p>
+            <p class="character-dislikes"><span class="title">Dislikes:</span> ${character.dislikes.join(', ')}</p>
+            </div>
+            <hr>
+            <div class="card-family">
+            <p class="character-status"><span class="title">Relationship Status:</span> ${character.spouse.status}</p>
+            ${character.spouse.name !== "None" ? `<p class="character-spouse-name"><span class="title">Name:</span> ${character.spouse.name}</p>` : ""}
+            ${character.spouse.age !== "None" ? `<p class="character-spouse-age"><span class="title">Age:</span> ${character.spouse.age}</p>` : ""}
+            ${character.spouse.pronouns[0] !== "None" ? `<p class="character-spouse-pronouns"><span class="title">Pronouns:</span> ${character.spouse.pronouns[0]}/${character.spouse.pronouns[1]}/${character.spouse.pronouns[2]}</p>` : ""}
+            <hr>
+            ${character.children.length > 0 ? `<span class="title">Children : ${character.children.length}</span>` : ""}
+            ${character.children.length > 0 ? `<div class="character-children">${childrenInfo} </div>` : ""}
+            </div>
+        </div>
+    `;
+
+    const results = document.querySelector('.results');
+    results.appendChild(card);
+}
+
+
+
+
+
+
+
+
+
+
+
 
 //card scripts
 function deleteCard(event) {
@@ -474,6 +576,7 @@ function toggleLock(event) {
         lockIcon.classList.add('fa-unlock');
         lockedCards = lockedCards.filter(lockedCard => lockedCard !== card);
     }
+    console.log(lockedCards);
 }
 
 
@@ -577,8 +680,8 @@ document.addEventListener('DOMContentLoaded', function () {
         else {
             const results = document.querySelector('.results');
             results.innerHTML = '';
-            // lockedCards.forEach(card => results.appendChild(card));
-
+            lockedCards.forEach(card => results.appendChild(card));
+            lockedCards.forEach(card => console.log(card));
 
             const amountSelect = document.getElementById('npcAmount');
             const amountValue = amountSelect.value;
