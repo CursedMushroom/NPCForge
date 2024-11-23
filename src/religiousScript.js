@@ -158,7 +158,7 @@ function generateBreakdownCard(cardData) {
 };
 
 
-function generateCharacter(raceData, gender, hierarchy, voiceData, familyData) {
+function generateCharacter(raceData, gender, hierarchy, voiceData, familyData, personalityData) {
     // console.log(raceData, gender, hierarchy);
 
     let name, age, voice;
@@ -237,7 +237,23 @@ function generateCharacter(raceData, gender, hierarchy, voiceData, familyData) {
 
 
 
+    //personality info
+    personality.push(getRandomElement(personalityData.traits.positive)); //positive trait
+    personality.push(getRandomElement(personalityData.traits.negative)); //negative trait
+    personality.push(getRandomElement(personalityData.traits.neutral)); //neutral trait
 
+    let availableLikes = [...personalityData.likes];
+    let availableDislikes = [...personalityData.dislikes];
+
+    for (let i = 0; likes.length < 3 && dislikes.length < 3; i++) {
+        let like = getRandomElement(availableLikes);
+        likes.push(like);
+        availableLikes = availableLikes.filter(item => item !== like);
+
+        let dislike = getRandomElement(availableDislikes);
+        dislikes.push(dislike);
+        availableDislikes = availableDislikes.filter(item => item !== dislike);
+    }
 
 
     //family info
@@ -367,21 +383,21 @@ function generateCharacter(raceData, gender, hierarchy, voiceData, familyData) {
         if (jobNumber < highThreshold) {
             job = chosenPresetData.roles.high[Math.floor(Math.random() * chosenPresetData.roles.high.length)];
 
-            clothing=getRandomElement(chosenPresetData.clothing.high[job].clothing);
-            accessory=getRandomElement(chosenPresetData.clothing.high[job].accessories);
-            footware=getRandomElement(chosenPresetData.clothing.high[job].footwear);
+            clothing = getRandomElement(chosenPresetData.clothing.high[job].clothing);
+            accessory = getRandomElement(chosenPresetData.clothing.high[job].accessories);
+            footware = getRandomElement(chosenPresetData.clothing.high[job].footwear);
         } else if (jobNumber < midThreshold) {
             job = chosenPresetData.roles.mid[Math.floor(Math.random() * chosenPresetData.roles.mid.length)];
 
-            clothing=getRandomElement(chosenPresetData.clothing.mid[job].clothing);
-            accessory=getRandomElement(chosenPresetData.clothing.mid[job].accessories);
-            footware=getRandomElement(chosenPresetData.clothing.mid[job].footwear);
+            clothing = getRandomElement(chosenPresetData.clothing.mid[job].clothing);
+            accessory = getRandomElement(chosenPresetData.clothing.mid[job].accessories);
+            footware = getRandomElement(chosenPresetData.clothing.mid[job].footwear);
         } else {
             job = chosenPresetData.roles.low[Math.floor(Math.random() * chosenPresetData.roles.low.length)];
 
-            clothing=getRandomElement(chosenPresetData.clothing.low[job].clothing);
-            accessory=getRandomElement(chosenPresetData.clothing.low[job].accessories);
-            footware=getRandomElement(chosenPresetData.clothing.low[job].footwear);
+            clothing = getRandomElement(chosenPresetData.clothing.low[job].clothing);
+            accessory = getRandomElement(chosenPresetData.clothing.low[job].accessories);
+            footware = getRandomElement(chosenPresetData.clothing.low[job].footwear);
         }
     }
 
@@ -413,9 +429,9 @@ function generateCharacter(raceData, gender, hierarchy, voiceData, familyData) {
         accessory: accessory,
         footware: footware,
         // jewelry: jewelry,
-        // personality: personality,
-        // likes: likes,
-        // dislikes: dislikes,
+        personality: personality,
+        likes: likes,
+        dislikes: dislikes,
         spouse: spouse,
         children: children
     };
@@ -482,7 +498,13 @@ async function fetchJSON(url) {
         }
         const familyData = await familyResponse.json();
 
-        generateCharacter(data, genders, hierarchy, voiceData, familyData);
+        const personalityResponse = await fetch('json/personality.json');
+        if (!personalityResponse.ok) {
+            throw new Error('Network response for personality was not ok ' + personalityResponse.statusText);
+        }
+        const personalityData = await personalityResponse.json();
+
+        generateCharacter(data, genders, hierarchy, voiceData, familyData, personalityData);
     } catch (error) {
         console.error('There has been a problem with your fetch operation:', error);
     }
@@ -505,6 +527,22 @@ function getCheckedValues(id, checkArray) {
 
 document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('reset').addEventListener('click', function () {
+        const presetSelect = document.getElementById('presetSelect');
+        const hierarchySelect = document.querySelector('#hierarchyAmount');
+        const clothingSelect = document.querySelector('.clothselect');
+        const genderSelect = document.querySelectorAll("#gender-checkboxes input[type='checkbox']");
+        const races = document.querySelectorAll('input[name="race"]');
+
+
+
+        hierarchySelect.value = "20:50:30";
+        clothingSelect.value = "random";
+        genderSelect.forEach(checkbox => checkbox.checked = true);
+        races.forEach(race => race.checked = false);
+        presetSelect.value = "none";
+
+        document.getElementById("selected-gender-value").textContent = "Female, Male, Non-Binary / Androgynous";
+        updateSelectedValue();
 
     }
 

@@ -36,8 +36,7 @@ function handlePresetChange() {
             // Find the checkbox for the given gender value
             const genderCheckbox = document.querySelector(`#gender-checkboxes input[type='checkbox'][value="${gender}"]`);
         
-            // Log the gender being processed and the checkbox found
-            console.log('Processing gender:', gender);
+           
         
             if (genderCheckbox) {
                 genderCheckbox.checked = true;

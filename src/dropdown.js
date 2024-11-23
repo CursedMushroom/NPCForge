@@ -14,7 +14,7 @@ document.addEventListener("click", function(event) {
 });
 
 function updateSelectedValue(event) {
-    event.stopPropagation();
+    // event.stopPropagation();
     const allCheckboxes = document.querySelectorAll("#checkboxes input[type='checkbox']");
     const checkboxes = Array.from(allCheckboxes).filter(checkbox => checkbox.checked && !checkbox.id.includes('All'));
 
